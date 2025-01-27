@@ -183,23 +183,51 @@ export const workExperience = [
   {
     id: 2,
     title: "Editors Leaderboard",
-    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod fringilla felis, nec elementum purus.",
+    desc: "Recognizing the unsung heroes of Ethereum: Track and celebrate EIP Editors based on their contributions and impact in the ecosystem.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/DashboardCard2.png",
   },
   {
     id: 3,
     title: "Boards",
-    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod fringilla felis, nec elementum purus.",
+    desc: "Stay organized with the Boards Tool—your central hub for tracking and prioritizing EIPs. Sort proposals by activity, streamline editor reviews, and focus on PRs that need immediate attention.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/DashboardCard3.png",
   },
   {
     id: 4,
     title: "Search by Author",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    desc: "Dive deep into the proposals that matter to you. Filter and search by authors to explore individual contributions and their evolving ideas.",
     className: "md:col-span-2",
     thumbnail: "/DashboardCard4.png",
+  },
+  {
+    id: 5,
+    title: "All EIPs",
+    desc: "Access the full archive of Ethereum Improvement Proposals in one place. Simplified, structured, and easy to explore.",
+    className: "md:col-span-2",
+    thumbnail: "/DashboardCard5.png",
+  },
+  {
+    id: 6,
+    title: "Did You Know",
+    desc: "Uncover interesting facts and insights about Ethereum's proposal ecosystem, from historical milestones to key moments shaping its future.",
+    className: "md:col-span-2",
+    thumbnail: "/DashboardCard6.png",
+  },
+  {
+    id: 7,
+    title: "More Resources",
+    desc: "Expand your knowledge with curated resources, guides, and documentation for understanding Ethereum Improvement Proposals.",
+    className: "md:col-span-2",
+    thumbnail: "/DashboardCard7.png",
+  },
+  {
+    id: 8,
+    title: "Feedback",
+    desc: "Your voice matters! Share your thoughts, suggestions, and feedback to help us make EIPsInsight better for everyone.",
+    className: "md:col-span-2",
+    thumbnail: "/DashboardCard8.png",
   },
 ];
 
