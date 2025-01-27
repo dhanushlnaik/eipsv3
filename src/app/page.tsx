@@ -1,10 +1,9 @@
+import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import OurTools from "@/components/OurTools";
 import Clients from "@/components/ui/InfiniteScroll";
-import MagicButton from "@/components/ui/MagicButton";
-
 
 export default function Home() {
   return (
@@ -15,6 +14,7 @@ export default function Home() {
       <Hero/>
       <OurTools/>
       <Clients/>
+      <About/>
       <Footer/>
     </div>
    </main>
