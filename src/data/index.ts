@@ -176,7 +176,7 @@ export const workExperience = [
   {
     id: 1,
     title: "Analytics",
-    desc: "loreum ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod fringilla felis, nec elementum purus. Donec euismod fringilla felis, nec elementum purus.",
+    desc: "Get a bird's-eye view of Ethereum Improvement Proposal activity with our detailed analytics dashboards. Explore trends, progress, and changes like never before.",
     className: "md:col-span-2",
     thumbnail: "/DashboardCard1.png",
   },
