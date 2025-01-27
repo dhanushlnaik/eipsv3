@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from './ui/MovingBorders'
 
+
 const About = () => {
   return (
        <div className="py-20 w-full">
