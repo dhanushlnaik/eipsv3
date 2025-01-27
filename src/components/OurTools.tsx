@@ -1,15 +1,24 @@
+"use client";
 import React from "react";
-
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
-
+import { motion } from "motion/react";
+import { slideInFromLeft, slideInFromRight } from "@/lib/utils";
 const OurTools = () => {
   return (
-    <div className="py-20 w-full">
-           <h1 className="heading">
-        Our
-        <span className="text-purple"> Tools</span>
-      </h1>
+    <div className="py-40 w-full">
+        <motion.div
+        variants={slideInFromLeft(0.5)}
+        className='text-[60px] text-white font-bold mt-[10px] text-center mb-[5px]'
+        >
+            Our <span className="text-purple">  Tools </span>
+        </motion.div>
+        <motion.div
+        variants={slideInFromRight(0.5)}
+        className='cursive text-[20px] text-gray-200 mb-10 mt-[5px] text-center'
+        >
+            Simplifying Ethereum Proposal Analysis
+        </motion.div>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (
