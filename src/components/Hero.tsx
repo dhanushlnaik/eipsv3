@@ -4,8 +4,6 @@ import { Spotlight } from "./ui/Spotlight";
 import MagicButton from "./ui/MagicButton";
 import { motion } from "framer-motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
-import { slideInFromLeft, slideInFromRight, slideInFromTop } from './../lib/utils';
 import { Button } from "./ui/MovingBorders";
 
 const Hero = () => {
