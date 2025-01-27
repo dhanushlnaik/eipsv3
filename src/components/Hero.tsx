@@ -2,6 +2,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerate";
 import MagicButton from "./ui/MagicButton";
+import { motion } from "motion/react";
 
 const Hero = () => {
   return (
@@ -39,29 +40,27 @@ const Hero = () => {
         />
       </div>
 
+
+
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+          {/* <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Dynamic Web Magic with Next.js
-          </p>
+          </p> */}
 
-          {/**
-           *  Link: https://ui.aceternity.com/components/text-generate-effect
-           *
-           *  change md:text-6xl, add more responsive code
-           */}
           <TextGenerateEffect
-            words="Transforming Concepts into Seamless User Experiences"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            words="Tracking Progress"
+            className="text-center text-[100px] md:text-5xl lg:text-9xl"
+          />
+                    <TextGenerateEffect
+            words="Shaping Ethereum"
+            className="text-center text-[100px] md:text-5xl lg:text-9xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            EIPS Insights
-          </p>
 
           <a href="#about">
             <MagicButton
-              title="Show my work"
+              title="Explore EIPS"
               icon={<FaLocationArrow />}
               position="right"
             />

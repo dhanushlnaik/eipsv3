@@ -108,35 +108,36 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "This proposal introduces a streamlined mechanism to reduce gas fees significantly for frequent transactions. It ensures better efficiency in smart contract interactions.",
+    name: "EIP-1559",
+    title: "Fee Market Change for Ethereum",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Aimed at improving the scalability of Ethereum, this proposal outlines the addition of shard chains to increase transaction throughput without compromising decentralization.",
+    name: "EIP-4844",
+    title: "Proto-Danksharding",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "This standard specifies a way to enable multiple non-fungible tokens (NFTs) to exist within a single contract and simplifies how they are handled on-chain.",
+    name: "EIP-1155",
+    title: "Multi-Token Standard",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "This proposal introduces a way to recover lost Ethereum by allowing users to register 'guardians' who can approve fund recovery in case of a lost private key.",
+    name: "EIP-2426",
+    title: "Social Recovery Wallets",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "This change proposes the transition from proof-of-work to proof-of-stake consensus mechanism, significantly reducing energy consumption while improving network security.",
+    name: "EIP-3675",
+    title: "Ethereum Merge Upgrade",
   },
 ];
+
 
 export const companies = [
   {

@@ -6,6 +6,8 @@ import { Space_Grotesk } from 'next/font/google'
 const inter = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-inter',
+weight: [ "400", "700"],
+display: "swap",
 })
 
 export const metadata: Metadata = {
