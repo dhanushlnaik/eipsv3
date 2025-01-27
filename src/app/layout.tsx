@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-providers";
 import { Space_Grotesk } from 'next/font/google'
+import Navbar from "@/components/layout/Navbar";
  
 const inter = Space_Grotesk({
   subsets: ['latin'],
@@ -31,8 +32,10 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <Navbar/>
         {children}
         </ThemeProvider>
+        
       </body>
     </html>
   );

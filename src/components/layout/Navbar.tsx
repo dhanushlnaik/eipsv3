@@ -17,19 +17,19 @@ const Navbar = () => {
 
         <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
           <div className="flex underline items-center justify-between w-full h-auto border border-white/30 bg-black/70 px-5 py-2 rounded-full text-gray-200">
-            <a href="/about" className="cursor-pointer">
+            <a href="/pectra" className="cursor-pointer">
               Pectra
             </a>
-            <a href="/skills" className="cursor-pointer">
+            <a href="/alleips" className="cursor-pointer">
               All EIPs
             </a>
-            <a href="/projects" className="cursor-pointer">
+            <a href="/tools" className="cursor-pointer">
               Tools
             </a>
-            <a href="/resume" className="cursor-pointer">
+            <a href="/insights" className="cursor-pointer">
               Insights
             </a>
-            <a href="/resume" className="cursor-pointer">
+            <a href="/more" className="cursor-pointer">
               More
             </a>
           </div>
