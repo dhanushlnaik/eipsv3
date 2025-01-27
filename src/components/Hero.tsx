@@ -5,6 +5,7 @@ import MagicButton from "./ui/MagicButton";
 import { motion } from "framer-motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { Button } from "./ui/MovingBorders";
+import { slideInFromLeft,  slideInFromTop } from "@/lib/utils";
 
 const Hero = () => {
   return (
