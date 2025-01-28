@@ -68,10 +68,18 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border border-gray-200 dark:border-gray-700 group-hover:border-gray-500 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-gradient-to-l from-white/10 via-white/10 to-transparent backdrop-filter backdrop-blur-[42%] border-[1px] border-white/30 group-hover:border-white/60 relative z-20",
         className
       )}
     >
+      <div
+        className="absolute inset-0 rounded-2xl pointer-events-none border-[1px] border-white/40 group-hover:border-white/70"
+        style={{
+          maskImage: "radial-gradient(circle, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%)",
+          WebkitMaskImage:
+            "radial-gradient(circle, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%)",
+        }}
+      />
       <div className="relative z-50">
         <div className="p-4">{children}</div>
       </div>
