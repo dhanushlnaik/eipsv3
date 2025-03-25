@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import { slideInFromLeft, slideInFromRight } from "@/lib/utils";
 const OurTools = () => {
   return (
-    <div className="py-40 w-full">
+    <div className="w-full">
         <motion.div
         variants={slideInFromLeft(0.5)}
         className='text-[60px] text-white font-bold mt-[10px] text-center mb-[5px]'

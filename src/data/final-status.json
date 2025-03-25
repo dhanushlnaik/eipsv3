@@ -1,0 +1,6326 @@
+{
+  "eip": [
+    {
+      "statusChanges": [
+        {
+          "eip": "6",
+          "lastStatus": "Draft",
+          "eipTitle": "Renaming Suicide Variable",
+          "eipCategory": "Standards Track"
+        },
+        {
+          "eip": "5",
+          "lastStatus": "Draft",
+          "eipTitle": "Gas Usage for `RETURN` and `CALL*`",
+          "eipCategory": "Standards Track"
+        }
+      ],
+      "year": 2015,
+      "repo": "eip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "7",
+          "lastStatus": "Accepted",
+          "eipTitle": "DELEGATECALL",
+          "eipCategory": "Homestead feature"
+        },
+        {
+          "eip": "8",
+          "lastStatus": "Draft",
+          "eipTitle": "devp2p Forward Compatibility Requirements for Homestead",
+          "eipCategory": "Standards Track"
+        }
+      ],
+      "year": 2016,
+      "repo": "eip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "140",
+          "lastStatus": "Accepted",
+          "eipTitle": "REVERT instruction in the Ethereum Virtual Machine",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "158",
+          "lastStatus": "Superseded",
+          "eipTitle": "State clearing",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "197",
+          "lastStatus": "Draft",
+          "eipTitle": "Precompiled contracts for optimal ate pairing check",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2",
+          "lastStatus": "Final",
+          "eipTitle": "Homestead Hard-fork Changes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "609",
+          "lastStatus": "Final",
+          "eipTitle": "Hardfork Meta: Byzantium",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "608",
+          "lastStatus": "Final",
+          "eipTitle": "Hardfork Meta: Tangerine Whistle",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "649",
+          "lastStatus": "Accepted",
+          "eipTitle": "Metropolis Difficulty Bomb Delay and Issuance Reduction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "100",
+          "lastStatus": "Final",
+          "eipTitle": "Change difficulty adjustment to target mean block time including uncles",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "211",
+          "lastStatus": "Draft",
+          "eipTitle": "New opcodes: RETURNDATASIZE and RETURNDATACOPY",
+          "eipCategory": "Standard Track"
+        },
+        {
+          "eip": "7",
+          "lastStatus": "Final",
+          "eipTitle": "DELEGATECALL",
+          "eipCategory": "Homestead feature"
+        },
+        {
+          "eip": "6",
+          "lastStatus": "Final",
+          "eipTitle": "Renaming Suicide Variable",
+          "eipCategory": "Standards Track"
+        },
+        {
+          "eip": "155",
+          "lastStatus": "Final",
+          "eipTitle": "Simple replay attack protection",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "615",
+          "lastStatus": "Draft",
+          "eipTitle": "Subroutines and Static Jumps for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "196",
+          "lastStatus": "Final",
+          "eipTitle": "Precompiled contracts for addition and scalar multiplication",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "170",
+          "lastStatus": "Draft",
+          "eipTitle": "Contract code size limit",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "607",
+          "lastStatus": "Final",
+          "eipTitle": "Hardfork Meta: Spurious Dragon",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "161",
+          "lastStatus": "Final",
+          "eipTitle": "State trie clearing (invariant-preserving alternative)",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "8",
+          "lastStatus": "Final",
+          "eipTitle": "devp2p Forward Compatibility Requirements for Homestead",
+          "eipCategory": "Standards Track"
+        },
+        {
+          "eip": "160",
+          "lastStatus": "Final",
+          "eipTitle": "EXP cost increase",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "145",
+          "lastStatus": "Draft",
+          "eipTitle": "Bitwise shifting instructions in EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "606",
+          "lastStatus": "Final",
+          "eipTitle": "Hardfork Meta: Homestead",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "141",
+          "lastStatus": "Accepted",
+          "eipTitle": "Designated invalid EVM instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "150",
+          "lastStatus": "Final",
+          "eipTitle": "Gas cost changes for IO-heavy operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "214",
+          "lastStatus": "Accepted",
+          "eipTitle": "New opcode STATICCALL",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "779",
+          "lastStatus": "Final",
+          "eipTitle": "Hardfork Info: DAO Fork",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "658",
+          "lastStatus": "Final",
+          "eipTitle": "Embedding transaction status code in receipts",
+          "eipCategory": "Standard Track"
+        },
+        {
+          "eip": "234",
+          "lastStatus": "Draft",
+          "eipTitle": "Add `blockHash` to JSON-RPC filter options.",
+          "eipCategory": "Interface"
+        }
+      ],
+      "year": 2017,
+      "repo": "eip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "141",
+          "lastStatus": "Final",
+          "eipTitle": "Designated invalid EVM instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "627",
+          "lastStatus": "Draft",
+          "eipTitle": "Whisper Specification",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "1109",
+          "lastStatus": "Draft",
+          "eipTitle": "Remove CALL costs for precompiled contracts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1186",
+          "lastStatus": "Draft",
+          "eipTitle": "RPC-Method to get Merkle Proofs - eth_getProof ",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "867",
+          "lastStatus": "Draft",
+          "eipTitle": "Standardized Ethereum Recovery Proposals",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "1352",
+          "lastStatus": "Draft",
+          "eipTitle": "Specify restricted address range for precompiles/system contracts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1283",
+          "lastStatus": "Accepted",
+          "eipTitle": "Net gas metering for SSTORE without dirty maps",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1087",
+          "lastStatus": "Draft",
+          "eipTitle": "Net gas metering for SSTORE operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "158",
+          "lastStatus": "Replaced",
+          "eipTitle": "State clearing",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1285",
+          "lastStatus": "Draft",
+          "eipTitle": "Increase Gcallstipend gas in the CALL OPCODE",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1240",
+          "lastStatus": "Draft",
+          "eipTitle": "Remove Difficulty Bomb",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "712",
+          "lastStatus": "Draft",
+          "eipTitle": "Ethereum typed structured data hashing and signing",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1571",
+          "lastStatus": "Draft",
+          "eipTitle": "EthereumStratum/2.0.0",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "665",
+          "lastStatus": "Draft",
+          "eipTitle": "Add precompiled contract for Ed25519 signature verification",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1057",
+          "lastStatus": "Draft",
+          "eipTitle": "ProgPoW, a Programmatic Proof-of-Work",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "999",
+          "lastStatus": "Draft",
+          "eipTitle": "Restore Contract Code at 0x863DF6BFa4469f3ead0bE8f9F2AAE51c91A907b4",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1193",
+          "lastStatus": "Draft",
+          "eipTitle": "Ethereum Provider API",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1010",
+          "lastStatus": "Draft",
+          "eipTitle": "Uniformity Between 0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B and 0x15E55EF43efA8348dDaeAa455F16C43B64917e3c",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "689",
+          "lastStatus": "Draft",
+          "eipTitle": "Address Collision of Contract Address Causes Exceptional Halt",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "140",
+          "lastStatus": "Final",
+          "eipTitle": "REVERT instruction in the Ethereum Virtual Machine",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "214",
+          "lastStatus": "Final",
+          "eipTitle": "New opcode STATICCALL",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "145",
+          "lastStatus": "Accepted",
+          "eipTitle": "Bitwise shifting instructions in EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1052",
+          "lastStatus": "Draft",
+          "eipTitle": "EXTCODEHASH opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4",
+          "lastStatus": "Draft",
+          "eipTitle": "EIP Classification",
+          "eipCategory": "Process"
+        },
+        {
+          "eip": "758",
+          "lastStatus": "Draft",
+          "eipTitle": "Subscriptions and filters for transaction return data",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1470",
+          "lastStatus": "Draft",
+          "eipTitle": "Smart Contract Weakness Classification (SWC)",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "1051",
+          "lastStatus": "Draft",
+          "eipTitle": "Overflow checking for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "695",
+          "lastStatus": "Draft",
+          "eipTitle": "Create `eth_chainId` method for JSON-RPC",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3",
+          "lastStatus": "Deferred",
+          "eipTitle": "Addition of CALLDEPTH opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "858",
+          "lastStatus": "Draft",
+          "eipTitle": "Reduce block reward",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "778",
+          "lastStatus": "Draft",
+          "eipTitle": "Ethereum Node Records (ENR)",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "908",
+          "lastStatus": "Draft",
+          "eipTitle": "Reward full nodes and clients",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "649",
+          "lastStatus": "Final",
+          "eipTitle": "Metropolis Difficulty Bomb Delay",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1380",
+          "lastStatus": "Draft",
+          "eipTitle": "Reduced gas cost for call to self",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "211",
+          "lastStatus": "Final",
+          "eipTitle": "New opcodes: RETURNDATASIZE and RETURNDATACOPY",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "233",
+          "lastStatus": "Draft",
+          "eipTitle": "Formal process of hard forks",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "706",
+          "lastStatus": "Final",
+          "eipTitle": "DEVp2p snappy compression",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "170",
+          "lastStatus": "Final",
+          "eipTitle": "Contract code size limit",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "616",
+          "lastStatus": "Deferred",
+          "eipTitle": "SIMD Operations for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1234",
+          "lastStatus": "Accepted",
+          "eipTitle": "Constantinople Difficulty Bomb Delay and Block Reward Adjustment",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1014",
+          "lastStatus": "Draft",
+          "eipTitle": "Skinny CREATE2",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1015",
+          "lastStatus": "Draft",
+          "eipTitle": "Configurable On Chain Issuance",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "197",
+          "lastStatus": "Final",
+          "eipTitle": "Precompiled contracts for optimal ate pairing check",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1108",
+          "lastStatus": "Draft",
+          "eipTitle": "Reduce alt_bn128 precompile gas costs",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "86",
+          "lastStatus": "Draft",
+          "eipTitle": "Abstraction of transaction origin and signature",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1355",
+          "lastStatus": "Draft",
+          "eipTitle": "Ethash 1a",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1013",
+          "lastStatus": "Draft",
+          "eipTitle": "\"Hardfork Meta: Constantinople\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "101",
+          "lastStatus": "Draft",
+          "eipTitle": "Serenity Currency and Crypto Abstraction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1295",
+          "lastStatus": "Draft",
+          "eipTitle": "Modify Ethereum PoW Incentive Structure and Diffuse Difficulty Bomb",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "969",
+          "lastStatus": "Draft",
+          "eipTitle": "Modifications to ethash to invalidate existing dedicated hardware implementations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "198",
+          "lastStatus": "Final",
+          "eipTitle": "Big integer modular exponentiation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "107",
+          "lastStatus": "Draft",
+          "eipTitle": "safe \"eth_sendTransaction\" authorization via html popup",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1482",
+          "lastStatus": "Draft",
+          "eipTitle": "Define a maximum block timestamp drift",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1102",
+          "lastStatus": "Draft",
+          "eipTitle": "Opt-in web3 access",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1227",
+          "lastStatus": "Draft",
+          "eipTitle": "Defuse Difficulty Bomb and Reset Block Reward",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "868",
+          "lastStatus": "Draft",
+          "eipTitle": "Node Discovery v4 ENR Extension",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "1459",
+          "lastStatus": "Draft",
+          "eipTitle": "Node Discovery via DNS",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "1011",
+          "lastStatus": "Draft",
+          "eipTitle": "Hybrid Casper FFG",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "210",
+          "lastStatus": "Draft",
+          "eipTitle": "Blockhash refactoring",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5",
+          "lastStatus": "Superseded",
+          "eipTitle": "Gas Usage for `RETURN` and `CALL*`",
+          "eipCategory": "Core"
+        }
+      ],
+      "year": 2018,
+      "repo": "eip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "2035",
+          "lastStatus": "Draft",
+          "eipTitle": "Stateless Clients - Repricing SLOAD and SSTORE to pay for block proofs",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2069",
+          "lastStatus": "Draft",
+          "eipTitle": "Recommendation for using YAML ABI in ERCs/EIPs",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "2364",
+          "lastStatus": "Draft",
+          "eipTitle": "\"eth/64: forkid-extended protocol handshake\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "627",
+          "lastStatus": "Final",
+          "eipTitle": "Whisper Specification",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "1",
+          "lastStatus": "Active",
+          "eipTitle": "EIP Purpose and Guidelines",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2387",
+          "lastStatus": "Last Call",
+          "eipTitle": "\"Hardfork Meta: Mountain Glacier\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "1052",
+          "lastStatus": "Final",
+          "eipTitle": "EXTCODEHASH opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2384",
+          "lastStatus": "Final",
+          "eipTitle": "Muir Glacier Difficulty Bomb Delay",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "152",
+          "lastStatus": "Final",
+          "eipTitle": "Add BLAKE2 compression function `F` precompile",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2124",
+          "lastStatus": "Draft",
+          "eipTitle": "Fork identifier for chain compatibility checks",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "1829",
+          "lastStatus": "Draft",
+          "eipTitle": "Precompile for Elliptic Curve Linear Combinations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1702",
+          "lastStatus": "Draft",
+          "eipTitle": "Generalized Account Versioning Scheme",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4",
+          "lastStatus": "Superseded",
+          "eipTitle": "EIP Classification",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2045",
+          "lastStatus": "Draft",
+          "eipTitle": "Particle gas costs for EVM opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2026",
+          "lastStatus": "Draft",
+          "eipTitle": "State Rent H - Fixed Prepayment for accounts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1276",
+          "lastStatus": "Draft",
+          "eipTitle": "Eliminate Difficulty Bomb and Adjust Block Reward on Constantinople Shift",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1474",
+          "lastStatus": "Draft",
+          "eipTitle": "Remote procedure call specification",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1355",
+          "lastStatus": "Abandoned",
+          "eipTitle": "Ethash 1a",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1898",
+          "lastStatus": "Draft",
+          "eipTitle": "Add `blockHash` to JSON-RPC methods which accept a default block parameter.",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2256",
+          "lastStatus": "Draft",
+          "eipTitle": "wallet_getOwnedAssets JSON-RPC Method",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1283",
+          "lastStatus": "Final",
+          "eipTitle": "Net gas metering for SSTORE without dirty maps",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "615",
+          "lastStatus": "Draft",
+          "eipTitle": "Subroutines and Static Jumps for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2014",
+          "lastStatus": "Draft",
+          "eipTitle": "Extended State Oracle",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1872",
+          "lastStatus": "Draft",
+          "eipTitle": "Ethereum Network Upgrade Windows",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "1965",
+          "lastStatus": "Draft",
+          "eipTitle": "Method to check if a chainID is valid at a specific block Number",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "225",
+          "lastStatus": "Final",
+          "eipTitle": "Clique proof-of-authority consensus protocol",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2031",
+          "lastStatus": "Draft",
+          "eipTitle": "State Rent B - Net transaction counter",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1716",
+          "lastStatus": "Final",
+          "eipTitle": "\"Hardfork Meta: Petersburg\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "1895",
+          "lastStatus": "Draft",
+          "eipTitle": "Support for an Elliptic Curve Cycle",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "145",
+          "lastStatus": "Final",
+          "eipTitle": "Bitwise shifting instructions in EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2330",
+          "lastStatus": "Draft",
+          "eipTitle": "EXTSLOAD opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1559",
+          "lastStatus": "Draft",
+          "eipTitle": "Fee market change for ETH 1.0 chain",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1014",
+          "lastStatus": "Final",
+          "eipTitle": "Skinny CREATE2",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3",
+          "lastStatus": "Draft",
+          "eipTitle": "Addition of CALLDEPTH opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1890",
+          "lastStatus": "Draft",
+          "eipTitle": "Commitment to Sustainable Ecosystem Funding",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1901",
+          "lastStatus": "Draft",
+          "eipTitle": "Add OpenRPC Service Discovery To JSON-RPC Services",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1706",
+          "lastStatus": "Draft",
+          "eipTitle": "Disable SSTORE with gasleft lower than call stipend",
+          "eipCategory": "Standards Track (Core, Networking, Interface, ERC)"
+        },
+        {
+          "eip": "1108",
+          "lastStatus": "Final",
+          "eipTitle": "Reduce alt_bn128 precompile gas costs",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "695",
+          "lastStatus": "Last Call",
+          "eipTitle": "Create `eth_chainId` method for JSON-RPC",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1682",
+          "lastStatus": "Abandoned",
+          "eipTitle": "Storage Rent",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2028",
+          "lastStatus": "Final",
+          "eipTitle": "Transaction data gas cost reduction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2070",
+          "lastStatus": "Draft",
+          "eipTitle": "\"Hardfork Meta: Berlin\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2242",
+          "lastStatus": "Draft",
+          "eipTitle": "Transaction Postdata",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1344",
+          "lastStatus": "Final",
+          "eipTitle": "ChainID opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1930",
+          "lastStatus": "Draft",
+          "eipTitle": "CALLs with strict gas semantic. Revert if not enough gas available.",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1015",
+          "lastStatus": "Draft",
+          "eipTitle": "Configurable On Chain Issuance",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "747",
+          "lastStatus": "Draft",
+          "eipTitle": "Add wallet_watchAsset to Provider",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1962",
+          "lastStatus": "Draft",
+          "eipTitle": "EC arithmetic and pairings with runtime definitions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "663",
+          "lastStatus": "Draft",
+          "eipTitle": "Unlimited SWAP and DUP instructions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2255",
+          "lastStatus": "Draft",
+          "eipTitle": "Wallet Permissions System",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "616",
+          "lastStatus": "Draft",
+          "eipTitle": "SIMD Operations for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2003",
+          "lastStatus": "Draft",
+          "eipTitle": "EVMC modules for implementations of precompiled contracts",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "1803",
+          "lastStatus": "Draft",
+          "eipTitle": "Rename opcodes for clarity",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1681",
+          "lastStatus": "Draft",
+          "eipTitle": "Temporal Replay Protection",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1485",
+          "lastStatus": "Draft",
+          "eipTitle": "TEthashV1",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1959",
+          "lastStatus": "Draft",
+          "eipTitle": "New Opcode to check if a chainID is part of the history of chainIDs",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1884",
+          "lastStatus": "Final",
+          "eipTitle": "Repricing for trie-size-dependent opcodes ",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "158",
+          "lastStatus": "Superseded",
+          "eipTitle": "State clearing",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2027",
+          "lastStatus": "Draft",
+          "eipTitle": "State Rent C - Net contract size accounting",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2015",
+          "lastStatus": "Draft",
+          "eipTitle": "Wallet Update Chain JSON-RPC Method (`wallet_updateChain`)",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2159",
+          "lastStatus": "Last Call",
+          "eipTitle": "Common Prometheus Metrics Names for Clients",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1013",
+          "lastStatus": "Draft",
+          "eipTitle": "\"Hardfork Meta: Constantinople\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "1767",
+          "lastStatus": "Draft",
+          "eipTitle": "GraphQL interface to Ethereum node data",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2200",
+          "lastStatus": "Final",
+          "eipTitle": "Structured Definitions for Net Gas Metering",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1234",
+          "lastStatus": "Final",
+          "eipTitle": "Constantinople Difficulty Bomb Delay and Block Reward Adjustment",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "698",
+          "lastStatus": "Draft",
+          "eipTitle": "OPCODE 0x46 BLOCKREWARD",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2046",
+          "lastStatus": "Draft",
+          "eipTitle": "Reduced gas cost for static calls made to precompiles",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1679",
+          "lastStatus": "Final",
+          "eipTitle": "\"Hardfork Meta: Istanbul\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2327",
+          "lastStatus": "Draft",
+          "eipTitle": "BEGINDATA opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2025",
+          "lastStatus": "Draft",
+          "eipTitle": "Block Rewards Proposal for funding Eth1.x",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2029",
+          "lastStatus": "Draft",
+          "eipTitle": "State Rent A - State counters contract",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1418",
+          "lastStatus": "Draft",
+          "eipTitle": "Blockchain Storage Rent Payment",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1985",
+          "lastStatus": "Draft",
+          "eipTitle": "Sane limits for certain EVM parameters",
+          "eipCategory": "Core"
+        }
+      ],
+      "year": 2019,
+      "repo": "eip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "908",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Reward clients for a sustainable network",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2657",
+          "lastStatus": "Draft",
+          "eipTitle": "Ephemeral Testnet Yolo",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "234",
+          "lastStatus": "Last Call",
+          "eipTitle": "Add `blockHash` to JSON-RPC filter options.",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3076",
+          "lastStatus": "Draft",
+          "eipTitle": "Validator client interchange format (slashing protection)",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3044",
+          "lastStatus": "Draft",
+          "eipTitle": "Adds `baseFee` to `eth_getBlockByNumber`",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1240",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Remove Difficulty Bomb",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1588",
+          "lastStatus": "Draft",
+          "eipTitle": "\"Hardfork Meta: Ethereum ProgPoW\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2583",
+          "lastStatus": "Draft",
+          "eipTitle": "Penalty for account trie misses",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3074",
+          "lastStatus": "Draft",
+          "eipTitle": "Sponsored Transaction Precompile",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1682",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Storage Rent",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2786",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Ethereum Provider Connect/Disconnect Events",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "158",
+          "lastStatus": "Final",
+          "eipTitle": "State clearing",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2930",
+          "lastStatus": "Draft",
+          "eipTitle": "Optional access lists",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "868",
+          "lastStatus": "Last Call",
+          "eipTitle": "Node Discovery v4 ENR Extension",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "2780",
+          "lastStatus": "Draft",
+          "eipTitle": "Reduce intrinsic transaction gas",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2700",
+          "lastStatus": "Final",
+          "eipTitle": "JavaScript Provider Event Emitter",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3041",
+          "lastStatus": "Draft",
+          "eipTitle": "Adds `baseFee` to `eth_getBlockByHash`",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2935",
+          "lastStatus": "Draft",
+          "eipTitle": "Save historical block hashes in state",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2474",
+          "lastStatus": "Draft",
+          "eipTitle": "Coinbase calls",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2929",
+          "lastStatus": "Draft",
+          "eipTitle": "Gas cost increases for state access opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2972",
+          "lastStatus": "Draft",
+          "eipTitle": "Wrapped Legacy Transactions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2696",
+          "lastStatus": "Final",
+          "eipTitle": "JavaScript `request` method RPC transport",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2539",
+          "lastStatus": "Draft",
+          "eipTitle": "BLS12-377 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "778",
+          "lastStatus": "Last Call",
+          "eipTitle": "Ethereum Node Records (ENR)",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "2124",
+          "lastStatus": "Last Call",
+          "eipTitle": "Fork identifier for chain compatibility checks",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "3091",
+          "lastStatus": "Draft",
+          "eipTitle": "Block Explorer API Routes",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2666",
+          "lastStatus": "Draft",
+          "eipTitle": "Repricing of precompiles and Keccak256 function",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2677",
+          "lastStatus": "Draft",
+          "eipTitle": "Limit size of `initcode`",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2831",
+          "lastStatus": "Draft",
+          "eipTitle": "Transaction Replacement Message Type",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2681",
+          "lastStatus": "Review",
+          "eipTitle": "Limit account nonce to 2^64-1",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2387",
+          "lastStatus": "Final",
+          "eipTitle": "\"Hardfork Meta: Muir Glacier\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2515",
+          "lastStatus": "Draft",
+          "eipTitle": "Implement Difficulty Freeze",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3102",
+          "lastStatus": "Draft",
+          "eipTitle": "Binary trie structure",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3068",
+          "lastStatus": "Draft",
+          "eipTitle": "Precompile for BN256 HashToCurve Algorithms",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1",
+          "lastStatus": "Living",
+          "eipTitle": "EIP Purpose and Guidelines",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2458",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Updates and Updated-by Header",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "1057",
+          "lastStatus": "Review",
+          "eipTitle": "ProgPoW, a Programmatic Proof-of-Work",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2464",
+          "lastStatus": "Draft",
+          "eipTitle": "\"eth/65: transaction announcements and retrievals\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "999",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Restore Contract Code at 0x863DF6BFa4469f3ead0bE8f9F2AAE51c91A907b4",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1153",
+          "lastStatus": "Draft",
+          "eipTitle": "Transient storage opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2537",
+          "lastStatus": "Draft",
+          "eipTitle": "Precompile for BLS12-381 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2803",
+          "lastStatus": "Draft",
+          "eipTitle": "Rich Transactions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1355",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Ethash 1a",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2159",
+          "lastStatus": "Final",
+          "eipTitle": "Common Prometheus Metrics Names for Clients",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2982",
+          "lastStatus": "Draft",
+          "eipTitle": "Serenity Phase 0",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "2315",
+          "lastStatus": "Draft",
+          "eipTitle": "Simple Subroutines for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2584",
+          "lastStatus": "Draft",
+          "eipTitle": "Trie format transition with overlay trees",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2997",
+          "lastStatus": "Draft",
+          "eipTitle": "IMPERSONATECALL Opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2976",
+          "lastStatus": "Draft",
+          "eipTitle": "eth/##: Typed Transactions over Gossip",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "2378",
+          "lastStatus": "Draft",
+          "eipTitle": "EIPs Eligible for Inclusion",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2228",
+          "lastStatus": "Draft",
+          "eipTitle": "Canonicalize the name of network with chain ID 1",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "1193",
+          "lastStatus": "Final",
+          "eipTitle": "Ethereum Provider JavaScript API",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2542",
+          "lastStatus": "Draft",
+          "eipTitle": "New opcodes TXGASLIMIT and CALLGASLIMIT",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3046",
+          "lastStatus": "Draft",
+          "eipTitle": "Adds `baseFee` to `eth_getUncleByBlockNumberAndIndex`",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3143",
+          "lastStatus": "Draft",
+          "eipTitle": "Increase block rewards to 5 ETH",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3085",
+          "lastStatus": "Draft",
+          "eipTitle": "Wallet Add Ethereum Chain RPC Method (`wallet_addEthereumChain`)",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2488",
+          "lastStatus": "Draft",
+          "eipTitle": "Deprecate the CALLCODE opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2565",
+          "lastStatus": "Last Call",
+          "eipTitle": "ModExp Gas Cost",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3026",
+          "lastStatus": "Draft",
+          "eipTitle": "BW6-761 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3155",
+          "lastStatus": "Draft",
+          "eipTitle": "EVM trace specification",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3045",
+          "lastStatus": "Draft",
+          "eipTitle": "Adds `baseFee` to `eth_getUncleByBlockHashAndIndex`",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2938",
+          "lastStatus": "Draft",
+          "eipTitle": "Account Abstraction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2970",
+          "lastStatus": "Draft",
+          "eipTitle": "IS_STATIC opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Addition of CALLDEPTH opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5",
+          "lastStatus": "Final",
+          "eipTitle": "Gas Usage for `RETURN` and `CALL*`",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "695",
+          "lastStatus": "Final",
+          "eipTitle": "Create `eth_chainId` method for JSON-RPC",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "4",
+          "lastStatus": "Final",
+          "eipTitle": "EIP Classification",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2593",
+          "lastStatus": "Draft",
+          "eipTitle": "Escalator fee market change for ETH 1.0 chain",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3014",
+          "lastStatus": "Draft",
+          "eipTitle": "Create `eth_symbol` method for JSON-RPC",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2718",
+          "lastStatus": "Draft",
+          "eipTitle": "Typed Transaction Envelope",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2481",
+          "lastStatus": "Review",
+          "eipTitle": "\"eth/66: request identifier\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "2711",
+          "lastStatus": "Draft",
+          "eipTitle": "Separate gas payer from msg.sender",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1013",
+          "lastStatus": "Final",
+          "eipTitle": "\"Hardfork Meta: Constantinople\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2926",
+          "lastStatus": "Draft",
+          "eipTitle": "Chunk-Based Code Merkleization",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2025",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Block Rewards Proposal for funding Eth1.x",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1706",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Disable SSTORE with gasleft lower than call stipend",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2733",
+          "lastStatus": "Draft",
+          "eipTitle": "Transaction package",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2937",
+          "lastStatus": "Draft",
+          "eipTitle": "SET_INDESTRUCTIBLE opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2936",
+          "lastStatus": "Draft",
+          "eipTitle": "EXTCLEAR Opcode For SELFDESTRUCTed contracts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2844",
+          "lastStatus": "Draft",
+          "eipTitle": "Add DID related methods to the JSON-RPC",
+          "eipCategory": "Interface"
+        }
+      ],
+      "year": 2020,
+      "repo": "eip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "2045",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Particle gas costs for EVM opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1681",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Temporal Replay Protection",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "867",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Standardized Ethereum Recovery Proposals",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "3756",
+          "lastStatus": "Draft",
+          "eipTitle": "Gas Limit Cap",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4399",
+          "lastStatus": "Draft",
+          "eipTitle": "Supplant DIFFICULTY opcode with RANDOM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "712",
+          "lastStatus": "Review",
+          "eipTitle": "Ethereum typed structured data hashing and signing",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1803",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Rename opcodes for clarity",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3978",
+          "lastStatus": "Draft",
+          "eipTitle": "Gas refunds on reverts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2970",
+          "lastStatus": "Stagnant",
+          "eipTitle": "IS_STATIC opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3374",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Predictable Proof-of-Work (POW) Sunsetting",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1767",
+          "lastStatus": "Stagnant",
+          "eipTitle": "GraphQL interface to Ethereum node data",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2929",
+          "lastStatus": "Final",
+          "eipTitle": "Gas cost increases for state access opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2256",
+          "lastStatus": "Stagnant",
+          "eipTitle": "wallet_getOwnedAssets JSON-RPC Method",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2935",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Save historical block hashes in state",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "665",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Add precompiled contract for Ed25519 signature verification",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2733",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Transaction Package",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2474",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Coinbase calls",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1588",
+          "lastStatus": "Stagnant",
+          "eipTitle": "\"Hardfork Meta: Ethereum ProgPoW\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "4200",
+          "lastStatus": "Draft",
+          "eipTitle": "Static relative jumps",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "101",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Serenity Currency and Crypto Abstraction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4573",
+          "lastStatus": "Draft",
+          "eipTitle": "Entry Points and Procedures for EVM Code Sections",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2937",
+          "lastStatus": "Stagnant",
+          "eipTitle": "SET_INDESTRUCTIBLE opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3584",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Block Access List",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3540",
+          "lastStatus": "Review",
+          "eipTitle": "EVM Object Format (EOF) v1",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2926",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Chunk-Based Code Merkleization",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3041",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Adds `baseFee` to `eth_getBlockByHash`",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "698",
+          "lastStatus": "Stagnant",
+          "eipTitle": "OPCODE 0x46 BLOCKREWARD",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1295",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Modify Ethereum PoW Incentive Structure and Delay Difficulty Bomb",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3298",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Removal of refunds",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3326",
+          "lastStatus": "Draft",
+          "eipTitle": "Wallet Switch Ethereum Chain RPC Method (`wallet_switchEthereumChain`)",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1153",
+          "lastStatus": "Draft",
+          "eipTitle": "Transient storage opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3030",
+          "lastStatus": "Stagnant",
+          "eipTitle": "BLS Remote Signer HTTP API",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1285",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Increase Gcallstipend gas in the CALL opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3651",
+          "lastStatus": "Draft",
+          "eipTitle": "Warm COINBASE",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2657",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Ephemeral Testnet Yolo",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2327",
+          "lastStatus": "Stagnant",
+          "eipTitle": "BEGINDATA opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3068",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Precompile for BN256 HashToCurve Algorithms",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1959",
+          "lastStatus": "Stagnant",
+          "eipTitle": "New Opcode to check if a chainID is part of the history of chainIDs",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3076",
+          "lastStatus": "Last Call",
+          "eipTitle": "Slashing Protection Interchange Format",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "858",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Reduce block reward and delay difficulty bomb",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2364",
+          "lastStatus": "Last Call",
+          "eipTitle": "\"eth/64: forkid-extended protocol handshake\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "689",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Address Collision of Contract Address Causes Exceptional Halt",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2583",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Penalty for account trie misses",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3044",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Adds `baseFee` to `eth_getBlockByNumber`",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3074",
+          "lastStatus": "Review",
+          "eipTitle": "AUTH and AUTHCALL opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2936",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EXTCLEAR Opcode For SELFDESTRUCTed contracts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "778",
+          "lastStatus": "Final",
+          "eipTitle": "Ethereum Node Records (ENR)",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "2584",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Trie format transition with overlay trees",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3026",
+          "lastStatus": "Stagnant",
+          "eipTitle": "BW6-761 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3403",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Partial removal of refunds",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1051",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Overflow checking for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1890",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Commitment to Sustainable Ecosystem Funding",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1380",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Reduced gas cost for call to self",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "234",
+          "lastStatus": "Final",
+          "eipTitle": "Add `blockHash` to JSON-RPC filter options.",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2537",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Precompile for BLS12-381 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2464",
+          "lastStatus": "Last Call",
+          "eipTitle": "\"eth/65: transaction announcements and retrievals\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "3332",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "MEDGASPRICE Opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3372",
+          "lastStatus": "Stagnant",
+          "eipTitle": "5 FNV primes for ethash",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2255",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Wallet Permissions System",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3416",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Median Gas Premium",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3855",
+          "lastStatus": "Review",
+          "eipTitle": "PUSH0 instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2481",
+          "lastStatus": "Last Call",
+          "eipTitle": "\"eth/66: request identifier\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "3220",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Crosschain Identifier Specification",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1930",
+          "lastStatus": "Stagnant",
+          "eipTitle": "CALLs with strict gas semantic. Revert if not enough gas available.",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2711",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Sponsored, expiring and batch transactions.",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2015",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Wallet Update Ethereum Chain RPC Method (`wallet_updateEthereumChain`)",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2242",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Transaction Postdata",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1010",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Uniformity Between 0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B and 0x15E55EF43efA8348dDaeAa455F16C43B64917e3c",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1571",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EthereumStratum/2.0.0",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "758",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Subscriptions and filters for completed transactions",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1470",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Smart Contract Weakness Classification (SWC)",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "2070",
+          "lastStatus": "Stagnant",
+          "eipTitle": "\"Hardfork Meta: Berlin\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "3267",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Giving Ethereum fees to Future Salaries",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1898",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Add `blockHash` to JSON-RPC methods which accept a default block parameter.",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "747",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Add wallet_watchAsset to Provider",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2029",
+          "lastStatus": "Stagnant",
+          "eipTitle": "State Rent A - State counters contract",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "616",
+          "lastStatus": "Stagnant",
+          "eipTitle": "SIMD Operations for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3860",
+          "lastStatus": "Review",
+          "eipTitle": "Limit and meter initcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1186",
+          "lastStatus": "Stagnant",
+          "eipTitle": "RPC-Method to get Merkle Proofs - eth_getProof",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1702",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Generalized Account Versioning Scheme",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1485",
+          "lastStatus": "Stagnant",
+          "eipTitle": "TEthashV1",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2593",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Escalator fee market change for ETH 1.0 chain",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2515",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Implement Difficulty Freeze",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2031",
+          "lastStatus": "Stagnant",
+          "eipTitle": "State Rent B - Net transaction counter",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2488",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Deprecate the CALLCODE opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3554",
+          "lastStatus": "Final",
+          "eipTitle": "Difficulty Bomb Delay to December 2021",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1011",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Hybrid Casper FFG",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3368",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Increase block rewards to 3 ETH, with 2 Year Decay to 1 ETH Scheduled",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1276",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Eliminate Difficulty Bomb and Adjust Block Reward on Constantinople Shift",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1962",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EC arithmetic and pairings with runtime definitions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2014",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Extended State Oracle",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3198",
+          "lastStatus": "Final",
+          "eipTitle": "BASEFEE opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2997",
+          "lastStatus": "Stagnant",
+          "eipTitle": "IMPERSONATECALL Opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3607",
+          "lastStatus": "Review",
+          "eipTitle": "Reject transactions from senders with deployed code",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1872",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Ethereum Network Upgrade Windows",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2844",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Add DID related methods to the JSON-RPC",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2938",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Account Abstraction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3508",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Transaction Data Opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "615",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Subroutines and Static Jumps for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3779",
+          "lastStatus": "Draft",
+          "eipTitle": "Safer Control Flow for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3155",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EVM trace specification",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2035",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Stateless Clients - Repricing SLOAD and SSTORE to pay for block proofs",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2976",
+          "lastStatus": "Last Call",
+          "eipTitle": "'Typed Transactions over Gossip'",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "3322",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Account gas storage opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3690",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - JUMPDEST Table",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3541",
+          "lastStatus": "Final",
+          "eipTitle": "Reject new contracts starting with the 0xEF byte",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2027",
+          "lastStatus": "Stagnant",
+          "eipTitle": "State Rent C - Net contract size accounting",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2666",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Repricing of precompiles and Keccak256 function",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3670",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - Code Validation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1087",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Net gas metering for SSTORE operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4345",
+          "lastStatus": "Final",
+          "eipTitle": "Difficulty Bomb Delay to June 2022",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2046",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Reduced gas cost for static calls made to precompiles",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2315",
+          "lastStatus": "Draft",
+          "eipTitle": "Simple Subroutines for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1057",
+          "lastStatus": "Stagnant",
+          "eipTitle": "ProgPoW, a Programmatic Proof-of-Work",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2124",
+          "lastStatus": "Final",
+          "eipTitle": "Fork identifier for chain compatibility checks",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "3382",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Hardcoded Block Gas Limit",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "969",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Modifications to ethash to invalidate existing dedicated hardware implementations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3300",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Phase out refunds",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2803",
+          "lastStatus": "Review",
+          "eipTitle": "Rich Transactions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3521",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Reduce access list cost",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3091",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Block Explorer API Routes",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2003",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EVMC modules for implementations of precompiled contracts",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "233",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Formal process of hard forks",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2539",
+          "lastStatus": "Stagnant",
+          "eipTitle": "BLS12-377 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1559",
+          "lastStatus": "Final",
+          "eipTitle": "Fee market change for ETH 1.0 chain",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1459",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Node Discovery via DNS",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "1985",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Sane limits for certain EVM parameters",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4488",
+          "lastStatus": "Draft",
+          "eipTitle": "Transaction calldata gas cost reduction with total calldata limit",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1482",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Define a maximum block timestamp drift",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2780",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Reduce intrinsic transaction gas",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3534",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Restricted Chain Context Type Transactions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2982",
+          "lastStatus": "Last Call",
+          "eipTitle": "Serenity Phase 0",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "4396",
+          "lastStatus": "Draft",
+          "eipTitle": "Time-Aware Base Fee Calculation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1965",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Method to check if a chainID is valid at a specific block Number",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1109",
+          "lastStatus": "Stagnant",
+          "eipTitle": "PRECOMPILEDCALL opcode (Remove CALL costs for precompiled contracts)",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3045",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Adds `baseFee` to `eth_getUncleByBlockHashAndIndex`",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3336",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Paged memory allocation for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3709",
+          "lastStatus": "Draft",
+          "eipTitle": "Remove Support for Type 1 Transactions",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1895",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Support for an Elliptic Curve Cycle",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3238",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Difficulty Bomb Delay to Q2/2022",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3338",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Limit account nonce to 2^52",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3529",
+          "lastStatus": "Final",
+          "eipTitle": "Reduction in refunds",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "210",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Blockhash refactoring",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3046",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Adds `baseFee` to `eth_getUncleByBlockNumberAndIndex`",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3143",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Increase block rewards to 5 ETH",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2831",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Transaction Replacement Message Type",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2565",
+          "lastStatus": "Final",
+          "eipTitle": "ModExp Gas Cost",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2930",
+          "lastStatus": "Final",
+          "eipTitle": "Optional access lists",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2681",
+          "lastStatus": "Final",
+          "eipTitle": "Limit account nonce to 2^64-1",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2026",
+          "lastStatus": "Stagnant",
+          "eipTitle": "State Rent H - Fixed Prepayment for accounts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3436",
+          "lastStatus": "Review",
+          "eipTitle": "Expanded Clique Block Choice Rule",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "3085",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Wallet Add Ethereum Chain RPC Method (`wallet_addEthereumChain`)",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "663",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Unlimited SWAP and DUP instructions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "86",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Abstraction of transaction origin and signature",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1474",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Remote procedure call specification",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "868",
+          "lastStatus": "Final",
+          "eipTitle": "Node Discovery v4 ENR Extension",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "1015",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Configurable On Chain Issuance",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2378",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EIPs Eligible for Inclusion",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "1901",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Add OpenRPC Service Discovery To JSON-RPC Services",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2972",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Wrapped Legacy Transactions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2330",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EXTSLOAD opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1829",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Precompile for Elliptic Curve Linear Combinations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2069",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Recommendation for using YAML ABI in ERCs/EIPs",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "2228",
+          "lastStatus": "Final",
+          "eipTitle": "Canonicalize the name of network ID 1 and chain ID 1",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "4444",
+          "lastStatus": "Draft",
+          "eipTitle": "Bound Historical Data in Execution Clients",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "3337",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Frame pointer support for memory load and store operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3520",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Transaction Destination Opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1102",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Opt-in account exposure",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1352",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Specify restricted address range for precompiles/system contracts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2718",
+          "lastStatus": "Final",
+          "eipTitle": "Typed Transaction Envelope",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2566",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Human Readable Parameters for Contract Function Execution",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2542",
+          "lastStatus": "Stagnant",
+          "eipTitle": "New opcodes TXGASLIMIT and CALLGASLIMIT",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1227",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Defuse Difficulty Bomb and Reset Block Reward",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "107",
+          "lastStatus": "Stagnant",
+          "eipTitle": "safe \"eth_sendTransaction\" authorization via html popup",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3675",
+          "lastStatus": "Draft",
+          "eipTitle": "Upgrade consensus to Proof-of-Stake",
+          "eipCategory": "Core"
+        }
+      ],
+      "year": 2021,
+      "repo": "eip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "2976",
+          "lastStatus": "Final",
+          "eipTitle": "'Typed Transactions over Gossip'",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "3014",
+          "lastStatus": "Stagnant",
+          "eipTitle": "eth_symbol JSON-RPC method",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "5027",
+          "lastStatus": "Draft",
+          "eipTitle": "Remove the limit on contract code size",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3607",
+          "lastStatus": "Final",
+          "eipTitle": "Reject transactions from senders with deployed code",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5003",
+          "lastStatus": "Draft",
+          "eipTitle": "Insert Code into EOAs with AUTHUSURP",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5749",
+          "lastStatus": "Last Call",
+          "eipTitle": "The 'window.evmproviders' object",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "5806",
+          "lastStatus": "Draft",
+          "eipTitle": "Delegate transaction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5920",
+          "lastStatus": "Draft",
+          "eipTitle": "PAY opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5656",
+          "lastStatus": "Draft",
+          "eipTitle": "Memory copying instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5450",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - Stack Validation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4844",
+          "lastStatus": "Draft",
+          "eipTitle": "Shard Blob Transactions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5283",
+          "lastStatus": "Draft",
+          "eipTitle": "Semaphore for Reentrancy Protection",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5345",
+          "lastStatus": "Draft",
+          "eipTitle": "Silent Signing Extension for JSON-RPC",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "5793",
+          "lastStatus": "Draft",
+          "eipTitle": "eth/68 - Add tx type to tx announcement",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "3690",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EOF - JUMPDEST Table",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5133",
+          "lastStatus": "Final",
+          "eipTitle": "Delaying Difficulty Bomb to mid-September 2022",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4762",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Statelessness gas cost changes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2803",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Rich Transactions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6049",
+          "lastStatus": "Final",
+          "eipTitle": "Deprecate SELFDESTRUCT",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "712",
+          "lastStatus": "Final",
+          "eipTitle": "Typed structured data hashing and signing",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1898",
+          "lastStatus": "Draft",
+          "eipTitle": "Add `blockHash` to JSON-RPC methods which accept a default block parameter.",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2481",
+          "lastStatus": "Final",
+          "eipTitle": "\"eth/66: request identifier\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "2677",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Limit size of `initcode`",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3074",
+          "lastStatus": "Stagnant",
+          "eipTitle": "AUTH and AUTHCALL opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6046",
+          "lastStatus": "Draft",
+          "eipTitle": "Replace SELFDESTRUCT with DEACTIVATE",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4938",
+          "lastStatus": "Draft",
+          "eipTitle": "\"eth/67: Removal of GetNodeData\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "4788",
+          "lastStatus": "Draft",
+          "eipTitle": "Beacon state root in the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5593",
+          "lastStatus": "Draft",
+          "eipTitle": "Restrict Ethereum Provider API Injection",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "4803",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Limit transaction gas to a maximum of 2^63-1",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5792",
+          "lastStatus": "Draft",
+          "eipTitle": "Wallet Function Call API",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "4200",
+          "lastStatus": "Review",
+          "eipTitle": "Static relative jumps",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5988",
+          "lastStatus": "Draft",
+          "eipTitle": "Add Poseidon hash function precompile",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2364",
+          "lastStatus": "Final",
+          "eipTitle": "\"eth/64: forkid-extended protocol handshake\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "5757",
+          "lastStatus": "Final",
+          "eipTitle": "Process for Approving External Resources",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "4863",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Beacon chain push withdrawals",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1153",
+          "lastStatus": "Last Call",
+          "eipTitle": "Transient storage opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5081",
+          "lastStatus": "Draft",
+          "eipTitle": "Expirable Trainsaction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2464",
+          "lastStatus": "Final",
+          "eipTitle": "\"eth/65: transaction announcements and retrievals\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "4399",
+          "lastStatus": "Final",
+          "eipTitle": "Supplant DIFFICULTY opcode with PREVRANDAO",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3756",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Gas Limit Cap",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3978",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Gas refunds on reverts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5022",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Increase price of SSTORE from zero to non-zero to 40k gas",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5000",
+          "lastStatus": "Draft",
+          "eipTitle": "MULDIV instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3651",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Warm COINBASE",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4758",
+          "lastStatus": "Review",
+          "eipTitle": "Deactivate SELFDESTRUCT",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3326",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Wallet Switch Ethereum Chain RPC Method (`wallet_switchEthereumChain`)",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2315",
+          "lastStatus": "Review",
+          "eipTitle": "Simple Subroutines for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2330",
+          "lastStatus": "Draft",
+          "eipTitle": "EXTSLOAD opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5065",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Instruction for transferring ether",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3675",
+          "lastStatus": "Final",
+          "eipTitle": "Upgrade consensus to Proof-of-Stake",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6051",
+          "lastStatus": "Draft",
+          "eipTitle": "Private Key Encapsulation",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "5069",
+          "lastStatus": "Living",
+          "eipTitle": "EIP Editor Handbook",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "6110",
+          "lastStatus": "Draft",
+          "eipTitle": "Supply validator deposits on chain",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2982",
+          "lastStatus": "Final",
+          "eipTitle": "Serenity Phase 0",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "4573",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Procedures for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4760",
+          "lastStatus": "Stagnant",
+          "eipTitle": "SELFDESTRUCT bomb",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4736",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Consensus Layer Withdrawal Protection",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3779",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Safer Control Flow for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4396",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Time-Aware Base Fee Calculation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1459",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Node Discovery via DNS",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "4750",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - Functions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6206",
+          "lastStatus": "Draft",
+          "eipTitle": "EOF - JUMPF instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3436",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Expanded Clique Block Choice Rule",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3709",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Remove Support for Type 1 Transactions",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "4895",
+          "lastStatus": "Review",
+          "eipTitle": "Beacon chain push withdrawals as operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4488",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Transaction calldata gas cost reduction with total calldata limit",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4881",
+          "lastStatus": "Draft",
+          "eipTitle": "Deposit Contract Snapshot Interface",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "663",
+          "lastStatus": "Review",
+          "eipTitle": "Unlimited SWAP and DUP instructions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5478",
+          "lastStatus": "Draft",
+          "eipTitle": "CREATE2COPY Opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2294",
+          "lastStatus": "Review",
+          "eipTitle": "Explicit bound to Chain ID size",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4747",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Simplify EIP-161",
+          "eipCategory": "Core"
+        }
+      ],
+      "year": 2022,
+      "repo": "eip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "7441",
+          "lastStatus": "Draft",
+          "eipTitle": "Upgrade block proposer election to Whisk",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7514",
+          "lastStatus": "Review",
+          "eipTitle": "Add Max Epoch Churn Limit",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2294",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Explicit bound to Chain ID size",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7516",
+          "lastStatus": "Review",
+          "eipTitle": "BLOBBASEFEE opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2677",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Limit size of `initcode`",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5081",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Expirable Trainsaction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6811",
+          "lastStatus": "Stagnant",
+          "eipTitle": "To The Moon—10 Minute Blocks",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7480",
+          "lastStatus": "Draft",
+          "eipTitle": "EOF - Data section access instructions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3651",
+          "lastStatus": "Final",
+          "eipTitle": "Warm COINBASE",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4881",
+          "lastStatus": "Final",
+          "eipTitle": "Deposit Contract Snapshot Interface",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "4938",
+          "lastStatus": "Stagnant",
+          "eipTitle": "\"eth/67 - Removal of GetNodeData\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "7503",
+          "lastStatus": "Review",
+          "eipTitle": "Zero-Knowledge Wormholes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4758",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Deactivate SELFDESTRUCT",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5793",
+          "lastStatus": "Review",
+          "eipTitle": "eth/68 - Add tx type to tx announcement",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "7377",
+          "lastStatus": "Draft",
+          "eipTitle": "Migration Transaction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5792",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Wallet Function Call API",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3074",
+          "lastStatus": "Review",
+          "eipTitle": "AUTH and AUTHCALL opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6465",
+          "lastStatus": "Draft",
+          "eipTitle": "SSZ withdrawals root",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6051",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Private Key Encapsulation",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "4788",
+          "lastStatus": "Review",
+          "eipTitle": "Beacon block root in the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4444",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Bound Historical Data in Execution Clients",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "5988",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Add Poseidon hash function precompile",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6963",
+          "lastStatus": "Final",
+          "eipTitle": "Multi Injected Provider Discovery",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7519",
+          "lastStatus": "Draft",
+          "eipTitle": "Atomic Storage Operations SCREDIT and SDEBIT",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1418",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Blockchain Storage Rent Payment",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6810",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Ex Post Facto Cascading Revert",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3860",
+          "lastStatus": "Final",
+          "eipTitle": "Limit and meter initcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7039",
+          "lastStatus": "Draft",
+          "eipTitle": "Scheme-Handler Discovery Option for Wallets",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7547",
+          "lastStatus": "Draft",
+          "eipTitle": "Inclusion lists",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6888",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Math checking in EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3026",
+          "lastStatus": "Draft",
+          "eipTitle": "BW6-761 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6404",
+          "lastStatus": "Draft",
+          "eipTitle": "SSZ transactions root",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6953",
+          "lastStatus": "Last Call",
+          "eipTitle": "Network Upgrade Activation Triggers",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "747",
+          "lastStatus": "Final",
+          "eipTitle": "wallet_watchAsset RPC Method",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2255",
+          "lastStatus": "Final",
+          "eipTitle": "Wallet Permissions System",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "1898",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Add `blockHash` to defaultBlock methods",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "6914",
+          "lastStatus": "Draft",
+          "eipTitle": "Reuse Withdrawn Validator Indices",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7568",
+          "lastStatus": "Draft",
+          "eipTitle": "Hardfork Meta Backfill - Berlin to Shapella",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "2315",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Simple Subroutines for the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2015",
+          "lastStatus": "Review",
+          "eipTitle": "Wallet Update Ethereum Chain RPC Method (`wallet_updateEthereumChain`)",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "6122",
+          "lastStatus": "Last Call",
+          "eipTitle": "Forkid checks based on timestamps",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "6466",
+          "lastStatus": "Draft",
+          "eipTitle": "SSZ Receipts Root",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6690",
+          "lastStatus": "Draft",
+          "eipTitle": "EVM Modular Arithmetic Extensions (EVMMAX)",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7542",
+          "lastStatus": "Draft",
+          "eipTitle": "eth/69 - available-blocks-extended protocol",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "5593",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Restrict Ethereum Provider API Injection",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3855",
+          "lastStatus": "Final",
+          "eipTitle": "PUSH0 instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5000",
+          "lastStatus": "Stagnant",
+          "eipTitle": "MULDIV instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5283",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Semaphore for Reentrancy Protection",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1459",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Node Discovery via DNS",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "3455",
+          "lastStatus": "Stagnant",
+          "eipTitle": "SUDO Opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4895",
+          "lastStatus": "Final",
+          "eipTitle": "Beacon chain push withdrawals as operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6190",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Verkle-compatible SELFDESTRUCT",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6916",
+          "lastStatus": "Review",
+          "eipTitle": "Automatically Reset Tesnet",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6780",
+          "lastStatus": "Review",
+          "eipTitle": "SELFDESTRUCT only in same transaction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5920",
+          "lastStatus": "Review",
+          "eipTitle": "PAY opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4736",
+          "lastStatus": "Final",
+          "eipTitle": "Consensus Layer Withdrawal Protection",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "4520",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Multi-byte opcodes prefixed by EB and EC.",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6800",
+          "lastStatus": "Draft",
+          "eipTitle": "Ethereum state using a unified verkle tree",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5450",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - Stack Validation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7069",
+          "lastStatus": "Draft",
+          "eipTitle": "Revamped CALL instructions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5656",
+          "lastStatus": "Review",
+          "eipTitle": "Memory copying instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7199",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Linter Scope",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7251",
+          "lastStatus": "Draft",
+          "eipTitle": "Increase the MAX_EFFECTIVE_BALANCE",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6475",
+          "lastStatus": "Draft",
+          "eipTitle": "SSZ Optional",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6913",
+          "lastStatus": "Stagnant",
+          "eipTitle": "SETCODE instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5478",
+          "lastStatus": "Stagnant",
+          "eipTitle": "CREATE2COPY Opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6493",
+          "lastStatus": "Review",
+          "eipTitle": "SSZ Transaction Signature Scheme",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6873",
+          "lastStatus": "Draft",
+          "eipTitle": "Preimage retention",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3091",
+          "lastStatus": "Draft",
+          "eipTitle": "Block Explorer API Routes",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "6968",
+          "lastStatus": "Draft",
+          "eipTitle": "Contract Secured Revenue on an EVM based L2",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "684",
+          "lastStatus": "Final",
+          "eipTitle": "Revert creation in case of collision",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5345",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Silent Signing Extension for JSON-RPC",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "5027",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Remove the limit on contract code size",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6189",
+          "lastStatus": "Review",
+          "eipTitle": "Alias Contracts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7002",
+          "lastStatus": "Draft",
+          "eipTitle": "Execution layer triggerable exits",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7329",
+          "lastStatus": "Final",
+          "eipTitle": "ERC/EIP Repository split",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7378",
+          "lastStatus": "Draft",
+          "eipTitle": "Add time-weighted averaging to the base fee",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7545",
+          "lastStatus": "Draft",
+          "eipTitle": "Verkle proof verification precompile",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4844",
+          "lastStatus": "Review",
+          "eipTitle": "Shard Blob Transactions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7044",
+          "lastStatus": "Review",
+          "eipTitle": "Perpetually Valid Signed Voluntary Exits",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7549",
+          "lastStatus": "Draft",
+          "eipTitle": "Move committee index outside Attestation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5003",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Insert Code into EOAs with AUTHUSURP",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6789",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Rename gas to mana",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2330",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EXTSLOAD opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6988",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Elected block proposer has not been slashed",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3788",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Strict enforcement of chainId",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6188",
+          "lastStatus": "Review",
+          "eipTitle": "Nonce Cap",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7495",
+          "lastStatus": "Review",
+          "eipTitle": "SSZ PartialContainer",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3085",
+          "lastStatus": "Review",
+          "eipTitle": "Wallet Add Ethereum Chain RPC Method (`wallet_addEthereumChain`)",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7045",
+          "lastStatus": "Review",
+          "eipTitle": "Increase max attestation inclusion slot",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5749",
+          "lastStatus": "Final",
+          "eipTitle": "The 'window.evmproviders' object",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2539",
+          "lastStatus": "Draft",
+          "eipTitle": "BLS12-377 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7523",
+          "lastStatus": "Draft",
+          "eipTitle": "Empty accounts deprecation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7569",
+          "lastStatus": "Review",
+          "eipTitle": "Hardfork Meta - Dencun",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7266",
+          "lastStatus": "Draft",
+          "eipTitle": "Remove BLAKE2 compression precompile",
+          "eipCategory": "Core"
+        }
+      ],
+      "year": 2023,
+      "repo": "eip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "7514",
+          "lastStatus": "Final",
+          "eipTitle": "Add Max Epoch Churn Limit",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7542",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "eth/70 - available-blocks-extended protocol",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "2537",
+          "lastStatus": "Review",
+          "eipTitle": "Precompile for BLS12-381 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7039",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Scheme-Handler Discovery Option for Wallets",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7480",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - Data section access instructions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7706",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Separate gas type for calldata",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7701",
+          "lastStatus": "Draft",
+          "eipTitle": "Native Account Abstraction with EOF",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5793",
+          "lastStatus": "Final",
+          "eipTitle": "eth/68 - Add tx type to tx announcement",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "7782",
+          "lastStatus": "Draft",
+          "eipTitle": "Reduce Slot Time for Lower Peak Bandwidth",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7612",
+          "lastStatus": "Draft",
+          "eipTitle": "Verkle state transition via an overlay tree",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7637",
+          "lastStatus": "Review",
+          "eipTitle": "Optimize EOA EXTCODEHASH",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7620",
+          "lastStatus": "Review",
+          "eipTitle": "EOF Contract Creation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7805",
+          "lastStatus": "Draft",
+          "eipTitle": "Fork-choice enforced Inclusion Lists (FOCIL)",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7843",
+          "lastStatus": "Draft",
+          "eipTitle": "SLOT precompile",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6188",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Nonce Cap",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5792",
+          "lastStatus": "Review",
+          "eipTitle": "Wallet Call API",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "4200",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - Static relative jumps",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7688",
+          "lastStatus": "Review",
+          "eipTitle": "Forward compatible consensus data structures",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7783",
+          "lastStatus": "Draft",
+          "eipTitle": "Add Controlled Gas Limit Increase Strategy",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "7756",
+          "lastStatus": "Draft",
+          "eipTitle": "EOF/EVM Trace Specification",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7804",
+          "lastStatus": "Draft",
+          "eipTitle": "Withdrawal Credential Update Request",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4803",
+          "lastStatus": "Review",
+          "eipTitle": "Limit transaction gas to a maximum of 2^63-1",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7547",
+          "lastStatus": "Review",
+          "eipTitle": "Inclusion lists",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2294",
+          "lastStatus": "Review",
+          "eipTitle": "Explicit bound to Chain ID size",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "4938",
+          "lastStatus": "Final",
+          "eipTitle": "\"eth/67 - Removal of GetNodeData\"",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "7666",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EVM-ify the identity precompile",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7523",
+          "lastStatus": "Last Call",
+          "eipTitle": "Empty accounts deprecation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7707",
+          "lastStatus": "Draft",
+          "eipTitle": "Incentivize Access List Provisioning",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7819",
+          "lastStatus": "Draft",
+          "eipTitle": "Create delegate",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7519",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Atomic Storage Operations SCREDIT and SDEBIT",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7664",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Access-Key opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7657",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Sync committee slashings",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7742",
+          "lastStatus": "Review",
+          "eipTitle": "Uncouple blob count between CL and EL",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7658",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Light client data backfill",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3026",
+          "lastStatus": "Stagnant",
+          "eipTitle": "BW6-761 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7723",
+          "lastStatus": "Review",
+          "eipTitle": "Network Upgrade Inclusion Stages",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7377",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Migration Transaction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6888",
+          "lastStatus": "Draft",
+          "eipTitle": "Math checking in EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7543",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EVM arbitrary precision decimal math",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7623",
+          "lastStatus": "Review",
+          "eipTitle": "Increase calldata cost",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7691",
+          "lastStatus": "Review",
+          "eipTitle": "Blob throughput increase",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7801",
+          "lastStatus": "Draft",
+          "eipTitle": "eth/70 - Sharded Blocks Protocol",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "4788",
+          "lastStatus": "Final",
+          "eipTitle": "Beacon block root in the EVM",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7834",
+          "lastStatus": "Draft",
+          "eipTitle": "Separate Metadata Section for EOF",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7768",
+          "lastStatus": "Draft",
+          "eipTitle": "No-Ether transactions with free-for-all tips",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7044",
+          "lastStatus": "Last Call",
+          "eipTitle": "Perpetually Valid Signed Voluntary Exits",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7610",
+          "lastStatus": "Last Call",
+          "eipTitle": "Revert creation in case of non-empty storage",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7692",
+          "lastStatus": "Review",
+          "eipTitle": "EVM Object Format (EOFv1) Meta",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7549",
+          "lastStatus": "Review",
+          "eipTitle": "Move committee index outside Attestation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7713",
+          "lastStatus": "Draft",
+          "eipTitle": "Box type for EIP-712 messages",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7784",
+          "lastStatus": "Review",
+          "eipTitle": "GETCONTRACT opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7639",
+          "lastStatus": "Draft",
+          "eipTitle": "Cease serving history before PoS",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "7686",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Linear EVM memory limits",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3540",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - EVM Object Format v1",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7833",
+          "lastStatus": "Draft",
+          "eipTitle": "Scheduled function calls",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7587",
+          "lastStatus": "Final",
+          "eipTitle": "Reserve Precompile Address Range for RIPs",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7643",
+          "lastStatus": "Stagnant",
+          "eipTitle": "History accumulator for pre-PoS data",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7545",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Verkle proof verification precompile",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7676",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EOF - Prepare for Address Space Extension",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3074",
+          "lastStatus": "Stagnant",
+          "eipTitle": "AUTH and AUTHCALL opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7709",
+          "lastStatus": "Draft",
+          "eipTitle": "Read BLOCKHASH from storage and update cost",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7675",
+          "lastStatus": "Review",
+          "eipTitle": "Retroactively Included EIPs",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "3155",
+          "lastStatus": "Review",
+          "eipTitle": "EVM trace specification",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3085",
+          "lastStatus": "Stagnant",
+          "eipTitle": "wallet_addEthereumChain RPC Method",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "2935",
+          "lastStatus": "Review",
+          "eipTitle": "Serve historical block hashes from state",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7823",
+          "lastStatus": "Draft",
+          "eipTitle": "Set upper bounds for MODEXP",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6789",
+          "lastStatus": "Draft",
+          "eipTitle": "Rename gas to mana",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7708",
+          "lastStatus": "Draft",
+          "eipTitle": "ETH transfers emit a log",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "1153",
+          "lastStatus": "Final",
+          "eipTitle": "Transient storage opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7807",
+          "lastStatus": "Draft",
+          "eipTitle": "SSZ execution blocks",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7748",
+          "lastStatus": "Draft",
+          "eipTitle": "State conversion to Verkle Tree",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7705",
+          "lastStatus": "Stagnant",
+          "eipTitle": "NONREENTRANT and REENTRANT opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7668",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Remove bloom filters",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5920",
+          "lastStatus": "Stagnant",
+          "eipTitle": "PAY opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7778",
+          "lastStatus": "Draft",
+          "eipTitle": "Prevent Block Gas Smuggling",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7607",
+          "lastStatus": "Draft",
+          "eipTitle": "Hardfork Meta - Osaka",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7698",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - Creation transaction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7642",
+          "lastStatus": "Stagnant",
+          "eipTitle": "eth/69 - Drop pre-merge fields",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "7650",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Programmable access lists",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7266",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Remove BLAKE2 compression precompile",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3102",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Binary trie structure",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7569",
+          "lastStatus": "Final",
+          "eipTitle": "Hardfork Meta - Dencun",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7503",
+          "lastStatus": "Draft",
+          "eipTitle": "Zero-Knowledge Wormholes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7702",
+          "lastStatus": "Review",
+          "eipTitle": "Set EOA account code for one transaction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7808",
+          "lastStatus": "Review",
+          "eipTitle": "Reserve Tx-Type Range for RIPs",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7045",
+          "lastStatus": "Final",
+          "eipTitle": "Increase max attestation inclusion slot",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7761",
+          "lastStatus": "Draft",
+          "eipTitle": "HASCODE instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7591",
+          "lastStatus": "Draft",
+          "eipTitle": "BLS signed transactions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7002",
+          "lastStatus": "Review",
+          "eipTitle": "Execution layer triggerable withdrawals",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7069",
+          "lastStatus": "Review",
+          "eipTitle": "Revamped CALL instructions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7516",
+          "lastStatus": "Final",
+          "eipTitle": "BLOBBASEFEE instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4844",
+          "lastStatus": "Final",
+          "eipTitle": "Shard Blob Transactions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7790",
+          "lastStatus": "Draft",
+          "eipTitle": "Controlled Gas Limit Increase Guidelines",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "7775",
+          "lastStatus": "Draft",
+          "eipTitle": "BURN opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7736",
+          "lastStatus": "Draft",
+          "eipTitle": "Leaf-level state expiry in verkle trees",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7441",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Upgrade block proposer election to Whisk",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7788",
+          "lastStatus": "Draft",
+          "eipTitle": "Dynamic target blob count",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6780",
+          "lastStatus": "Final",
+          "eipTitle": "SELFDESTRUCT only in same transaction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5656",
+          "lastStatus": "Final",
+          "eipTitle": "MCOPY - Memory copying instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6046",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Replace SELFDESTRUCT with DEACTIVATE",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7749",
+          "lastStatus": "Draft",
+          "eipTitle": "Add wallet_signIntendedValidatorData method",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7636",
+          "lastStatus": "Final",
+          "eipTitle": "Extension of EIP-778 for \"client\" ENR Entry",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "7762",
+          "lastStatus": "Review",
+          "eipTitle": "Increase MIN_BASE_FEE_PER_BLOB_GAS",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7797",
+          "lastStatus": "Draft",
+          "eipTitle": "Double speed for hash_tree_root",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6110",
+          "lastStatus": "Review",
+          "eipTitle": "Supply validator deposits on chain",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7378",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Add time-weighted averaging to the base fee",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6493",
+          "lastStatus": "Draft",
+          "eipTitle": "SSZ Transaction Signature Scheme",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6873",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Preimage retention",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6206",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - JUMPF and non-returning functions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7251",
+          "lastStatus": "Review",
+          "eipTitle": "Increase the MAX_EFFECTIVE_BALANCE",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7727",
+          "lastStatus": "Draft",
+          "eipTitle": "EVM Transaction Bundles",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6913",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "SETCODE instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7830",
+          "lastStatus": "Draft",
+          "eipTitle": "Contract size limit increase for EOF",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "3091",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Block Explorer API Routes",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "6475",
+          "lastStatus": "Stagnant",
+          "eipTitle": "SSZ Optional",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6916",
+          "lastStatus": "Last Call",
+          "eipTitle": "Automatically Reset Testnet",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6968",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Contract Secured Revenue on an EVM based L2",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7577",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Versioning Scheme for EIPs",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7684",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Return deposits for distinct credentials",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6914",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Reuse Withdrawn Validator Indices",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "4762",
+          "lastStatus": "Draft",
+          "eipTitle": "Statelessness gas cost changes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7609",
+          "lastStatus": "Draft",
+          "eipTitle": "Decrease base cost of TLOAD/TSTORE",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7825",
+          "lastStatus": "Draft",
+          "eipTitle": "Transaction Gas Limit Cap",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2070",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "\"Hardfork Meta: Berlin\"",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "6404",
+          "lastStatus": "Draft",
+          "eipTitle": "SSZ Transactions Root",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6465",
+          "lastStatus": "Draft",
+          "eipTitle": "SSZ Withdrawals Root",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6953",
+          "lastStatus": "Final",
+          "eipTitle": "Network Upgrade Activation Triggers",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "6189",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Alias Contracts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7667",
+          "lastStatus": "Draft",
+          "eipTitle": "Raise gas costs of hash functions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7793",
+          "lastStatus": "Draft",
+          "eipTitle": "TXINDEX precompile",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7773",
+          "lastStatus": "Draft",
+          "eipTitle": "Hardfork Meta - Amsterdam",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7645",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Alias ORIGIN to SENDER",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7600",
+          "lastStatus": "Review",
+          "eipTitle": "Hardfork Meta - Pectra",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "6122",
+          "lastStatus": "Final",
+          "eipTitle": "Forkid checks based on timestamps",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "2015",
+          "lastStatus": "Stagnant",
+          "eipTitle": "wallet_updateEthereumChain RPC Method",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7568",
+          "lastStatus": "Final",
+          "eipTitle": "Hardfork Meta Backfill - Berlin to Shapella",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "3670",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - Code Validation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7594",
+          "lastStatus": "Review",
+          "eipTitle": "PeerDAS - Peer Data Availability Sampling",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "7716",
+          "lastStatus": "Draft",
+          "eipTitle": "Anti-correlation attestation penalties",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7745",
+          "lastStatus": "Draft",
+          "eipTitle": "Two dimensional log filter data structure",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7732",
+          "lastStatus": "Draft",
+          "eipTitle": "Enshrined Proposer-Builder Separation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7792",
+          "lastStatus": "Draft",
+          "eipTitle": "Verifiable logs",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7703",
+          "lastStatus": "Draft",
+          "eipTitle": "Increase calldata cost",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7799",
+          "lastStatus": "Draft",
+          "eipTitle": "System logs",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7685",
+          "lastStatus": "Review",
+          "eipTitle": "General purpose execution layer requests",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6690",
+          "lastStatus": "Draft",
+          "eipTitle": "EVM Modular Arithmetic Extensions (EVMMAX)",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6466",
+          "lastStatus": "Draft",
+          "eipTitle": "SSZ Receipts Root",
+          "eipCategory": "Core"
+        }
+      ],
+      "year": 2024,
+      "repo": "eip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "7637",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Optimize EOA EXTCODEHASH",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7702",
+          "lastStatus": "Last Call",
+          "eipTitle": "Set EOA account code",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7707",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Incentivize Access List Provisioning",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7594",
+          "lastStatus": "Stagnant",
+          "eipTitle": "PeerDAS - Peer Data Availability Sampling",
+          "eipCategory": "Networking"
+        },
+        {
+          "eip": "2537",
+          "lastStatus": "Last Call",
+          "eipTitle": "Precompile for BLS12-381 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7547",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Inclusion lists",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2539",
+          "lastStatus": "Stagnant",
+          "eipTitle": "BLS12-377 curve operations",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7851",
+          "lastStatus": "Draft",
+          "eipTitle": "Deactivate/Reactivate a Delegated EOA's Key",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7886",
+          "lastStatus": "Draft",
+          "eipTitle": "Delayed execution",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7862",
+          "lastStatus": "Draft",
+          "eipTitle": "Delayed Execution Layer State Root",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7675",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Retroactively Included EIPs",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7791",
+          "lastStatus": "Draft",
+          "eipTitle": "GAS2ETH opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7840",
+          "lastStatus": "Last Call",
+          "eipTitle": "Add blob schedule to EL config files",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "7873",
+          "lastStatus": "Draft",
+          "eipTitle": "EOF - TXCREATE and InitcodeTransaction type",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7907",
+          "lastStatus": "Draft",
+          "eipTitle": "Meter Contract Code Size And Increase Limit",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7600",
+          "lastStatus": "Last Call",
+          "eipTitle": "Hardfork Meta - Pectra",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7623",
+          "lastStatus": "Last Call",
+          "eipTitle": "Increase calldata cost",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7716",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Anti-correlation attestation penalties",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7549",
+          "lastStatus": "Last Call",
+          "eipTitle": "Move committee index outside Attestation",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5806",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Delegate transaction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "6110",
+          "lastStatus": "Last Call",
+          "eipTitle": "Supply validator deposits on chain",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7685",
+          "lastStatus": "Last Call",
+          "eipTitle": "General purpose execution layer requests",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "2935",
+          "lastStatus": "Last Call",
+          "eipTitle": "Serve historical block hashes from state",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7863",
+          "lastStatus": "Draft",
+          "eipTitle": "Block-level Warming",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7519",
+          "lastStatus": "Draft",
+          "eipTitle": "Atomic Storage Operations SCREDIT and SDEBIT",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7691",
+          "lastStatus": "Last Call",
+          "eipTitle": "Blob throughput increase",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7872",
+          "lastStatus": "Draft",
+          "eipTitle": "Max blob flag for local builders",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "663",
+          "lastStatus": "Stagnant",
+          "eipTitle": "SWAPN, DUPN and EXCHANGE instructions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7877",
+          "lastStatus": "Draft",
+          "eipTitle": "Enhanced RETURN opcodes",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "5920",
+          "lastStatus": "Draft",
+          "eipTitle": "PAY opcode",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7002",
+          "lastStatus": "Last Call",
+          "eipTitle": "Execution layer triggerable withdrawals",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7591",
+          "lastStatus": "Stagnant",
+          "eipTitle": "BLS signed transactions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7736",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Leaf-level state expiry in verkle trees",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7870",
+          "lastStatus": "Draft",
+          "eipTitle": "Hardware and Bandwidth Recommendations",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "4750",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - Functions",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7609",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Decrease base cost of TLOAD/TSTORE",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7251",
+          "lastStatus": "Last Call",
+          "eipTitle": "Increase the MAX_EFFECTIVE_BALANCE",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7830",
+          "lastStatus": "Review",
+          "eipTitle": "Contract size limit increase for EOF",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7867",
+          "lastStatus": "Draft",
+          "eipTitle": "Flow Control Wallet Call Capability",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7727",
+          "lastStatus": "Stagnant",
+          "eipTitle": "EVM Transaction Bundles",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7864",
+          "lastStatus": "Draft",
+          "eipTitle": "Ethereum state using a unified binary tree",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7892",
+          "lastStatus": "Draft",
+          "eipTitle": "Blob Parameter Only Hardforks",
+          "eipCategory": "Informational"
+        },
+        {
+          "eip": "7880",
+          "lastStatus": "Draft",
+          "eipTitle": "EOF - EXTCODEADDRESS instruction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7723",
+          "lastStatus": "Last Call",
+          "eipTitle": "Network Upgrade Inclusion Stages",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "1898",
+          "lastStatus": "Last Call",
+          "eipTitle": "Add `blockHash` to defaultBlock methods",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3155",
+          "lastStatus": "Last Call",
+          "eipTitle": "EVM trace specification",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7823",
+          "lastStatus": "Review",
+          "eipTitle": "Set upper bounds for MODEXP",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7896",
+          "lastStatus": "Draft",
+          "eipTitle": "ABI attachment in `wallet_sendCalls`",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "3540",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - EVM Object Format v1",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7713",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Box type for EIP-712 messages",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "6789",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Rename gas to mana",
+          "eipCategory": "Interface"
+        },
+        {
+          "eip": "7692",
+          "lastStatus": "Review",
+          "eipTitle": "EVM Object Format (EOFv1) Meta",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7883",
+          "lastStatus": "Draft",
+          "eipTitle": "ModExp Gas Cost Increase",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7698",
+          "lastStatus": "Review",
+          "eipTitle": "EOF - Creation transaction",
+          "eipCategory": "Core"
+        }
+      ],
+      "year": 2025,
+      "repo": "eip"
+    }
+  ],
+  "erc": [
+    {
+      "statusChanges": [
+        {
+          "eip": "7231",
+          "lastStatus": "Last Call",
+          "eipTitle": "Identity aggregated NFT",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7517",
+          "lastStatus": "Draft",
+          "eipTitle": "Content Consent for AI/ML Data Mining",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6982",
+          "lastStatus": "Final",
+          "eipTitle": "Efficient Default Lockable Tokens",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5050",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Interactive NFTs with Modular Environments",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6123",
+          "lastStatus": "Draft",
+          "eipTitle": "Smart Derivative Contract",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6358",
+          "lastStatus": "Review",
+          "eipTitle": "Cross-Chain Token States Synchronization",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6956",
+          "lastStatus": "Review",
+          "eipTitle": "Asset-bound Non-Fungible Tokens",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7066",
+          "lastStatus": "Final",
+          "eipTitle": "Lockable Extension for ERC-721",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7548",
+          "lastStatus": "Draft",
+          "eipTitle": "Open IP Protocol built on NFTs",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7410",
+          "lastStatus": "Draft",
+          "eipTitle": "ERC-20 Update Allowance By Spender",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "223",
+          "lastStatus": "Final",
+          "eipTitle": "Token with transaction handling model",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7496",
+          "lastStatus": "Draft",
+          "eipTitle": "NFT Dynamic Traits",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "3643",
+          "lastStatus": "Final",
+          "eipTitle": "T-REX - Token for Regulated EXchanges",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7510",
+          "lastStatus": "Draft",
+          "eipTitle": "Cross-Contract Hierarchical NFT",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7540",
+          "lastStatus": "Review",
+          "eipTitle": "Asynchronous ERC-4626 Tokenized Vaults",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7521",
+          "lastStatus": "Draft",
+          "eipTitle": "General Intents for Smart Contract Wallets",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "20",
+          "lastStatus": "Final",
+          "eipTitle": "Token Standard",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7535",
+          "lastStatus": "Review",
+          "eipTitle": "Native Asset ERC-4626 Tokenized Vault",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7160",
+          "lastStatus": "Final",
+          "eipTitle": "ERC-721 Multi-Metadata Extension",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7439",
+          "lastStatus": "Last Call",
+          "eipTitle": "Prevent ticket touting",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1363",
+          "lastStatus": "Final",
+          "eipTitle": "Payable Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6860",
+          "lastStatus": "Draft",
+          "eipTitle": "Web3 URL to EVM Call Message Translation",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7513",
+          "lastStatus": "Draft",
+          "eipTitle": "Smart NFT - A Component for Intent-Centric",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7531",
+          "lastStatus": "Draft",
+          "eipTitle": "Staked ERC-721 Ownership Recognition",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "2612",
+          "lastStatus": "Final",
+          "eipTitle": "Permit Extension for EIP-20 Signed Approvals",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7529",
+          "lastStatus": "Draft",
+          "eipTitle": "Contract Discovery and eTLD+1 Association",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7417",
+          "lastStatus": "Draft",
+          "eipTitle": "Token Converter",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6120",
+          "lastStatus": "Review",
+          "eipTitle": "Universal Token Router",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7506",
+          "lastStatus": "Draft",
+          "eipTitle": "Trusted Hint Registry",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6900",
+          "lastStatus": "Draft",
+          "eipTitle": "Modular Smart Contract Accounts and Plugins",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6596",
+          "lastStatus": "Review",
+          "eipTitle": "Historical Asset Metadata JSON Schema",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "4337",
+          "lastStatus": "Draft",
+          "eipTitle": "Account Abstraction Using Alt Mempool",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7092",
+          "lastStatus": "Review",
+          "eipTitle": "Financial Bonds",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7509",
+          "lastStatus": "Draft",
+          "eipTitle": "Entity Component System",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7498",
+          "lastStatus": "Draft",
+          "eipTitle": "NFT Redeemables",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7201",
+          "lastStatus": "Final",
+          "eipTitle": "Namespaced Storage Layout",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6909",
+          "lastStatus": "Draft",
+          "eipTitle": "Minimal Multi-Token Interface",
+          "eipCategory": "ERC"
+        }
+      ],
+      "year": 2023,
+      "repo": "erc"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "7769",
+          "lastStatus": "Draft",
+          "eipTitle": "JSON-RPC API for ERC-4337",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "2135",
+          "lastStatus": "Final",
+          "eipTitle": "Consumable Interface (Tickets, etc)",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7540",
+          "lastStatus": "Final",
+          "eipTitle": "Asynchronous ERC-4626 Tokenized Vaults",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7632",
+          "lastStatus": "Draft",
+          "eipTitle": "Interfaces for Named Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7651",
+          "lastStatus": "Draft",
+          "eipTitle": "Fractionally Represented Non-Fungible Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7750",
+          "lastStatus": "Draft",
+          "eipTitle": "Decentralized Employment System",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7399",
+          "lastStatus": "Draft",
+          "eipTitle": "Flash Loans",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "2615",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Non-Fungible Token with mortgage and rental functions",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5173",
+          "lastStatus": "Draft",
+          "eipTitle": "NFT Future Rewards (nFR)",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6735",
+          "lastStatus": "Review",
+          "eipTitle": "L2 Aliasing of EVM-based Addresses",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1129",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Standardised DAPP announcements",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7627",
+          "lastStatus": "Review",
+          "eipTitle": "Secure Messaging Protocol",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7754",
+          "lastStatus": "Draft",
+          "eipTitle": "Tamperproof Web Immutable Transaction (TWIT)",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7390",
+          "lastStatus": "Draft",
+          "eipTitle": "Vanilla Options for ERC-20 Tokens",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7818",
+          "lastStatus": "Draft",
+          "eipTitle": "Expirable ERC-20",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7720",
+          "lastStatus": "Draft",
+          "eipTitle": "Deferred Token Transfer",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7744",
+          "lastStatus": "Draft",
+          "eipTitle": "Code Index",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7595",
+          "lastStatus": "Draft",
+          "eipTitle": "Collateralized NFT",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7615",
+          "lastStatus": "Draft",
+          "eipTitle": "Atomic Push-based Data Feed Among Contracts",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5216",
+          "lastStatus": "Last Call",
+          "eipTitle": "ERC-1155 Allowance Extension",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7656",
+          "lastStatus": "Last Call",
+          "eipTitle": "Generalized Token-Linked Services",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7662",
+          "lastStatus": "Draft",
+          "eipTitle": "AI Agent NFTs",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5023",
+          "lastStatus": "Final",
+          "eipTitle": "Shareable Non-Fungible Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7729",
+          "lastStatus": "Draft",
+          "eipTitle": "Token with Metadata",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5791",
+          "lastStatus": "Draft",
+          "eipTitle": "Physical Backed Tokens",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7741",
+          "lastStatus": "Draft",
+          "eipTitle": "Authorize Operator",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1077",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Gas relay for contract calls",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "3770",
+          "lastStatus": "Draft",
+          "eipTitle": "Chain-specific addresses",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7518",
+          "lastStatus": "Draft",
+          "eipTitle": "Dynamic Compliant Interop Security Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7694",
+          "lastStatus": "Draft",
+          "eipTitle": "Solana Storage Router",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7700",
+          "lastStatus": "Draft",
+          "eipTitle": "Cross-chain Storage Router Protocol",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7631",
+          "lastStatus": "Review",
+          "eipTitle": "Dual Nature Token Pair",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7760",
+          "lastStatus": "Draft",
+          "eipTitle": "Minimal Upgradeable Proxies",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7535",
+          "lastStatus": "Final",
+          "eipTitle": "Native Asset ERC-4626 Tokenized Vault",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1062",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Formalize IPFS hash into ENS(Ethereum Name Service) resolver",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6734",
+          "lastStatus": "Review",
+          "eipTitle": "L2 Token List",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7527",
+          "lastStatus": "Draft",
+          "eipTitle": "Token Bound Function Oracle AMM",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7746",
+          "lastStatus": "Review",
+          "eipTitle": "Composable Security Middleware Hooks",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7618",
+          "lastStatus": "Draft",
+          "eipTitle": "Content encoding in ERC-5219 mode Web3 URL",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7726",
+          "lastStatus": "Draft",
+          "eipTitle": "Common Quote Oracle",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7683",
+          "lastStatus": "Draft",
+          "eipTitle": "Cross Chain Intents",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "4626",
+          "lastStatus": "Final",
+          "eipTitle": "Tokenized Vaults",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7246",
+          "lastStatus": "Draft",
+          "eipTitle": "Encumber - Splitting Ownership & Guarantees",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7555",
+          "lastStatus": "Draft",
+          "eipTitle": "Single Sign-On for Account Discovery",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5115",
+          "lastStatus": "Draft",
+          "eipTitle": "SY Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1056",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Ethereum Lightweight Identity",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5252",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Account-bound Finance",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7710",
+          "lastStatus": "Draft",
+          "eipTitle": "Smart Contract Delegation",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7508",
+          "lastStatus": "Draft",
+          "eipTitle": "Dynamic On-Chain Token Attributes Repository",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5604",
+          "lastStatus": "Draft",
+          "eipTitle": "NFT Lien",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7695",
+          "lastStatus": "Draft",
+          "eipTitle": "Ownership Delegation and Context for ERC-721",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7598",
+          "lastStatus": "Draft",
+          "eipTitle": "Use contract signature for signed transfer",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7638",
+          "lastStatus": "Draft",
+          "eipTitle": "Batch Calls Encoding in SCA",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7649",
+          "lastStatus": "Draft",
+          "eipTitle": "Bonding curve-embedded liquidity for NFTs",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "777",
+          "lastStatus": "Final",
+          "eipTitle": "Token Standard",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7572",
+          "lastStatus": "Draft",
+          "eipTitle": "Contract-level metadata via `contractURI()`",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7738",
+          "lastStatus": "Draft",
+          "eipTitle": "Permissionless Script Registry",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5453",
+          "lastStatus": "Last Call",
+          "eipTitle": "Endorsement - Permit for Any Functions",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7589",
+          "lastStatus": "Draft",
+          "eipTitle": "Semi-Fungible Token Roles",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7546",
+          "lastStatus": "Draft",
+          "eipTitle": "Upgradeable Clone for Scalable Contracts",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7208",
+          "lastStatus": "Last Call",
+          "eipTitle": "On-Chain Data Containers",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7682",
+          "lastStatus": "Draft",
+          "eipTitle": "Auxiliary Funds Capability",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7776",
+          "lastStatus": "Draft",
+          "eipTitle": "Transparent Financial Statements",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1066",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Status Codes",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7562",
+          "lastStatus": "Draft",
+          "eipTitle": "Account Abstraction Validation Scope Rules",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7681",
+          "lastStatus": "Draft",
+          "eipTitle": "Dual Nature Multi Token Protocol",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7779",
+          "lastStatus": "Draft",
+          "eipTitle": "Interoperable Delegated Accounts",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7533",
+          "lastStatus": "Draft",
+          "eipTitle": "Public Cross Port",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7573",
+          "lastStatus": "Draft",
+          "eipTitle": "Conditional-upon-Transfer-Decryption for DvP",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7280",
+          "lastStatus": "Draft",
+          "eipTitle": "NFT Metadata Extension like JSON-LD",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7561",
+          "lastStatus": "Draft",
+          "eipTitle": "Simple NFT, Simplified ERC-721",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7564",
+          "lastStatus": "Draft",
+          "eipTitle": "Contract wallet management NFT",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7582",
+          "lastStatus": "Draft",
+          "eipTitle": "Modular Accounts with Delegated Validation",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7578",
+          "lastStatus": "Last Call",
+          "eipTitle": "Physical Asset Redemption",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7734",
+          "lastStatus": "Review",
+          "eipTitle": "Decentralized Identity Verification (DID)",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6538",
+          "lastStatus": "Final",
+          "eipTitle": "Stealth Meta-Address Registry",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7579",
+          "lastStatus": "Draft",
+          "eipTitle": "Minimal Modular Smart Accounts",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7425",
+          "lastStatus": "Draft",
+          "eipTitle": "Tokenized Reserve",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6224",
+          "lastStatus": "Review",
+          "eipTitle": "Contracts Dependencies Registry",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7565",
+          "lastStatus": "Draft",
+          "eipTitle": "Perpetual Contract NFTs as Collateral",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7679",
+          "lastStatus": "Draft",
+          "eipTitle": "UserOperation Builder",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6229",
+          "lastStatus": "Draft",
+          "eipTitle": "Tokenized Vaults with Lock-in Period",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "3668",
+          "lastStatus": "Final",
+          "eipTitle": "CCIP Read—Secure offchain data retrieval",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7673",
+          "lastStatus": "Draft",
+          "eipTitle": "Distinguishable base256emoji Addresses",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7566",
+          "lastStatus": "Draft",
+          "eipTitle": "Multiplayer Game Communication",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7585",
+          "lastStatus": "Draft",
+          "eipTitle": "MixHash and Public Data Storage Proofs",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7617",
+          "lastStatus": "Draft",
+          "eipTitle": "Chunk support for ERC-5219 mode in Web3 URL",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7677",
+          "lastStatus": "Review",
+          "eipTitle": "Paymaster Web Service Capability",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7524",
+          "lastStatus": "Draft",
+          "eipTitle": "PLUME Signature in Wallets",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1",
+          "lastStatus": "Living",
+          "eipTitle": "EIP Purpose and Guidelines",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7538",
+          "lastStatus": "Draft",
+          "eipTitle": "Multiplicative Tokens",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7774",
+          "lastStatus": "Draft",
+          "eipTitle": "Cache invalidation in ERC-5219 mode Web3 URL",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7628",
+          "lastStatus": "Review",
+          "eipTitle": "ERC-721 Ownership Shares Extension",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7644",
+          "lastStatus": "Draft",
+          "eipTitle": "ERC-721 Name Registry Extension",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6932",
+          "lastStatus": "Draft",
+          "eipTitle": "Subscription-Based Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7586",
+          "lastStatus": "Review",
+          "eipTitle": "Interest Rate Swaps",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7196",
+          "lastStatus": "Draft",
+          "eipTitle": "Simple token, Simplified ERC-20",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7820",
+          "lastStatus": "Review",
+          "eipTitle": "Access Control Registry",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7580",
+          "lastStatus": "Draft",
+          "eipTitle": "Advertisement Tracking Interface",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7613",
+          "lastStatus": "Draft",
+          "eipTitle": "Puppet Proxy Contract",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "3448",
+          "lastStatus": "Final",
+          "eipTitle": "MetaProxy Standard",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7603",
+          "lastStatus": "Draft",
+          "eipTitle": "ERC-1155 Multi-Asset extension",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7766",
+          "lastStatus": "Draft",
+          "eipTitle": "Signature Aggregation for ERC-4337",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6105",
+          "lastStatus": "Final",
+          "eipTitle": "No Intermediary NFT Trading Protocol",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7417",
+          "lastStatus": "Review",
+          "eipTitle": "Token Converter",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7588",
+          "lastStatus": "Final",
+          "eipTitle": "Blob Transactions Metadata JSON Schema",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "4361",
+          "lastStatus": "Review",
+          "eipTitle": "Sign-In with Ethereum",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5521",
+          "lastStatus": "Final",
+          "eipTitle": "Referable NFT",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "838",
+          "lastStatus": "Draft",
+          "eipTitle": "ABI specification for REVERT reason string",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7722",
+          "lastStatus": "Draft",
+          "eipTitle": "Opaque Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7821",
+          "lastStatus": "Draft",
+          "eipTitle": "Minimal Batch Executor Interface",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5625",
+          "lastStatus": "Final",
+          "eipTitle": "NFT Metadata JSON Schema dStorage Extension",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7794",
+          "lastStatus": "Draft",
+          "eipTitle": "Grant Registry",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "4527",
+          "lastStatus": "Stagnant",
+          "eipTitle": "QR Code transmission protocol for wallets",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7796",
+          "lastStatus": "Draft",
+          "eipTitle": "Conditional send transaction RPC",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5585",
+          "lastStatus": "Final",
+          "eipTitle": "ERC-721 NFT Authorization",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7699",
+          "lastStatus": "Draft",
+          "eipTitle": "ERC-20 Transfer Reference Extension",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7303",
+          "lastStatus": "Draft",
+          "eipTitle": "Token-Controlled Token Circulation",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5630",
+          "lastStatus": "Draft",
+          "eipTitle": "New approach for encryption / decryption",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7621",
+          "lastStatus": "Draft",
+          "eipTitle": "Basket Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7777",
+          "lastStatus": "Draft",
+          "eipTitle": "Governance for Human Robot Societies",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7780",
+          "lastStatus": "Draft",
+          "eipTitle": "Validation Module Extension for ERC-7579",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7528",
+          "lastStatus": "Final",
+          "eipTitle": "ETH (Native Asset) Address Convention",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7641",
+          "lastStatus": "Draft",
+          "eipTitle": "Intrinsic RevShare Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7629",
+          "lastStatus": "Draft",
+          "eipTitle": "ERC-20/ERC-721 Unified Token Interface",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7231",
+          "lastStatus": "Final",
+          "eipTitle": "Identity-aggregated NFT",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7604",
+          "lastStatus": "Draft",
+          "eipTitle": "ERC-1155 Permit Approvals",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7739",
+          "lastStatus": "Draft",
+          "eipTitle": "Readable Typed Signatures for Smart Accounts",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7654",
+          "lastStatus": "Draft",
+          "eipTitle": "Request Method Types",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7787",
+          "lastStatus": "Draft",
+          "eipTitle": "Soulbound Degradable Governance",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7204",
+          "lastStatus": "Draft",
+          "eipTitle": "Contract wallet management token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7531",
+          "lastStatus": "Review",
+          "eipTitle": "Staked ERC-721 Ownership Recognition",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7575",
+          "lastStatus": "Final",
+          "eipTitle": "Multi-Asset ERC-4626 Vaults",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5573",
+          "lastStatus": "Draft",
+          "eipTitle": "Sign-In with Ethereum Capabilities, ReCaps",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7484",
+          "lastStatus": "Draft",
+          "eipTitle": "Registry Extension for ERC-7579",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7786",
+          "lastStatus": "Draft",
+          "eipTitle": "Cross-Chain Messaging Gateway",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7803",
+          "lastStatus": "Draft",
+          "eipTitle": "EIP-712 Extensions for Account Abstraction",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7590",
+          "lastStatus": "Review",
+          "eipTitle": "ERC-20 Holder Extension for NFTs",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5727",
+          "lastStatus": "Draft",
+          "eipTitle": "Semi-Fungible Soulbound Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5564",
+          "lastStatus": "Final",
+          "eipTitle": "Stealth Addresses",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7597",
+          "lastStatus": "Draft",
+          "eipTitle": "Signature Validation Extension for Permit",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "2309",
+          "lastStatus": "Final",
+          "eipTitle": "ERC-721 Consecutive Transfer Extension",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6909",
+          "lastStatus": "Review",
+          "eipTitle": "Minimal Multi-Token Interface",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1081",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Standard Bounties",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "5485",
+          "lastStatus": "Draft",
+          "eipTitle": "Legitimacy, Jurisdiction and Sovereignty",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7092",
+          "lastStatus": "Final",
+          "eipTitle": "Financial Bonds",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7721",
+          "lastStatus": "Draft",
+          "eipTitle": "Lockable Extension for ERC-1155",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1078",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Universal login / signup using ENS subdomains",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7272",
+          "lastStatus": "Draft",
+          "eipTitle": "Ethereum Access Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7439",
+          "lastStatus": "Final",
+          "eipTitle": "Prevent ticket touting",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7634",
+          "lastStatus": "Draft",
+          "eipTitle": "Limited Transfer Count NFT",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7758",
+          "lastStatus": "Review",
+          "eipTitle": "Transfer With Authorization",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1046",
+          "lastStatus": "Final",
+          "eipTitle": "tokenURI Interoperability",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7432",
+          "lastStatus": "Final",
+          "eipTitle": "Non-Fungible Token Roles",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "4824",
+          "lastStatus": "Review",
+          "eipTitle": "Common Interfaces for DAOs",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7743",
+          "lastStatus": "Draft",
+          "eipTitle": "Multi-Owner Non-Fungible Tokens (MO-NFT)",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7291",
+          "lastStatus": "Draft",
+          "eipTitle": "Purpose bound money",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1328",
+          "lastStatus": "Final",
+          "eipTitle": "WalletConnect URI Format",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7007",
+          "lastStatus": "Final",
+          "eipTitle": "Verifiable AI-Generated Content Token",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "6672",
+          "lastStatus": "Final",
+          "eipTitle": "Multi-redeemable NFTs",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7015",
+          "lastStatus": "Review",
+          "eipTitle": "NFT Creator Attribution",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7087",
+          "lastStatus": "Draft",
+          "eipTitle": "MIME type for Web3 URL in Auto Mode",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7751",
+          "lastStatus": "Review",
+          "eipTitle": "Wrapping of bubbled up reverts",
+          "eipCategory": "ERC"
+        }
+      ],
+      "year": 2024,
+      "repo": "erc"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "7837",
+          "lastStatus": "Draft",
+          "eipTitle": "Diffusive Tokens",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7412",
+          "lastStatus": "Draft",
+          "eipTitle": "On-Demand Off-Chain Data Retrieval",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7887",
+          "lastStatus": "Draft",
+          "eipTitle": "Cancelation for ERC-7540 Tokenized Vaults",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7208",
+          "lastStatus": "Final",
+          "eipTitle": "On-Chain Data Containers",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7715",
+          "lastStatus": "Draft",
+          "eipTitle": "Grant Permissions from Wallets",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7884",
+          "lastStatus": "Draft",
+          "eipTitle": "Operation Router",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7820",
+          "lastStatus": "Final",
+          "eipTitle": "Access Control Registry",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7674",
+          "lastStatus": "Draft",
+          "eipTitle": "Temporary Approval Extension for ERC-20",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "2645",
+          "lastStatus": "Stagnant",
+          "eipTitle": "Hierarchical Deterministic Wallet for Layer-2",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1923",
+          "lastStatus": "Stagnant",
+          "eipTitle": "zk-SNARK Verifier Registry Standard",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7812",
+          "lastStatus": "Draft",
+          "eipTitle": "ZK Identity Registry",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "1922",
+          "lastStatus": "Stagnant",
+          "eipTitle": "zk-SNARK Verifier Standard",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7744",
+          "lastStatus": "Review",
+          "eipTitle": "Code Index",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7818",
+          "lastStatus": "Final",
+          "eipTitle": "Expirable ERC-20",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7765",
+          "lastStatus": "Draft",
+          "eipTitle": "Privileged Non-Fungible Tokens Tied To RWA",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7743",
+          "lastStatus": "Review",
+          "eipTitle": "Multi-Owner Non-Fungible Tokens (MO-NFT)",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7656",
+          "lastStatus": "Review",
+          "eipTitle": "Generalized Token-Linked Services",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7627",
+          "lastStatus": "Last Call",
+          "eipTitle": "Secure Messaging Protocol",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7734",
+          "lastStatus": "Final",
+          "eipTitle": "Decentralized Identity Verification (DID)",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7578",
+          "lastStatus": "Final",
+          "eipTitle": "Physical Asset Redemption",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7813",
+          "lastStatus": "Draft",
+          "eipTitle": "Store, Table-Based Introspectable Storage",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7856",
+          "lastStatus": "Draft",
+          "eipTitle": "Chain-Specific Payment Requests",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7897",
+          "lastStatus": "Withdrawn",
+          "eipTitle": "Wallet-Linked Services for Smart Accounts",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7777",
+          "lastStatus": "Draft",
+          "eipTitle": "Governance for Human Robot Societies",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7795",
+          "lastStatus": "Draft",
+          "eipTitle": "Wallet Call Token Capabilities",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7751",
+          "lastStatus": "Final",
+          "eipTitle": "Wrapping of bubbled up reverts",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7750",
+          "lastStatus": "Review",
+          "eipTitle": "Decentralized Employment System",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7829",
+          "lastStatus": "Draft",
+          "eipTitle": "Data Asset NFT",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "4883",
+          "lastStatus": "Draft",
+          "eipTitle": "Composable SVG NFT",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7802",
+          "lastStatus": "Draft",
+          "eipTitle": "Crosschain Token Interface",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7858",
+          "lastStatus": "Draft",
+          "eipTitle": "Expirable NFTs and SBTs",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7785",
+          "lastStatus": "Draft",
+          "eipTitle": "Onchain registration of chain identifiers",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7730",
+          "lastStatus": "Draft",
+          "eipTitle": "Structured Data Clear Signing Format",
+          "eipCategory": "ERC"
+        },
+        {
+          "eip": "7831",
+          "lastStatus": "Draft",
+          "eipTitle": "Multi-Chain Addressing",
+          "eipCategory": "ERC"
+        }
+      ],
+      "year": 2025,
+      "repo": "erc"
+    }
+  ],
+  "rip": [
+    {
+      "statusChanges": [
+        {
+          "eip": "7212",
+          "lastStatus": "Last Call",
+          "eipTitle": "Precompile for secp256r1 Curve Support",
+          "eipCategory": "Core"
+        }
+      ],
+      "year": 2023,
+      "repo": "rip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "7759",
+          "lastStatus": "Draft",
+          "eipTitle": "Layer 2 Transaction Fees",
+          "eipCategory": "RIP"
+        },
+        {
+          "eip": "7810",
+          "lastStatus": "Living",
+          "eipTitle": "RIP Purpose and Guidelines",
+          "eipCategory": "Meta"
+        },
+        {
+          "eip": "7728",
+          "lastStatus": "Draft",
+          "eipTitle": "Precompile for L1SLOAD",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7212",
+          "lastStatus": "Final",
+          "eipTitle": "Precompile for secp256r1 Curve Support",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7755",
+          "lastStatus": "Draft",
+          "eipTitle": "Cross-L2-Call",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7696",
+          "lastStatus": "Draft",
+          "eipTitle": "Precompile for generic DSM (double scalar multiplication)",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7712",
+          "lastStatus": "Draft",
+          "eipTitle": "Enable RIP-7560 transactions using a two-dimensional nonce",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7711",
+          "lastStatus": "Draft",
+          "eipTitle": "An RIP-7560 transactions bundle transaction type",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7560",
+          "lastStatus": "Draft",
+          "eipTitle": "Native Account Abstraction",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7767",
+          "lastStatus": "Draft",
+          "eipTitle": "Gas to Ether precompile",
+          "eipCategory": "Core"
+        }
+      ],
+      "year": 2024,
+      "repo": "rip"
+    },
+    {
+      "statusChanges": [
+        {
+          "eip": "7614",
+          "lastStatus": "Draft",
+          "eipTitle": "Expose call stack to contracts",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "0000",
+          "lastStatus": "undefined",
+          "eipTitle": "Native Account Abstraction RPC methods",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7859",
+          "lastStatus": "Draft",
+          "eipTitle": "Store L1 origin data and historic L2 block hashes in L2 state",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7875",
+          "lastStatus": "Draft",
+          "eipTitle": "Canonical ERC-7802 token bridge address",
+          "eipCategory": "Core"
+        },
+        {
+          "eip": "7740",
+          "lastStatus": "Draft",
+          "eipTitle": "Preinstall deterministic deployment factories",
+          "eipCategory": "RRC"
+        }
+      ],
+      "year": 2025,
+      "repo": "rip"
+    }
+  ]
+}

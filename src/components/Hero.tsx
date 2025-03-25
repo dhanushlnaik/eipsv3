@@ -53,16 +53,15 @@ const Hero = () => {
           <div className="flex flex-col gap-6 lg:gap-8 max-w-[600px]">
 
 
-            <motion.div
-              variants={slideInFromTop} className="gap-2"
-            >
-                          <Button className="p-3">
-              <SparklesIcon className="text-purple-500 h-5 w-5" />
-              <h1 className="text-sm font-medium text-purple-500">
-                Empowering Ethereum
-              </h1>
-            </Button>
-            </motion.div>
+          <motion.div variants={slideInFromTop} className="gap-2">
+  <Button className="p-3">
+    <div className="flex items-center gap-2">
+      <SparklesIcon className="text-purple-500 h-5 w-5" />
+      <h1 className="text-sm font-medium text-purple-500">Empowering Ethereum</h1>
+    </div>
+  </Button>
+</motion.div>
+
 
             <motion.h1
               variants={slideInFromLeft(0.5)}
