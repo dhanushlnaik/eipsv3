@@ -160,14 +160,14 @@ const EIPChartWrapper: React.FC<{ type: string }> = ({ type }) => {
         <>
           <div className="flex justify-between items-center mb-4">
             <Link href="/alltable">
-              <span className="text-xl font-bold text-blue-400 cursor-pointer hover:underline">
+              <span className="text-xl font-bold text-purple cursor-pointer hover:underline">
                 {type === "Total" ? `All EIPs [${data.length}]` : `${type} - [${data.length}]`}
               </span>
             </Link>
             <select
               value={chartType}
               onChange={(e) => setChartType(e.target.value)}
-              className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
+              className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-purple"
             >
               <option value="category">Category</option>
               <option value="status">Status</option>
