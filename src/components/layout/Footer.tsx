@@ -20,7 +20,7 @@ const Footer = () => {
 
       <div className="flex flex-col items-center">
       <h1 className="heading lg:max-w-[45vw]">
-  Got questions or ideas? We&apos;d <span className="text-purple">love</span> to hear from you!
+  Got questions or ideas? We&apos;d <span className="text-purpleee">love</span> to hear from you!
 </h1>
 <p className="text-white-200 md:mt-10 my-5 text-center">
   Connect with us and help drive innovation in the Ethereum proposal ecosystem.

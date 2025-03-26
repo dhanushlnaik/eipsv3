@@ -41,7 +41,18 @@ const config = {
         blue: {
           "100": "#E4ECFF",
         },
-        purple: "#CBACF9",
+        purpleee: "#CBACF9",
+        purple: {
+          100: "#EADDFC", // Very Light Purple
+          200: "#D3B8F7", // Light Purple
+          300: "#B990F5",
+          400: "#9B5DE5",
+          500: "#7A3EB5", // Primary Purple
+          600: "#5A2E91",
+          700: "#432C85",
+          800: "#321B66",
+          900: "#221043",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

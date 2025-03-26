@@ -15,7 +15,7 @@ const Clients = () => {
            className='text-[60px] text-white font-bold text-center'
            >
                Trending
-               <span className="text-purple"> EIPS</span>
+               <span className="text-purpleee"> EIPS</span>
            </motion.div>
         
        

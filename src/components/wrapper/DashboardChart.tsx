@@ -12,7 +12,7 @@ const DashboardChart = () => {
         variants={slideInFromLeft(0.5)}
         className="text-[60px] text-white font-bold mt-10 text-center mb-5"
       >
-        All <span className="text-purple">EIPs</span>
+        All <span className="text-purpleee">EIPs</span>
       </motion.div>
       <motion.div
         variants={slideInFromRight(0.5)}

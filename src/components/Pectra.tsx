@@ -4,6 +4,8 @@ import { Button } from './ui/MovingBorders'
 import { motion } from 'motion/react'
 import { cn } from '@/lib/utils'
 import { HoverEffect } from './ui/CardHover';
+import PectraCountdown from './PectraCountdown';
+
 const PectraC = () => {
   return (
            <div className="pt-20 w-full">
@@ -26,6 +28,7 @@ const PectraC = () => {
         >
             Pectra
         </div>
+        <PectraCountdown/>
       </motion.div>
 
         

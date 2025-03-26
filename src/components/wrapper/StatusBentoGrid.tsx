@@ -13,7 +13,7 @@ export default function BentoGridSecondDemo() {
         variants={slideInFromLeft(0.5)}
         className='text-[60px] text-white font-bold mt-[10px] text-center mb-[5px]'
         >
-            EIP Status <span className="text-purple">  Changes by Year </span>
+            EIP Status <span className="text-purpleee">  Changes by Year </span>
         </motion.div>
         <motion.div
         variants={slideInFromRight(0.5)}

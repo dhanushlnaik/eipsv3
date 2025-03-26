@@ -12,7 +12,7 @@ const OurTools = () => {
         variants={slideInFromLeft(0.5)}
         className='text-[60px] text-white font-bold mt-[10px] text-center mb-[5px]'
         >
-            Our <span className="text-purple">  Tools </span>
+            Our <span className="text-purpleee">  Tools </span>
         </motion.div>
         <motion.div
         variants={slideInFromRight(0.5)}

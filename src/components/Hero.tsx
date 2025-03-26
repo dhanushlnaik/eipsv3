@@ -56,8 +56,8 @@ const Hero = () => {
           <motion.div variants={slideInFromTop} className="gap-2">
   <Button className="p-3">
     <div className="flex items-center gap-2">
-      <SparklesIcon className="text-purple-500 h-5 w-5" />
-      <h1 className="text-sm font-medium text-purple-500">Empowering Ethereum</h1>
+      <SparklesIcon className="text-purpleee h-5 w-5" />
+      <h1 className="text-sm font-medium text-purpleee">Empowering Ethereum</h1>
     </div>
   </Button>
 </motion.div>
@@ -68,7 +68,7 @@ const Hero = () => {
               className="text-5xl lg:text-6xl font-bold text-white leading-tight"
             >
               Tracking Progress,{" "}
-              <span className="text-purple">
+              <span className="text-purpleee">
                 Shaping Ethereum
               </span>
             </motion.h1>

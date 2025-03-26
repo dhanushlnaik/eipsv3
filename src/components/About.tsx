@@ -18,7 +18,7 @@ const About = () => {
         >
           <div className="p-5 md:p-8 lg:p-10">
             <h1 className="heading pb-6 text-3xl md:text-4xl lg:text-5xl text-center lg:text-left">
-              What is <span className="text-purple">EIPs Insights</span>
+              What is <span className="text-purpleee">EIPs Insights</span>
             </h1>
             <p className="text-start text-base md:text-lg lg:text-xl text-white-100 font-semibold leading-relaxed">
               EIPsInsight specializes in tools designed to provide clear, visual insights into the activity of Ethereum Improvement Proposals (EIPs), Ethereum Request for Comments (ERCs), and Rollup Improvement Proposals (RIPs) over a specified period. The provided data helps track the progress and workload distribution among EIP Editors, ensuring transparency and efficiency in the proposal review process.
