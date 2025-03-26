@@ -27,13 +27,13 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({ data, category, type })
   };
 
   return (
+
+    <button  onClick={handleDownload} className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-6 py-1 text-xs bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear">
+  Download Data
+</button>
+
     
-    <button
-      onClick={handleDownload}
-      className="px-2 py-1 text-xs bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-    >
-      Download Data
-    </button>
+
   );
 };
 

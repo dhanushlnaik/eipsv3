@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -23,8 +23,13 @@ const StatBox: React.FC<StatBoxProps> = ({
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-[#1a1325] border border-[#6b46c1] hover:border-[#9f7aea] p-6 rounded-xl shadow-lg flex flex-col justify-between cursor-pointer transition duration-200"
+      whileHover={{
+        scale: 1.05,
+        borderColor: "#D6BCFA",
+        boxShadow: "0px 4px 15px rgba(159, 122, 234, 0.5)",
+      }}
+      transition={{ duration: 0.3 }}
+      className="bg-[#1a1325] border border-[#6b46c1] hover:border-[#d6bcfa] p-6 rounded-xl shadow-lg flex flex-col justify-between cursor-pointer transition-all duration-300"
     >
       <Link href={url} className="no-underline">
         <div className="flex justify-between items-center mb-3">

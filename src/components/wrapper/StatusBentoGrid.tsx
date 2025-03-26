@@ -21,7 +21,7 @@ export default function BentoGridSecondDemo() {
         >
             Graph shows the number of EIPs that transitioned into different statuses each year. 
         </motion.div>
-    <BentoGrid className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 md:auto-rows-[24rem]">
+    <BentoGrid className="max-w-8xl mx-auto grid md:grid-cols-3 gap-8 md:auto-rows-[24rem]">
         <StatusChartWrapper category="ERC" type="bar" />
       
       {/* Other Charts */}
