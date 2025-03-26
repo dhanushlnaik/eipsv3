@@ -105,7 +105,7 @@ const EIPChartWrapper: React.FC<{ type: string }> = ({ type }) => {
   const uniqueCategories = new Set(Object.keys(finalData).map((k) => k.split("-")[1]));
   const years = [...new Set(Object.keys(finalData).map((k) => k.split("-")[0]))].sort();
 
-  const colors = ["#00BFFF", "#32CD32", "#FF4500", "#8A2BE2", "#FFD700"];
+  const colors = ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF", "#FF9F40"];
 
   const seriesData = Array.from(uniqueCategories).map((category, index) => ({
     name: category,
@@ -150,12 +150,10 @@ const EIPChartWrapper: React.FC<{ type: string }> = ({ type }) => {
       },
     },
     series: seriesData,
-
   };
 
   return (
     <div className="p-4 rounded-lg shadow-md bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white h-[600px]">
-
       {isLoading ? (
         <p className="text-white">Loading...</p>
       ) : (
@@ -176,8 +174,8 @@ const EIPChartWrapper: React.FC<{ type: string }> = ({ type }) => {
             </select>
           </div>
           <div className="h-[450px] flex items-center justify-center">
-  <ReactECharts option={option} style={{ height: "100%", width: "100%" }} />
-</div>
+            <ReactECharts option={option} style={{ height: "100%", width: "100%" }} />
+          </div>
           <DateTime />
         </>
       )}
