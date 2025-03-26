@@ -20,7 +20,7 @@ interface DashboardProps {
 
 const Dashboard: React.FC<DashboardProps> = ({ allData, data }) => {
   return (
-    <div className="p-6">
+    <div className="p-6 z-20">
       {/* Title */}
       <motion.div
         variants={slideInFromLeft(0.5)}
@@ -37,7 +37,7 @@ const Dashboard: React.FC<DashboardProps> = ({ allData, data }) => {
       </motion.div>
 
       {/* Grid Layout */}
-      <div className="grid grid-cols-4 grid-rows-8 gap-6 mt-6">
+      <div className="grid grid-cols-4 gap-6 mt-6">
         {/* Meta EIPs - Spans 2 columns */}
         <div className="col-span-2">
           <StatBox
@@ -49,12 +49,17 @@ const Dashboard: React.FC<DashboardProps> = ({ allData, data }) => {
           />
         </div>
 
-        <div className="col-span-2 row-span-4">
+        <div className="col-span-2 row-span-6">
         <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="p-6 rounded-lg bg-[#1a1325] border border-[#6b46c1] hover:border-[#9f7aea] cursor-pointer"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{
+        scale: 1.05,
+        borderColor: "#D6BCFA",
+        boxShadow: "0px 4px 15px rgba(159, 122, 234, 0.5)",
+      }}
+      transition={{ duration: 0.3 }}
+            className="p-6 rounded-lg bg-[#1a1325] border border-[#6b46c1] hover:border-[#d6bcfa] cursor-pointer transition-all duration-300"
           >
             <Link href="/all">
               <h2 className="text-xl font-bold text-[#9f7aea] mb-4">
@@ -128,20 +133,101 @@ const Dashboard: React.FC<DashboardProps> = ({ allData, data }) => {
         </div>
 
         {/* Status Section - Spans all 4 columns */}
-        <div className="col-span-4">
+        <div className="col-span-2 row-span-6 z-30">
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{
+        scale: 1.05,
+        borderColor: "#D6BCFA",
+        boxShadow: "0px 4px 15px rgba(159, 122, 234, 0.5)",
+      }}
+      transition={{ duration: 0.3 }}
             className="p-6 rounded-lg bg-[#1a1325] border border-[#6b46c1] hover:border-[#9f7aea] cursor-pointer"
           >
             <Link href="/status">
-              <h2 className="text-xl font-bold text-[#9f7aea] mb-4">
+              <h2 className="text-xl font-bold text-[#9f7aea]">
                 Status - [{allData.length}]
               </h2>
             </Link>
             <DashboardDonut dataset={data} />
           </motion.div>
+        </div>
+
+        <div className="col-span-2 z-30">
+          <StatBox
+            title="Draft"
+            value={new Set(allData.filter((item) => item.status === "Draft").map((item) => item.eip)).size}
+            description="Draft EIPs are proposals still under initial consideration and open for feedback."
+            icon={<Clipboard size={20} />}
+            url="rips"
+          />
+        </div>
+        
+        <div className="col-span-1 z-30">
+          <StatBox
+            title="Review"
+            value={new Set(allData.filter((item) => item.status === "Review").map((item) => item.eip)).size}
+            description="EIPs in the Review stage are being actively discussed and evaluated by the community."
+            icon={<Clipboard size={20} />}
+            url="rips"
+          />
+        </div>
+        
+        <div className="col-span-1 z-30">
+          <StatBox
+            title="Last Call"
+            value={new Set(allData.filter((item) => item.status === "Last Call").map((item) => item.eip)).size}
+            description="Last Call EIPs are nearing finalization, with a short period for final community comments."
+            icon={<Clipboard size={20} />}
+            url="rips"
+          />
+
+          
+        </div>
+
+        <div className="col-span-1 z-30">
+          <StatBox
+            title="Final"
+            value={new Set(allData.filter((item) => item.status === "Final").map((item) => item.eip)).size}
+            description="Final EIPs have been formally accepted and implemented as part of the Ethereum protocol."
+            icon={<Clipboard size={20} />}
+            url="rips"
+          />
+        </div>
+        
+        <div className="col-span-1 z-30">
+          <StatBox
+            title="Withdrawn"
+            value={new Set(allData.filter((item) => item.status === "Withdrawn").map((item) => item.eip)).size}
+            description="Withdrawn EIPs have been removed from consideration by the author or due to lack of support."
+            icon={<Clipboard size={20} />}
+            url="rips"
+          />
+
+          
+        </div>
+
+        <div className="col-span-1 z-30">
+          <StatBox
+            title="Stagnant"
+            value={new Set(allData.filter((item) => item.status === "Stagnant").map((item) => item.eip)).size}
+            description="Stagnant EIPs are inactive and have not progressed for a prolonged period."
+            icon={<Clipboard size={20} />}
+            url="rips"
+          />
+        </div>
+        
+        <div className="col-span-1 z-30">
+          <StatBox
+            title="Living"
+            value={new Set(allData.filter((item) => item.status === "Living").map((item) => item.eip)).size}
+            description="Living EIPs are continuously updated and reflect evolving standards or documentation."
+            icon={<Clipboard size={20} />}
+            url="rips"
+          />
+
+          
         </div>
       </div>
     </div>
