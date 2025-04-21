@@ -71,6 +71,10 @@
   font-family: "Cedarville Cursive", cursive;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   * {
     @apply border-border !scroll-smooth;
@@ -142,3 +146,44 @@
   to { transform: rotate(360deg); }
 }
 
+/* styles/glass-pagination.css */
+
+.pagination {
+  @apply flex justify-center mt-4 space-x-2;
+}
+
+.page-item {
+  @apply text-white text-sm;
+}
+
+.page-link {
+  @apply bg-purple-500/30 text-white px-3 py-1 rounded-md hover:bg-purple-500/50 transition-all duration-200;
+  backdrop-filter: blur(12px) saturate(180%);
+  border: none;
+}
+
+.page-item.active .page-link {
+  @apply bg-purple-700 font-semibold;
+}
+
+/* Table filter inputs */
+.c-smart-table input[type="text"] {
+  @apply bg-white/10 text-white placeholder-purple-300 border border-purple-500 
+         rounded-md px-2 py-1 text-sm focus:outline-none focus:ring-2 
+         focus:ring-purple-400 backdrop-blur-md transition duration-300;
+}
+
+/* Header style */
+.c-smart-table thead th {
+  @apply bg-white/10 text-purple-300 font-bold text-sm uppercase tracking-wide 
+         px-4 py-3 border-b border-purple-700 backdrop-blur-md;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Sorter icon tint */
+.c-icon.c-icon-sm {
+  color: #d8b4fe !important; /* purple-300 */
+}
+
+/* Add glowing hover for pagination dots/buttons */

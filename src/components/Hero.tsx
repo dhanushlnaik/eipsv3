@@ -87,13 +87,14 @@ const Hero = () => {
           variants={slideInFromTop}
           className=" flex "
         >
-          <a href="#about">
+          <a href="#dashboard">
             <MagicButton
               title="Explore EIPS"
               icon={<FaLocationArrow />}
               position="right"
             />
           </a>
+
         </motion.div>
 
           </div>
