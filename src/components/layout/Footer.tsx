@@ -1,8 +1,8 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaLocationArrow } from 'react-icons/fa6';
 
-import { socialMedia } from "@/data";
-import MagicButton from "../ui/MagicButton";
-import Image from "next/image";
+import { socialMedia } from '@/data';
+import MagicButton from '../ui/MagicButton';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -19,12 +19,14 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col items-center">
-      <h1 className="heading lg:max-w-[45vw]">
-  Got questions or ideas? We&apos;d <span className="text-purpleee">love</span> to hear from you!
-</h1>
-<p className="text-white-200 md:mt-10 my-5 text-center">
-  Connect with us and help drive innovation in the Ethereum proposal ecosystem.
-</p>
+        <h1 className="heading lg:max-w-[45vw]">
+          Got questions or ideas? We&apos;d{' '}
+          <span className="text-purpleee">love</span> to hear from you!
+        </h1>
+        <p className="text-white-200 md:mt-10 my-5 text-center">
+          Connect with us and help drive innovation in the Ethereum proposal
+          ecosystem.
+        </p>
 
         <a href="mailto:contact@dhanushlnaik.pro">
           <MagicButton

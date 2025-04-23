@@ -1,6 +1,6 @@
-import React from "react";
-import ReactECharts from "echarts-for-react";
-import axios from "axios";
+import React from 'react';
+import ReactECharts from 'echarts-for-react';
+import axios from 'axios';
 
 // Define the data structure for each entry
 interface AuthorData {
@@ -11,66 +11,251 @@ interface AuthorData {
 
 // Original data set
 const rawData = [
-  { upgrade: "Arrow Glacier", eip: "EIP-4345", authors: ["Tim Beiko", "James Hancock", "Thomas Jay Rush"] },
-  { upgrade: "Berlin", eip: "EIP-2565", authors: ["Kelly Olson", "Sean Gulley", "Simon Peffers", "Justin Drake", "Dankrad Feist"] },
-  { upgrade: "Berlin", eip: "EIP-2929", authors: ["Vitalik Buterin", "Martin Holst Swende"] },
-  { upgrade: "Berlin", eip: "EIP-2718", authors: ["Micah Zoltu"] },
-  { upgrade: "Berlin", eip: "EIP-2930", authors: ["Vitalik Buterin", "Martin Holst Swende"] },
-  { upgrade: "Byzantium", eip: "EIP-100", authors: ["Vitalik Buterin"] },
-  { upgrade: "Byzantium", eip: "EIP-140", authors: ["Alex Beregszaszi", "Nikolai Mushegian"] },
-  { upgrade: "Byzantium", eip: "EIP-196", authors: ["Christian Reitwiessner"] },
-  { upgrade: "Byzantium", eip: "EIP-197", authors: ["Vitalik Buterin", "Christian Reitwiessner"] },
-  { upgrade: "Byzantium", eip: "EIP-198", authors: ["Vitalik Buterin"] },
-  { upgrade: "Byzantium", eip: "EIP-211", authors: ["Christian Reitwiessner"] },
-  { upgrade: "Byzantium", eip: "EIP-214", authors: ["Vitalik Buterin", "Christian Reitwiessner"] },
-  { upgrade: "Byzantium", eip: "EIP-649", authors: ["Afri Schoedon", "Vitalik Buterin"] },
-  { upgrade: "Byzantium", eip: "EIP-658", authors: ["Nick Johnson"] },
-  { upgrade: "Dencun", eip: "EIP-1153", authors: ["Alexey Akhunov", "Moody Salem"] },
-  { upgrade: "Dencun", eip: "EIP-4788", authors: ["Alex Stokes", "Ansgar Dietrichs", "Danny Ryan", "Martin Holst Swende", "lightclient"] },
-  { upgrade: "Dencun", eip: "EIP-4844", authors: ["Vitalik Buterin", "Dankrad Feist", "Diederik Loerakker", "George Kadianakis", "Matt Garnett", "Mofi Taiwo", "Ansgar Dietrichs"] },
-  { upgrade: "Dencun", eip: "EIP-5656", authors: ["Alex Beregszaszi", "Paul Dworzanski", "Jared Wasinger", "Casey Detrio", "Paweł Bylica", "Charles Cooper"] },
-  { upgrade: "Dencun", eip: "EIP-6780", authors: ["Guillaume Ballet", "Vitalik Buterin", "Dankrad Feist"] },
-  { upgrade: "Dencun", eip: "EIP-7044", authors: ["Lion"] },
-  { upgrade: "Dencun", eip: "EIP-7045", authors: ["Danny Ryan"] },
-  { upgrade: "Dencun", eip: "EIP-7514", authors: ["dapplion","Tim Beiko" ] },
-  { upgrade: "Dencun", eip: "EIP-7516", authors: ["Carl Beekhuizen"] },
-  { upgrade: "Constantinople", eip: "EIP-145", authors: ["Alex Beregszaszi", "Paweł Bylica"] },
-  { upgrade: "Constantinople", eip: "EIP-1014", authors: ["Vitalik Buterin"] },
-  { upgrade: "Constantinople", eip: "EIP-1052", authors: ["Nick Johnson", "Paweł Bylica"] },
-  { upgrade: "Constantinople", eip: "EIP-1234", authors: ["Afri Schoedon"] },
-  { upgrade: "Constantinople", eip: "EIP-1283", authors: ["Wei Tang"] },
-  { upgrade: "Gray Glacier", eip: "EIP-5133", authors: ["Tomasz Kajetan Stanczak", "Eric Marti Haynes", "Josh Klopfenstein", "Abhimanyu Nag"] },
-  { upgrade: "Homestead", eip: "EIP-2", authors: ["Vitalik Buterin"] },
-  { upgrade: "Homestead", eip: "EIP-7", authors: ["Vitalik Buterin"] },
-  { upgrade: "Homestead", eip: "EIP-8", authors: ["Felix Lange"] },
-  { upgrade: "Istanbul", eip: "EIP-152", authors: ["Tjaden Hess", "Matt Luongo", "Piotr Dyraga", "James Hancock"] },
-  { upgrade: "Istanbul", eip: "EIP-1108", authors: ["Antonio Salazar Cardozo", "Zachary Williamson"] },
-  { upgrade: "Istanbul", eip: "EIP-1344", authors: ["Richard Meissner", "Bryant Eisenbach"] },
-  { upgrade: "Istanbul", eip: "EIP-1884", authors: ["Martin Holst Swende"] },
-  { upgrade: "Istanbul", eip: "EIP-2028", authors: ["Alexey Akhunov", "Eli Ben Sasson", "Tom Brand", "Louis Guthmann", "Avihu Levy"] },
-  { upgrade: "Istanbul", eip: "EIP-2200", authors: ["Wei Tang"] },
-  { upgrade: "London", eip: "EIP-1559", authors: ["Vitalik Buterin", "Eric Conner", "Rick Dudley", "Matthew Slipper", "Ian Norden", "Abdelhamid Bakhta"] },
-  { upgrade: "London", eip: "EIP-3198", authors: ["Abdelhamid Bakhta", "Vitalik Buterin"] },
-  { upgrade: "London", eip: "EIP-3529", authors: ["Martin Holst Swende", "Vitalik Buterin"] },
-  { upgrade: "London", eip: "EIP-3541", authors: ["Alex Beregszaszi", "Paweł Bylica", "Andrei Maiboroda", "Alexey Akhunov", "Christian Reitwiessner", "Martin Holst Swende"] },
-  { upgrade: "London", eip: "EIP-3554", authors: ["James Hancock"] },
-  { upgrade: "Muir Glacier", eip: "EIP-2384", authors: ["Eric Conner"] },
-  { upgrade: "The Merge", eip: "EIP-3675", authors: ["Mikhail Kalinin", "Danny Ryan", "Vitalik Buterin"] },
-  { upgrade: "The Merge", eip: "EIP-4399", authors: ["Mikhail Kalinin", "Danny Ryan"] },
-  { upgrade: "Petersburg", eip: "EIP-145", authors: ["Alex Beregszaszi", "Paweł Bylica"] },
-  { upgrade: "Petersburg", eip: "EIP-1014", authors: ["Vitalik Buterin"] },
-  { upgrade: "Petersburg", eip: "EIP-1052", authors: ["Nick Johnson", "Paweł Bylica"] },
-  { upgrade: "Petersburg", eip: "EIP-1234", authors: ["Afri Schoedon"] },
-  { upgrade: "Shapella", eip: "EIP-3651", authors: ["William Morriss"] },
-  { upgrade: "Shapella", eip: "EIP-3855", authors: ["Alex Beregszaszi", "Hugo De la cruz", "Paweł Bylica"] },
-  { upgrade: "Shapella", eip: "EIP-3860", authors: ["Martin Holst Swende", "Paweł Bylica", "Alex Beregszaszi", "Andrei Maiboroda"] },
-  { upgrade: "Shapella", eip: "EIP-4895", authors: ["Alex Stokes", "Danny Ryan"] },
-  { upgrade: "Shapella", eip: "EIP-6049", authors: ["William Entriken"] },
-  { upgrade: "Spurious Dragon", eip: "EIP-155", authors: ["Vitalik Buterin"] },
-  { upgrade: "Spurious Dragon", eip: "EIP-160", authors: ["Vitalik Buterin"] },
-  { upgrade: "Spurious Dragon", eip: "EIP-161", authors: ["Gavin Wood"] },
-  { upgrade: "Spurious Dragon", eip: "EIP-170", authors: ["Vitalik Buterin"] },
-  { upgrade: "Tangerine Whistle", eip: "EIP-150", authors: ["Vitalik Buterin"] }
+  {
+    upgrade: 'Arrow Glacier',
+    eip: 'EIP-4345',
+    authors: ['Tim Beiko', 'James Hancock', 'Thomas Jay Rush'],
+  },
+  {
+    upgrade: 'Berlin',
+    eip: 'EIP-2565',
+    authors: [
+      'Kelly Olson',
+      'Sean Gulley',
+      'Simon Peffers',
+      'Justin Drake',
+      'Dankrad Feist',
+    ],
+  },
+  {
+    upgrade: 'Berlin',
+    eip: 'EIP-2929',
+    authors: ['Vitalik Buterin', 'Martin Holst Swende'],
+  },
+  { upgrade: 'Berlin', eip: 'EIP-2718', authors: ['Micah Zoltu'] },
+  {
+    upgrade: 'Berlin',
+    eip: 'EIP-2930',
+    authors: ['Vitalik Buterin', 'Martin Holst Swende'],
+  },
+  { upgrade: 'Byzantium', eip: 'EIP-100', authors: ['Vitalik Buterin'] },
+  {
+    upgrade: 'Byzantium',
+    eip: 'EIP-140',
+    authors: ['Alex Beregszaszi', 'Nikolai Mushegian'],
+  },
+  { upgrade: 'Byzantium', eip: 'EIP-196', authors: ['Christian Reitwiessner'] },
+  {
+    upgrade: 'Byzantium',
+    eip: 'EIP-197',
+    authors: ['Vitalik Buterin', 'Christian Reitwiessner'],
+  },
+  { upgrade: 'Byzantium', eip: 'EIP-198', authors: ['Vitalik Buterin'] },
+  { upgrade: 'Byzantium', eip: 'EIP-211', authors: ['Christian Reitwiessner'] },
+  {
+    upgrade: 'Byzantium',
+    eip: 'EIP-214',
+    authors: ['Vitalik Buterin', 'Christian Reitwiessner'],
+  },
+  {
+    upgrade: 'Byzantium',
+    eip: 'EIP-649',
+    authors: ['Afri Schoedon', 'Vitalik Buterin'],
+  },
+  { upgrade: 'Byzantium', eip: 'EIP-658', authors: ['Nick Johnson'] },
+  {
+    upgrade: 'Dencun',
+    eip: 'EIP-1153',
+    authors: ['Alexey Akhunov', 'Moody Salem'],
+  },
+  {
+    upgrade: 'Dencun',
+    eip: 'EIP-4788',
+    authors: [
+      'Alex Stokes',
+      'Ansgar Dietrichs',
+      'Danny Ryan',
+      'Martin Holst Swende',
+      'lightclient',
+    ],
+  },
+  {
+    upgrade: 'Dencun',
+    eip: 'EIP-4844',
+    authors: [
+      'Vitalik Buterin',
+      'Dankrad Feist',
+      'Diederik Loerakker',
+      'George Kadianakis',
+      'Matt Garnett',
+      'Mofi Taiwo',
+      'Ansgar Dietrichs',
+    ],
+  },
+  {
+    upgrade: 'Dencun',
+    eip: 'EIP-5656',
+    authors: [
+      'Alex Beregszaszi',
+      'Paul Dworzanski',
+      'Jared Wasinger',
+      'Casey Detrio',
+      'Paweł Bylica',
+      'Charles Cooper',
+    ],
+  },
+  {
+    upgrade: 'Dencun',
+    eip: 'EIP-6780',
+    authors: ['Guillaume Ballet', 'Vitalik Buterin', 'Dankrad Feist'],
+  },
+  { upgrade: 'Dencun', eip: 'EIP-7044', authors: ['Lion'] },
+  { upgrade: 'Dencun', eip: 'EIP-7045', authors: ['Danny Ryan'] },
+  { upgrade: 'Dencun', eip: 'EIP-7514', authors: ['dapplion', 'Tim Beiko'] },
+  { upgrade: 'Dencun', eip: 'EIP-7516', authors: ['Carl Beekhuizen'] },
+  {
+    upgrade: 'Constantinople',
+    eip: 'EIP-145',
+    authors: ['Alex Beregszaszi', 'Paweł Bylica'],
+  },
+  { upgrade: 'Constantinople', eip: 'EIP-1014', authors: ['Vitalik Buterin'] },
+  {
+    upgrade: 'Constantinople',
+    eip: 'EIP-1052',
+    authors: ['Nick Johnson', 'Paweł Bylica'],
+  },
+  { upgrade: 'Constantinople', eip: 'EIP-1234', authors: ['Afri Schoedon'] },
+  { upgrade: 'Constantinople', eip: 'EIP-1283', authors: ['Wei Tang'] },
+  {
+    upgrade: 'Gray Glacier',
+    eip: 'EIP-5133',
+    authors: [
+      'Tomasz Kajetan Stanczak',
+      'Eric Marti Haynes',
+      'Josh Klopfenstein',
+      'Abhimanyu Nag',
+    ],
+  },
+  { upgrade: 'Homestead', eip: 'EIP-2', authors: ['Vitalik Buterin'] },
+  { upgrade: 'Homestead', eip: 'EIP-7', authors: ['Vitalik Buterin'] },
+  { upgrade: 'Homestead', eip: 'EIP-8', authors: ['Felix Lange'] },
+  {
+    upgrade: 'Istanbul',
+    eip: 'EIP-152',
+    authors: ['Tjaden Hess', 'Matt Luongo', 'Piotr Dyraga', 'James Hancock'],
+  },
+  {
+    upgrade: 'Istanbul',
+    eip: 'EIP-1108',
+    authors: ['Antonio Salazar Cardozo', 'Zachary Williamson'],
+  },
+  {
+    upgrade: 'Istanbul',
+    eip: 'EIP-1344',
+    authors: ['Richard Meissner', 'Bryant Eisenbach'],
+  },
+  { upgrade: 'Istanbul', eip: 'EIP-1884', authors: ['Martin Holst Swende'] },
+  {
+    upgrade: 'Istanbul',
+    eip: 'EIP-2028',
+    authors: [
+      'Alexey Akhunov',
+      'Eli Ben Sasson',
+      'Tom Brand',
+      'Louis Guthmann',
+      'Avihu Levy',
+    ],
+  },
+  { upgrade: 'Istanbul', eip: 'EIP-2200', authors: ['Wei Tang'] },
+  {
+    upgrade: 'London',
+    eip: 'EIP-1559',
+    authors: [
+      'Vitalik Buterin',
+      'Eric Conner',
+      'Rick Dudley',
+      'Matthew Slipper',
+      'Ian Norden',
+      'Abdelhamid Bakhta',
+    ],
+  },
+  {
+    upgrade: 'London',
+    eip: 'EIP-3198',
+    authors: ['Abdelhamid Bakhta', 'Vitalik Buterin'],
+  },
+  {
+    upgrade: 'London',
+    eip: 'EIP-3529',
+    authors: ['Martin Holst Swende', 'Vitalik Buterin'],
+  },
+  {
+    upgrade: 'London',
+    eip: 'EIP-3541',
+    authors: [
+      'Alex Beregszaszi',
+      'Paweł Bylica',
+      'Andrei Maiboroda',
+      'Alexey Akhunov',
+      'Christian Reitwiessner',
+      'Martin Holst Swende',
+    ],
+  },
+  { upgrade: 'London', eip: 'EIP-3554', authors: ['James Hancock'] },
+  { upgrade: 'Muir Glacier', eip: 'EIP-2384', authors: ['Eric Conner'] },
+  {
+    upgrade: 'The Merge',
+    eip: 'EIP-3675',
+    authors: ['Mikhail Kalinin', 'Danny Ryan', 'Vitalik Buterin'],
+  },
+  {
+    upgrade: 'The Merge',
+    eip: 'EIP-4399',
+    authors: ['Mikhail Kalinin', 'Danny Ryan'],
+  },
+  {
+    upgrade: 'Petersburg',
+    eip: 'EIP-145',
+    authors: ['Alex Beregszaszi', 'Paweł Bylica'],
+  },
+  { upgrade: 'Petersburg', eip: 'EIP-1014', authors: ['Vitalik Buterin'] },
+  {
+    upgrade: 'Petersburg',
+    eip: 'EIP-1052',
+    authors: ['Nick Johnson', 'Paweł Bylica'],
+  },
+  { upgrade: 'Petersburg', eip: 'EIP-1234', authors: ['Afri Schoedon'] },
+  { upgrade: 'Shapella', eip: 'EIP-3651', authors: ['William Morriss'] },
+  {
+    upgrade: 'Shapella',
+    eip: 'EIP-3855',
+    authors: ['Alex Beregszaszi', 'Hugo De la cruz', 'Paweł Bylica'],
+  },
+  {
+    upgrade: 'Shapella',
+    eip: 'EIP-3860',
+    authors: [
+      'Martin Holst Swende',
+      'Paweł Bylica',
+      'Alex Beregszaszi',
+      'Andrei Maiboroda',
+    ],
+  },
+  {
+    upgrade: 'Shapella',
+    eip: 'EIP-4895',
+    authors: ['Alex Stokes', 'Danny Ryan'],
+  },
+  { upgrade: 'Shapella', eip: 'EIP-6049', authors: ['William Entriken'] },
+  { upgrade: 'Spurious Dragon', eip: 'EIP-155', authors: ['Vitalik Buterin'] },
+  { upgrade: 'Spurious Dragon', eip: 'EIP-160', authors: ['Vitalik Buterin'] },
+  { upgrade: 'Spurious Dragon', eip: 'EIP-161', authors: ['Gavin Wood'] },
+  { upgrade: 'Spurious Dragon', eip: 'EIP-170', authors: ['Vitalik Buterin'] },
+  {
+    upgrade: 'Tangerine Whistle',
+    eip: 'EIP-150',
+    authors: ['Vitalik Buterin'],
+  },
 ];
 
 // Transform data
@@ -79,38 +264,45 @@ const authorContributions: Record<string, AuthorData> = {};
 rawData.forEach(({ eip, authors }) => {
   authors.forEach((author) => {
     if (!authorContributions[author]) {
-      authorContributions[author] = { name: author, contributionCount: 0, eips: [] };
+      authorContributions[author] = {
+        name: author,
+        contributionCount: 0,
+        eips: [],
+      };
     }
     authorContributions[author].contributionCount += 1;
     authorContributions[author].eips.push(eip);
   });
 });
 
-const transformedData = Object.values(authorContributions).sort((a, b) => a.name.localeCompare(b.name));
+const transformedData = Object.values(authorContributions).sort((a, b) =>
+  a.name.localeCompare(b.name)
+);
 
 // Download CSV function
 const downloadData = () => {
-  const header = "Author,Contribution Count,EIP\n";
+  const header = 'Author,Contribution Count,EIP\n';
   const csvContent =
-    "data:text/csv;charset=utf-8," +
+    'data:text/csv;charset=utf-8,' +
     header +
     transformedData
       .map(({ name, contributionCount, eips }) =>
         eips
-          .map((eip, index) =>
-            `${index === 0 ? name : ""},${index === 0 ? contributionCount : ""},https://eipsinsight.com/eips/eip-${eip.replace(
-              "EIP-",
-              ""
-            )}`
+          .map(
+            (eip, index) =>
+              `${index === 0 ? name : ''},${index === 0 ? contributionCount : ''},https://eipsinsight.com/eips/eip-${eip.replace(
+                'EIP-',
+                ''
+              )}`
           )
-          .join("\n")
+          .join('\n')
       )
-      .join("\n");
+      .join('\n');
 
   const encodedUri = encodeURI(csvContent);
-  const link = document.createElement("a");
-  link.setAttribute("href", encodedUri);
-  link.setAttribute("download", "author_contributions.csv");
+  const link = document.createElement('a');
+  link.setAttribute('href', encodedUri);
+  link.setAttribute('download', 'author_contributions.csv');
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -122,34 +314,38 @@ const generateDistinctColor = (index: number, total: number) => {
   return `hsl(${hue}, 70%, 50%)`;
 };
 
-const colorMap = transformedData.reduce((map, author, index) => {
-  map[author.name] = generateDistinctColor(index, transformedData.length);
-  return map;
-}, {} as Record<string, string>);
+const colorMap = transformedData.reduce(
+  (map, author, index) => {
+    map[author.name] = generateDistinctColor(index, transformedData.length);
+    return map;
+  },
+  {} as Record<string, string>
+);
 
 const AuthorContributionsChart = () => {
   const chartOptions = {
     tooltip: {
-      trigger: "item",
-      formatter: (params: { name: string; value: number }) => `${params.name}<br/>Contributions: ${params.value}`,
+      trigger: 'item',
+      formatter: (params: { name: string; value: number }) =>
+        `${params.name}<br/>Contributions: ${params.value}`,
     },
     xAxis: {
-      type: "category",
+      type: 'category',
       data: transformedData.map((item) => item.name),
       axisLine: {
         lineStyle: {
-          color: "#888888", // Axis line color
+          color: '#888888', // Axis line color
         },
       },
     },
     yAxis: {
-      type: "value",
+      type: 'value',
       axisLabel: {
-        color: "#ffffff",
+        color: '#ffffff',
       },
       axisLine: {
         lineStyle: {
-          color: "#888888",
+          color: '#888888',
         },
       },
     },
@@ -162,8 +358,8 @@ const AuthorContributionsChart = () => {
             color: colorMap[item.name],
           },
         })),
-        type: "bar",
-        barWidth: "60%",
+        type: 'bar',
+        barWidth: '60%',
       },
     ],
   };
@@ -171,33 +367,43 @@ const AuthorContributionsChart = () => {
   const handleDownload = async () => {
     try {
       downloadData();
-      await axios.post("/api/DownloadCounter");
+      await axios.post('/api/DownloadCounter');
     } catch (error) {
-      console.error("Error triggering download counter:", error);
+      console.error('Error triggering download counter:', error);
     }
   };
 
   return (
-    <div className="rounded-2xl shadow-2xl border border-purple-300/50 
+    <div
+      className="rounded-2xl shadow-2xl border border-purple-300/50 
     bg-white/30 dark:bg-gray-900/30 
-    backdrop-blur-xl backdrop-saturate-150 text-gray-900 dark:text-white" style={{ padding: "24px", borderRadius: "12px" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-      <h2 style={{ color: "#ffffff", margin: 0 }}>Author Contributions</h2>
-      <button
-        onClick={handleDownload}
+    backdrop-blur-xl backdrop-saturate-150 text-gray-900 dark:text-white"
+      style={{ padding: '24px', borderRadius: '12px' }}
+    >
+      <div
         style={{
-        backgroundColor: "#6a0dad",
-        color: "#ffffff",
-        border: "none",
-        padding: "8px 16px",
-        borderRadius: "6px",
-        cursor: "pointer",
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '16px',
         }}
       >
-        Download CSV
-      </button>
+        <h2 style={{ color: '#ffffff', margin: 0 }}>Author Contributions</h2>
+        <button
+          onClick={handleDownload}
+          style={{
+            backgroundColor: '#6a0dad',
+            color: '#ffffff',
+            border: 'none',
+            padding: '8px 16px',
+            borderRadius: '6px',
+            cursor: 'pointer',
+          }}
+        >
+          Download CSV
+        </button>
       </div>
-      <ReactECharts option={chartOptions} style={{ height: "400px" }} />
+      <ReactECharts option={chartOptions} style={{ height: '400px' }} />
     </div>
   );
 };

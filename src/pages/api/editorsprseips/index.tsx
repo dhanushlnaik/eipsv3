@@ -75,7 +75,8 @@ const eipReviewSchema = new mongoose.Schema({
 
 // Create EIPReviewDetails model
 const EIPReviewDetails =
-  mongoose.models.EIPReviewDetails || mongoose.model('EIPReviewDetails', eipReviewSchema);
+  mongoose.models.EIPReviewDetails ||
+  mongoose.model('EIPReviewDetails', eipReviewSchema);
 
 // Controller logic to fetch and group PR review details by reviewer
 const handler = async (req: Request, res: Response): Promise<void> => {
@@ -138,58 +139,60 @@ const handler = async (req: Request, res: Response): Promise<void> => {
       { $unwind: '$reviews' }, // Unwind the reviews array
       {
         $project: {
-      prNumber: '$prInfo.prNumber',
-      prTitle: '$prInfo.prTitle',
-      closed_at: '$prInfo.closedAt',
-      merged_at: '$prInfo.mergedAt',
-      reviewDate: '$reviews.reviewDate',
-      reviewComment: '$reviews.reviewComment',
-      reviewerName: '$reviewerName',
-    },
-  },
-]);
+          prNumber: '$prInfo.prNumber',
+          prTitle: '$prInfo.prTitle',
+          closed_at: '$prInfo.closedAt',
+          merged_at: '$prInfo.mergedAt',
+          reviewDate: '$reviews.reviewDate',
+          reviewComment: '$reviews.reviewComment',
+          reviewerName: '$reviewerName',
+        },
+      },
+    ]);
 
-// Group PR details by reviewer
-eipReviews.forEach((review: {
-  reviewerName: string;
-  prNumber: number;
-  prTitle: string;
-  created_at: Date;
-  closed_at?: Date;
-  merged_at?: Date;
-  reviewDate: Date;
-  reviewComment?: string;
-}) => {
-  const {
-    reviewerName,
-    prNumber,
-    prTitle,
-    created_at,
-    closed_at,
-    merged_at,
-    reviewDate,
-    reviewComment,
-  } = review;
+    // Group PR details by reviewer
+    eipReviews.forEach(
+      (review: {
+        reviewerName: string;
+        prNumber: number;
+        prTitle: string;
+        created_at: Date;
+        closed_at?: Date;
+        merged_at?: Date;
+        reviewDate: Date;
+        reviewComment?: string;
+      }) => {
+        const {
+          reviewerName,
+          prNumber,
+          prTitle,
+          created_at,
+          closed_at,
+          merged_at,
+          reviewDate,
+          reviewComment,
+        } = review;
 
-  // Add review details to the respective reviewer
-  resultByReviewer[reviewerName].push({
-    repo: 'EIPs',
-    prNumber,
-    prTitle,
-    created_at,
-    closed_at,
-    merged_at,
-    reviewDate,
-    reviewComment,
-  });
-});
+        // Add review details to the respective reviewer
+        resultByReviewer[reviewerName].push({
+          repo: 'EIPs',
+          prNumber,
+          prTitle,
+          created_at,
+          closed_at,
+          merged_at,
+          reviewDate,
+          reviewComment,
+        });
+      }
+    );
 
-// Return the PR details grouped by each reviewer as a JSON response
-res.json(resultByReviewer);
-} catch (error) {
-console.error('Error:', error);
-res.status(500).json({ error: 'Something went wrong' });
-}
+    // Return the PR details grouped by each reviewer as a JSON response
+    res.json(resultByReviewer);
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Something went wrong' });
+  }
 };
 
 export default handler;

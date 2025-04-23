@@ -2,14 +2,17 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { lint } from 'eipw-lint-js';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method === 'POST') {
-    const { template } = req.body;  // Expecting a POST request with the markdown template
-    
+    const { template } = req.body; // Expecting a POST request with the markdown template
+
     try {
       // Split template into lines for linting
-      const templateLines = template.split("\n");
-      
+      const templateLines = template.split('\n');
+
       // Lint the template and await results
       const lintResults = await lint(templateLines);
 
@@ -21,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
 
       // Return a success response if no lint errors
-      return res.status(200).json({ message: "No lint errors." });
+      return res.status(200).json({ message: 'No lint errors.' });
     } catch (error) {
       // Log the error for debugging
       console.error('Linting Error:', error);

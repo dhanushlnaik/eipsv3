@@ -64,7 +64,8 @@ interface PRDetails {
   mergeDate: Date | null;
 }
 
-const PrDetails = mongoose.models.PrDetails || mongoose.model('PrDetails', prDetailsSchema);
+const PrDetails =
+  mongoose.models.PrDetails || mongoose.model('PrDetails', prDetailsSchema);
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { Type, number } = req.query;
@@ -74,25 +75,34 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     let prDetails: PRDetails | null = null;
 
     try {
-      const prResponse = await axios.get(`https://api.github.com/repos/ethereum/${typeString}/pulls/${number}`, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
+      const prResponse = await axios.get(
+        `https://api.github.com/repos/ethereum/${typeString}/pulls/${number}`,
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
 
       if (prResponse.status === 200) {
-        const issueDetails = await processPRDetails(prResponse.data, typeString);
+        const issueDetails = await processPRDetails(
+          prResponse.data,
+          typeString
+        );
 
         let state = prResponse.data.state;
         if (state === 'closed' && prResponse.data.merged === true) {
           state = 'merged';
         }
 
-        const commentsResponse = await axios.get(`https://api.github.com/repos/ethereum/${typeString}/pulls/${number}/reviews`, {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        });
+        const commentsResponse = await axios.get(
+          `https://api.github.com/repos/ethereum/${typeString}/pulls/${number}/reviews`,
+          {
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+          }
+        );
 
         let allConversations2: Conversation[] = commentsResponse.data;
 
@@ -146,7 +156,18 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 };
 
 // Process PR details
-const processPRDetails = async (prData: { labels: { name: string }[], number: number, state: string, title: string, body: string, merged_at: string | null, commits: Commit[] }, Type: string): Promise<PRDetails> => {
+const processPRDetails = async (
+  prData: {
+    labels: { name: string }[];
+    number: number;
+    state: string;
+    title: string;
+    body: string;
+    merged_at: string | null;
+    commits: Commit[];
+  },
+  Type: string
+): Promise<PRDetails> => {
   try {
     const labels = prData.labels.map((label: { name: string }) => label.name);
     const conversations = await fetchConversations(Type, prData.number);
@@ -182,21 +203,27 @@ const processPRDetails = async (prData: { labels: { name: string }[], number: nu
 };
 
 // Fetch conversations
-const fetchConversations = async (Type: string, number: number): Promise<Conversation[]> => {
+const fetchConversations = async (
+  Type: string,
+  number: number
+): Promise<Conversation[]> => {
   try {
     let page = 1;
     let allConversations: Conversation[] = [];
 
     while (true) {
-      const conversationResponse = await axios.get(`https://api.github.com/repos/ethereum/${Type}/pulls/${number}/comments`, {
-        params: {
-          page,
-          per_page: 100,
-        },
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
+      const conversationResponse = await axios.get(
+        `https://api.github.com/repos/ethereum/${Type}/pulls/${number}/comments`,
+        {
+          params: {
+            page,
+            per_page: 100,
+          },
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
 
       const conversations: Conversation[] = conversationResponse.data;
       allConversations = allConversations.concat(conversations);
@@ -209,15 +236,18 @@ const fetchConversations = async (Type: string, number: number): Promise<Convers
     }
 
     while (true) {
-      const conversationResponse = await axios.get(`https://api.github.com/repos/ethereum/${Type}/issues/${number}/comments`, {
-        params: {
-          page,
-          per_page: 100,
-        },
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
+      const conversationResponse = await axios.get(
+        `https://api.github.com/repos/ethereum/${Type}/issues/${number}/comments`,
+        {
+          params: {
+            page,
+            per_page: 100,
+          },
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
 
       const conversations: Conversation[] = conversationResponse.data;
       allConversations = allConversations.concat(conversations);
@@ -237,15 +267,20 @@ const fetchConversations = async (Type: string, number: number): Promise<Convers
 };
 
 // Get participants from conversations and commits
-const getParticipants = (conversations: Conversation[], commits: Commit[]): string[] => {
+const getParticipants = (
+  conversations: Conversation[],
+  commits: Commit[]
+): string[] => {
   const commentParticipants = conversations
     .filter((conversation) => conversation.user.login !== 'github-actions[bot]')
     .map((conversation) => conversation.user.login);
 
-  const commitParticipants = commits
-    .map((commit) => commit.committer.login);
+  const commitParticipants = commits.map((commit) => commit.committer.login);
 
-  const uniqueParticipants = new Set([...commentParticipants, ...commitParticipants]);
+  const uniqueParticipants = new Set([
+    ...commentParticipants,
+    ...commitParticipants,
+  ]);
 
   return Array.from(uniqueParticipants);
 };
@@ -254,7 +289,12 @@ const getParticipants2 = (conversations: Conversation[]): string[] => {
   if (conversations.length === 0) return [];
 
   const commentParticipants = conversations
-    .filter((conversation) => conversation.user && conversation.user.login && conversation.user.login !== 'github-actions[bot]')
+    .filter(
+      (conversation) =>
+        conversation.user &&
+        conversation.user.login &&
+        conversation.user.login !== 'github-actions[bot]'
+    )
     .map((conversation) => conversation.user.login);
 
   const uniqueParticipants = new Set(commentParticipants);
@@ -263,13 +303,19 @@ const getParticipants2 = (conversations: Conversation[]): string[] => {
 };
 
 // Fetch commits
-const fetchCommits = async (Type: string, number: number): Promise<Commit[]> => {
+const fetchCommits = async (
+  Type: string,
+  number: number
+): Promise<Commit[]> => {
   try {
-    const commitsResponse = await axios.get(`https://api.github.com/repos/ethereum/${Type}/pulls/${number}/commits`, {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-    });
+    const commitsResponse = await axios.get(
+      `https://api.github.com/repos/ethereum/${Type}/pulls/${number}/commits`,
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      }
+    );
 
     return commitsResponse.data;
   } catch (error) {
@@ -279,15 +325,23 @@ const fetchCommits = async (Type: string, number: number): Promise<Commit[]> => 
 };
 
 // Fetch files changed
-const fetchFilesChanged = async (Type: string, number: number): Promise<string[]> => {
+const fetchFilesChanged = async (
+  Type: string,
+  number: number
+): Promise<string[]> => {
   try {
-    const filesResponse = await axios.get(`https://api.github.com/repos/ethereum/${Type}/pulls/${number}/files`, {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-    });
+    const filesResponse = await axios.get(
+      `https://api.github.com/repos/ethereum/${Type}/pulls/${number}/files`,
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      }
+    );
 
-    return filesResponse.data.map((file: { filename: string }) => file.filename);
+    return filesResponse.data.map(
+      (file: { filename: string }) => file.filename
+    );
   } catch (error) {
     console.log('Error fetching files changed:', error);
     throw error;

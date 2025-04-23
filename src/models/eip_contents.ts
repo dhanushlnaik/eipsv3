@@ -2,10 +2,10 @@ import mongoose from 'mongoose';
 
 // Define the StatusChange schema
 const eipcontentsSchema = new mongoose.Schema({
-    eip: {
-        type: Number,
-    },
-    content: { type: String },
+  eip: {
+    type: Number,
+  },
+  content: { type: String },
 });
 
 // Create the StatusChange model

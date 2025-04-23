@@ -2,10 +2,10 @@ import { Request, Response } from 'express';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 
-
 const render = async (req: Request, res: Response) => {
   try {
-    const url = 'https://github.com/ethereum/EIPs/pulse_diffstat_summary?period=daily';
+    const url =
+      'https://github.com/ethereum/EIPs/pulse_diffstat_summary?period=daily';
     const response = await axios.get(url);
     const html = response.data;
 
@@ -14,27 +14,49 @@ const render = async (req: Request, res: Response) => {
 
     // Extract the desired information
     const infoContainer = $('div.color-fg-muted');
-    const numAuthors = infoContainer.find('strong.color-fg-default').eq(0).text().trim();
-    const commitsToMaster = infoContainer.find('strong.color-fg-default span.text-emphasized').eq(0).text().trim();
-    const commitsToAllBranches = infoContainer.find('strong.color-fg-default span.text-emphasized').eq(1).text().trim();
-    const filesChanged = infoContainer.find('strong.color-fg-default').eq(1).text().trim();
-    const additions = infoContainer.find('strong.color-fg-success').text().trim();
-    const deletions = infoContainer.find('strong.color-fg-danger').text().trim();
+    const numAuthors = infoContainer
+      .find('strong.color-fg-default')
+      .eq(0)
+      .text()
+      .trim();
+    const commitsToMaster = infoContainer
+      .find('strong.color-fg-default span.text-emphasized')
+      .eq(0)
+      .text()
+      .trim();
+    const commitsToAllBranches = infoContainer
+      .find('strong.color-fg-default span.text-emphasized')
+      .eq(1)
+      .text()
+      .trim();
+    const filesChanged = infoContainer
+      .find('strong.color-fg-default')
+      .eq(1)
+      .text()
+      .trim();
+    const additions = infoContainer
+      .find('strong.color-fg-success')
+      .text()
+      .trim();
+    const deletions = infoContainer
+      .find('strong.color-fg-danger')
+      .text()
+      .trim();
 
     const info = {
-        numAuthors: parseInt(numAuthors),
-        commitsToMaster: parseInt(commitsToMaster),
-        commitsToAllBranches: parseInt(commitsToAllBranches),
-        filesChanged: parseInt(filesChanged),
-        additions: parseInt(additions),
-        deletions: parseInt(deletions)
+      numAuthors: parseInt(numAuthors),
+      commitsToMaster: parseInt(commitsToMaster),
+      commitsToAllBranches: parseInt(commitsToAllBranches),
+      filesChanged: parseInt(filesChanged),
+      additions: parseInt(additions),
+      deletions: parseInt(deletions),
     };
 
     res.json(info);
-} catch (error) {
+  } catch (error) {
     console.error('Error:', error);
     res.status(500).json({ error: 'Internal server error' });
-}
+  }
 };
 
 export default render;

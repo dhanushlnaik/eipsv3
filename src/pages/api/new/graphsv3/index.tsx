@@ -1,6 +1,5 @@
-import mongoose from "mongoose";
-import { NextApiRequest, NextApiResponse } from "next";
-
+import mongoose from 'mongoose';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 // Ensure Mongo URI is defined
 const mongoUri = process.env.MONGODB_URI;
@@ -52,37 +51,43 @@ const statusChangeSchema = new mongoose.Schema({
 
 const EipStatusChange =
   mongoose.models.EipStatusChange2 ||
-  mongoose.model("EipStatusChange2", statusChangeSchema, "eipstatuschange2");
+  mongoose.model('EipStatusChange2', statusChangeSchema, 'eipstatuschange2');
 
 const ErcStatusChange =
   mongoose.models.ErcStatusChange2 ||
-  mongoose.model("ErcStatusChange2", statusChangeSchema, "ercstatuschange2");
+  mongoose.model('ErcStatusChange2', statusChangeSchema, 'ercstatuschange2');
 
 const RipStatusChange =
   mongoose.models.RipStatusChange2 ||
-  mongoose.model("RipStatusChange2", statusChangeSchema, "ripstatuschange2");
+  mongoose.model('RipStatusChange2', statusChangeSchema, 'ripstatuschange2');
 
 // Define the Next.js API route handler
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method === "GET") {
+  if (req.method === 'GET') {
     try {
-        const eipResults = (await EipStatusChange.find({})).map((result: mongoose.Document) => ({
-            ...result.toObject(),
-            repo: "eip",
-          }));
-    
-          const ercResults = (await ErcStatusChange.find({})).map((result: mongoose.Document) => ({
-            ...result.toObject(),
-            repo: "erc",
-          }));
-    
-          const ripResults = (await RipStatusChange.find({})).map((result: mongoose.Document) => ({
-            ...result.toObject(),
-            repo: "rip",
-          }));
+      const eipResults = (await EipStatusChange.find({})).map(
+        (result: mongoose.Document) => ({
+          ...result.toObject(),
+          repo: 'eip',
+        })
+      );
+
+      const ercResults = (await ErcStatusChange.find({})).map(
+        (result: mongoose.Document) => ({
+          ...result.toObject(),
+          repo: 'erc',
+        })
+      );
+
+      const ripResults = (await RipStatusChange.find({})).map(
+        (result: mongoose.Document) => ({
+          ...result.toObject(),
+          repo: 'rip',
+        })
+      );
 
       // Structure the response in the desired format
       res.status(200).json({
@@ -92,10 +97,10 @@ export default async function handler(
       });
     } catch (error) {
       console.error('Error fetching status changes:', error);
-      res.status(500).json({ error: "Error fetching status changes" });
+      res.status(500).json({ error: 'Error fetching status changes' });
     }
   } else {
-    res.setHeader("Allow", ["GET"]);
+    res.setHeader('Allow', ['GET']);
     res.status(405).end(`Method ${req.method} not allowed`);
   }
 }

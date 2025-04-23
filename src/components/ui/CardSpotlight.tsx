@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useMotionValue, motion, useMotionTemplate } from "motion/react";
-import React, { MouseEvent as ReactMouseEvent, useState } from "react";
-import { cn } from "@/lib/utils";
-import { CanvasRevealEffect } from "./canvas-reveal-effect";
+import { useMotionValue, motion, useMotionTemplate } from 'motion/react';
+import React, { MouseEvent as ReactMouseEvent, useState } from 'react';
+import { cn } from '@/lib/utils';
+import { CanvasRevealEffect } from './canvas-reveal-effect';
 
 export const CardSpotlight = ({
   children,
   radius = 350,
-  color = "#262626",
+  color = '#262626',
   className,
   ...props
 }: {
@@ -35,7 +35,7 @@ export const CardSpotlight = ({
   return (
     <div
       className={cn(
-        "group/spotlight p-10 rounded-md relative border border-neutral-800 bg-black dark:border-neutral-800",
+        'group/spotlight p-10 rounded-md relative border border-neutral-800 bg-black dark:border-neutral-800',
         className
       )}
       onMouseMove={handleMouseMove}

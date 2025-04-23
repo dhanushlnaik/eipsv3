@@ -58,7 +58,9 @@ const issueDetailsSchema = new mongoose.Schema<IIssueDetails>({
   closedAt: { type: Date },
 });
 
-const IssueDetails = mongoose.models.IssueDetails || mongoose.model('IssueDetails', issueDetailsSchema);
+const IssueDetails =
+  mongoose.models.IssueDetails ||
+  mongoose.model('IssueDetails', issueDetailsSchema);
 
 const accessToken = process.env.NEXT_PUBLIC_ACCESS_TOKEN;
 
@@ -76,11 +78,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     console.log('Type:', typeString);
 
     // Fetch issue details from GitHub API
-    const issueResponse = await axios.get(`https://api.github.com/repos/ethereum/${typeString}/issues/${number}`, {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-    });
+    const issueResponse = await axios.get(
+      `https://api.github.com/repos/ethereum/${typeString}/issues/${number}`,
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      }
+    );
 
     if (issueResponse.status === 200) {
       const issueDetails = await processIssueDetails(issueResponse.data);
@@ -96,7 +101,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       res.status(404).json({ error: 'Issue not found' });
     }
   } catch (error) {
-    console.error('Error fetching issue details:', (error as mongoose.Error).message);
+    console.error(
+      'Error fetching issue details:',
+      (error as mongoose.Error).message
+    );
     res.status(500).json({ error: 'Something went wrong' });
   }
 };
@@ -114,7 +122,9 @@ interface IssueData {
   html_url: string;
 }
 
-const processIssueDetails = async (issueData: IssueData): Promise<IIssueDetails> => {
+const processIssueDetails = async (
+  issueData: IssueData
+): Promise<IIssueDetails> => {
   try {
     const labels = issueData.labels.map((label) => label.name);
     const conversations = await fetchIssueConversations(issueData.number);
@@ -146,7 +156,9 @@ const processIssueDetails = async (issueData: IssueData): Promise<IIssueDetails>
 };
 
 // Fetch issue comments
-const fetchIssueConversations = async (issueNumber: number): Promise<Conversation[]> => {
+const fetchIssueConversations = async (
+  issueNumber: number
+): Promise<Conversation[]> => {
   try {
     let page = 1;
     let allConversations: Conversation[] = [];
@@ -182,7 +194,9 @@ const fetchIssueConversations = async (issueNumber: number): Promise<Conversatio
 // Extract unique participants
 const getParticipants = (conversations: Conversation[]): string[] => {
   const commentParticipants = conversations
-    .filter((conversation) => conversation.user?.login !== 'github-actions[bot]')
+    .filter(
+      (conversation) => conversation.user?.login !== 'github-actions[bot]'
+    )
     .map((conversation) => conversation.user?.login);
 
   const uniqueParticipants = new Set(commentParticipants);

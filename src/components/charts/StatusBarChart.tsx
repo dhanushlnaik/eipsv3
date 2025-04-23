@@ -1,5 +1,5 @@
-import React from "react";
-import ReactECharts from "echarts-for-react";
+import React from 'react';
+import ReactECharts from 'echarts-for-react';
 
 export interface StatusChange {
   eip: string;
@@ -20,39 +20,43 @@ export interface StatusChartProps {
 
 const getStatus = (status: string) => {
   switch (status) {
-    case "Draft":
-      return "Draft";
-    case "Final":
-    case "Accepted":
-    case "Superseded":
-      return "Final";
-    case "Last Call":
-      return "Last Call";
-    case "Withdrawn":
-    case "Abandoned":
-    case "Rejected":
-      return "Withdrawn";
-    case "Review":
-      return "Review";
-    case "Living":
-    case "Active":
-      return "Living";
-    case "Stagnant":
-      return "Stagnant";
+    case 'Draft':
+      return 'Draft';
+    case 'Final':
+    case 'Accepted':
+    case 'Superseded':
+      return 'Final';
+    case 'Last Call':
+      return 'Last Call';
+    case 'Withdrawn':
+    case 'Abandoned':
+    case 'Rejected':
+      return 'Withdrawn';
+    case 'Review':
+      return 'Review';
+    case 'Living':
+    case 'Active':
+      return 'Living';
+    case 'Stagnant':
+      return 'Stagnant';
     default:
-      return "Final";
+      return 'Final';
   }
 };
 
 const StatusBarChart: React.FC<StatusChartProps> = ({ data, category }) => {
   // Possible status categories
-  const statusTypes = ["Draft", "Last Call", "Final", "Review", "Stagnant"];
+  const statusTypes = ['Draft', 'Last Call', 'Final', 'Review', 'Stagnant'];
 
   // Filter data to include only years with actual status changes
   const filteredData = data
     .map(({ statusChanges, year }) => {
-      const filteredStatusChanges = statusChanges.filter(({ eipCategory }) => eipCategory === category);
-      return filteredStatusChanges.length > 0 ? { year, statusChanges: filteredStatusChanges } : null;
+      const filteredStatusChanges = statusChanges.filter(
+        ({ eipCategory }) => eipCategory === category
+      );
+      return filteredStatusChanges.length > 0
+        ? { year, statusChanges: filteredStatusChanges }
+        : null;
     })
     .filter(Boolean) as StatusChartData[]; // Remove null values
 
@@ -61,7 +65,9 @@ const StatusBarChart: React.FC<StatusChartProps> = ({ data, category }) => {
 
   // Initialize dataset structure for each status
   const statusData: Record<string, number[]> = {};
-  statusTypes.forEach((status) => (statusData[status] = new Array(years.length).fill(0)));
+  statusTypes.forEach(
+    (status) => (statusData[status] = new Array(years.length).fill(0))
+  );
 
   // Populate data into the dataset
   filteredData.forEach(({ statusChanges, year }) => {
@@ -76,20 +82,24 @@ const StatusBarChart: React.FC<StatusChartProps> = ({ data, category }) => {
 
   // Prepare ECharts options
   const option = {
-    tooltip: { trigger: "axis" },
+    tooltip: { trigger: 'axis' },
     legend: { data: statusTypes },
-    xAxis: { type: "category", data: years },
-    yAxis: { type: "value" },
+    xAxis: { type: 'category', data: years },
+    yAxis: { type: 'value' },
     series: statusTypes.map((status) => ({
       name: status,
-      type: "bar",
-      stack: "total",
+      type: 'bar',
+      stack: 'total',
       data: statusData[status],
     })),
   };
 
-  return <ReactECharts option={option} style={{ width: "100%", minHeight: "350px", height: "75%" }} />;
+  return (
+    <ReactECharts
+      option={option}
+      style={{ width: '100%', minHeight: '350px', height: '75%' }}
+    />
+  );
 };
-
 
 export default StatusBarChart;

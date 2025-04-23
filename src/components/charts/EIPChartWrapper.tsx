@@ -1,60 +1,60 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import ReactECharts from "echarts-for-react";
-import Link from "next/link";
-import DateTime from "../DateTime";
-import mockData from "@/data/eipmock.json";
+'use client';
+import React, { useEffect, useState } from 'react';
+import ReactECharts from 'echarts-for-react';
+import Link from 'next/link';
+import DateTime from '../DateTime';
+import mockData from '@/data/eipmock.json';
 
 const getCat = (cat: string): string => {
   switch (cat) {
-    case "Standards Track":
-    case "Standard Track":
-    case "Standards Track (Core, Networking, Interface, ERC)":
-    case "Standard":
-    case "Process":
-    case "Core":
-    case "core":
-      return "Core";
-    case "ERC":
-      return "ERCs";
-    case "RIP":
-      return "RIPs";
-    case "Networking":
-      return "Networking";
-    case "Interface":
-      return "Interface";
-    case "Meta":
-      return "Meta";
-    case "Informational":
-      return "Informational";
+    case 'Standards Track':
+    case 'Standard Track':
+    case 'Standards Track (Core, Networking, Interface, ERC)':
+    case 'Standard':
+    case 'Process':
+    case 'Core':
+    case 'core':
+      return 'Core';
+    case 'ERC':
+      return 'ERCs';
+    case 'RIP':
+      return 'RIPs';
+    case 'Networking':
+      return 'Networking';
+    case 'Interface':
+      return 'Interface';
+    case 'Meta':
+      return 'Meta';
+    case 'Informational':
+      return 'Informational';
     default:
-      return "Core";
+      return 'Core';
   }
 };
 
 const getStatus = (status: string): string => {
   switch (status) {
-    case "Draft":
-      return "Draft";
-    case "Final":
-    case "Accepted":
-    case "Superseded":
-      return "Final";
-    case "Last Call":
-      return "Last Call";
-    case "Withdrawn":
-    case "Abandoned":
-    case "Rejected":
-      return "Withdrawn";
-    case "Review":
-      return "Review";
-    case "Living":
-    case "Active":
-      return "Living";
-    case "Stagnant":
-      return "Stagnant";
+    case 'Draft':
+      return 'Draft';
+    case 'Final':
+    case 'Accepted':
+    case 'Superseded':
+      return 'Final';
+    case 'Last Call':
+      return 'Last Call';
+    case 'Withdrawn':
+    case 'Abandoned':
+    case 'Rejected':
+      return 'Withdrawn';
+    case 'Review':
+      return 'Review';
+    case 'Living':
+    case 'Active':
+      return 'Living';
+    case 'Stagnant':
+      return 'Stagnant';
     default:
-      return "Final";
+      return 'Final';
   }
 };
 
@@ -73,46 +73,63 @@ const EIPChartWrapper: React.FC<{ type: string }> = ({ type }) => {
 
   const [data, setData] = useState<EIPData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [chartType, setChartType] = useState("category");
+  const [chartType, setChartType] = useState('category');
 
   useEffect(() => {
     fetchEIPData().then((dataset) => {
-      if (type === "EIP") setData(dataset.eip);
-      else if (type === "ERC") setData(dataset.erc);
-      else if (type === "RIP") setData(dataset.rip);
+      if (type === 'EIP') setData(dataset.eip);
+      else if (type === 'ERC') setData(dataset.erc);
+      else if (type === 'RIP') setData(dataset.rip);
       else setData([...dataset.eip, ...dataset.erc, ...dataset.rip]);
       setIsLoading(false);
     });
   }, [type]);
 
-  const transformedData = data.reduce((acc, item) => {
-    const year = new Date(item.created).getFullYear();
-    const category = item.repo === "rip" ? "RIPs" : getCat(item.category);
-    const key = `${year}-${category}`;
-    acc[key] = (acc[key] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>);
+  const transformedData = data.reduce(
+    (acc, item) => {
+      const year = new Date(item.created).getFullYear();
+      const category = item.repo === 'rip' ? 'RIPs' : getCat(item.category);
+      const key = `${year}-${category}`;
+      acc[key] = (acc[key] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>
+  );
 
-  const transformedData2 = data.reduce((acc, item) => {
-    const year = new Date(item.created).getFullYear();
-    const status = getStatus(item.status);
-    const key = `${year}-${status}`;
-    acc[key] = (acc[key] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>);
+  const transformedData2 = data.reduce(
+    (acc, item) => {
+      const year = new Date(item.created).getFullYear();
+      const status = getStatus(item.status);
+      const key = `${year}-${status}`;
+      acc[key] = (acc[key] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>
+  );
 
-  const finalData = chartType === "status" ? transformedData2 : transformedData;
-  const uniqueCategories = new Set(Object.keys(finalData).map((k) => k.split("-")[1]));
-  const years = [...new Set(Object.keys(finalData).map((k) => k.split("-")[0]))].sort();
+  const finalData = chartType === 'status' ? transformedData2 : transformedData;
+  const uniqueCategories = new Set(
+    Object.keys(finalData).map((k) => k.split('-')[1])
+  );
+  const years = [
+    ...new Set(Object.keys(finalData).map((k) => k.split('-')[0])),
+  ].sort();
 
-  const colors = ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF", "#FF9F40"];
+  const colors = [
+    '#FF6384',
+    '#36A2EB',
+    '#FFCE56',
+    '#4BC0C0',
+    '#9966FF',
+    '#FF9F40',
+  ];
 
   const seriesData = Array.from(uniqueCategories).map((category, index) => ({
     name: category,
-    type: "bar",
-    stack: "total",
+    type: 'bar',
+    stack: 'total',
     emphasis: {
-      focus: "series",
+      focus: 'series',
     },
     itemStyle: {
       color: colors[index % colors.length],
@@ -125,28 +142,28 @@ const EIPChartWrapper: React.FC<{ type: string }> = ({ type }) => {
 
   const option = {
     tooltip: {
-      trigger: "axis",
+      trigger: 'axis',
       axisPointer: {
-        type: "shadow",
+        type: 'shadow',
       },
     },
     legend: {
-      top: "top",
+      top: 'top',
       textStyle: {
-        color: "#ffffff",
+        color: '#ffffff',
       },
     },
     xAxis: {
-      type: "category",
+      type: 'category',
       data: years,
       axisLabel: {
-        color: "#ffffff",
+        color: '#ffffff',
       },
     },
     yAxis: {
-      type: "value",
+      type: 'value',
       axisLabel: {
-        color: "#ffffff",
+        color: '#ffffff',
       },
     },
     series: seriesData,
@@ -161,7 +178,9 @@ const EIPChartWrapper: React.FC<{ type: string }> = ({ type }) => {
           <div className="flex justify-between items-center mb-4">
             <Link href="/alltable">
               <span className="text-xl font-bold text-purpleee cursor-pointer hover:underline">
-                {type === "Total" ? `All EIPs [${data.length}]` : `${type} - [${data.length}]`}
+                {type === 'Total'
+                  ? `All EIPs [${data.length}]`
+                  : `${type} - [${data.length}]`}
               </span>
             </Link>
             <select
@@ -174,7 +193,10 @@ const EIPChartWrapper: React.FC<{ type: string }> = ({ type }) => {
             </select>
           </div>
           <div className="h-[450px] flex items-center justify-center">
-            <ReactECharts option={option} style={{ height: "100%", width: "100%" }} />
+            <ReactECharts
+              option={option}
+              style={{ height: '100%', width: '100%' }}
+            />
           </div>
           <DateTime />
         </>

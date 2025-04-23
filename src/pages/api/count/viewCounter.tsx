@@ -9,15 +9,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/api/count/viewCounter', (req, res) => {
-    res.json({ viewsCount });
+  res.json({ viewsCount });
 });
 
 app.post('/api/count/viewCounter', (req, res) => {
-    viewsCount++;
-    res.json({ viewsCount });
+  viewsCount++;
+  res.json({ viewsCount });
 });
 
 setInterval(() => {
-    const viewsFilePath = path.join(__dirname, 'data', 'views.json');
-    fs.writeFileSync(viewsFilePath, JSON.stringify({ viewsCount }));
+  const viewsFilePath = path.join(__dirname, 'data', 'views.json');
+  fs.writeFileSync(viewsFilePath, JSON.stringify({ viewsCount }));
 }, 15000);

@@ -1,16 +1,16 @@
-"use client";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-providers";
-import { Space_Grotesk } from "next/font/google";
-import Navbar from "@/components/layout/Navbar";
-import { useState, useEffect } from "react";
-import Loader from "@/components/ui/Loader";
+'use client';
+import './globals.css';
+import { ThemeProvider } from '@/components/theme-providers';
+import { Space_Grotesk } from 'next/font/google';
+import Navbar from '@/components/layout/Navbar';
+import { useState, useEffect } from 'react';
+import Loader from '@/components/ui/Loader';
 
 const inter = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["400", "700"],
-  display: "swap",
+  subsets: ['latin'],
+  variable: '--font-inter',
+  weight: ['400', '700'],
+  display: 'swap',
 });
 
 // export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         {loading ? (
-          <Loader/>
+          <Loader />
         ) : (
           <ThemeProvider
             attribute="class"

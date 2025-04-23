@@ -4,14 +4,20 @@ import path from 'path';
 
 // Define the handler function
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  console.log('API route hit');  // Log when the API route is hit
+  console.log('API route hit'); // Log when the API route is hit
 
-  const rustCommand = 'cargo run';  // Command to run the Rust app
-  const rustProjectPath = path.resolve('C:/Users/Viwin/OneDrive/Desktop/EIP-Board');
-  const GITHUB_REPOSITORY="ethereum/ERCs"
+  const rustCommand = 'cargo run'; // Command to run the Rust app
+  const rustProjectPath = path.resolve(
+    'C:/Users/Viwin/OneDrive/Desktop/EIP-Board'
+  );
+  const GITHUB_REPOSITORY = 'ethereum/ERCs';
 
   // Set environment variables, including GITHUB_TOKEN from Next.js env
-  const envVars = { GITHUB_TOKEN: process.env.ACCESS_TOKEN,GITHUB_REPOSITORY:GITHUB_REPOSITORY, ...process.env };
+  const envVars = {
+    GITHUB_TOKEN: process.env.ACCESS_TOKEN,
+    GITHUB_REPOSITORY: GITHUB_REPOSITORY,
+    ...process.env,
+  };
 
   // Execute the Rust command with the necessary environment variables
   exec(rustCommand, { cwd: rustProjectPath, env: envVars }, (error, stdout) => {

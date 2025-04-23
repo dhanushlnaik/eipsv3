@@ -2,7 +2,9 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { ethers } from 'ethers';
 
 // Initialize the provider
-const provider = new ethers.JsonRpcProvider(`https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`);
+const provider = new ethers.JsonRpcProvider(
+  `https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`
+);
 
 // Live transaction updates endpoint handler
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -47,8 +49,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
       res.write(`data: ${JSON.stringify(transactionsInfo)}\n\n`);
     } catch (error) {
-      console.error('Error fetching transactions:', error instanceof Error ? error.message : 'Unknown error');
-      res.write(`data: ${JSON.stringify({ error: error instanceof Error ? error.message : 'Unknown error' })}\n\n`);
+      console.error(
+        'Error fetching transactions:',
+        error instanceof Error ? error.message : 'Unknown error'
+      );
+      res.write(
+        `data: ${JSON.stringify({ error: error instanceof Error ? error.message : 'Unknown error' })}\n\n`
+      );
     }
   };
 

@@ -16,7 +16,8 @@ const getGitHubInsightsForMonth = async (
     const startISODate = startDate.toISOString();
     const endISODate = endDate.toISOString();
 
-    let mergedPRsThisMonth: RestEndpointMethodTypes['pulls']['list']['response']['data'] = [];
+    let mergedPRsThisMonth: RestEndpointMethodTypes['pulls']['list']['response']['data'] =
+      [];
 
     // Fetch merged PRs within the date range
     let page = 1;

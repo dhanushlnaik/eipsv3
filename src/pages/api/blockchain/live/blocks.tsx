@@ -1,10 +1,16 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { ethers } from 'ethers';
 
-const provider = new ethers.JsonRpcProvider(`https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`);
+const provider = new ethers.JsonRpcProvider(
+  `https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`
+);
 
 // Middleware to set SSE headers
-const sseHandler = (req: NextApiRequest, res: NextApiResponse, next: () => void) => {
+const sseHandler = (
+  req: NextApiRequest,
+  res: NextApiResponse,
+  next: () => void
+) => {
   res.setHeader('Content-Type', 'text/event-stream');
   res.setHeader('Cache-Control', 'no-cache');
   res.setHeader('Connection', 'keep-alive');
@@ -35,8 +41,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
       res.write(`data: ${JSON.stringify(blockInfo)}\n\n`);
     } catch (error: unknown) {
-      console.error('Error fetching latest block:', error instanceof Error ? error.message : 'Unknown error');
-      res.write(`data: ${JSON.stringify({ error: error instanceof Error ? error.message : 'Unknown error' })}\n\n`);
+      console.error(
+        'Error fetching latest block:',
+        error instanceof Error ? error.message : 'Unknown error'
+      );
+      res.write(
+        `data: ${JSON.stringify({ error: error instanceof Error ? error.message : 'Unknown error' })}\n\n`
+      );
     }
   };
 

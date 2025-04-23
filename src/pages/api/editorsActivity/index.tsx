@@ -5,12 +5,12 @@ import mongoose from 'mongoose';
 
 // Connect to MongoDB
 if (mongoose.connection.readyState === 0) {
-    if (typeof process.env.MONGODB_URI === 'string') {
-        mongoose.connect(process.env.MONGODB_URI);
-    } else {
-        // Handle the case where the environment variable is not defined
-        console.error('MONGODB_URI environment variable is not defined');
-    }
+  if (typeof process.env.MONGODB_URI === 'string') {
+    mongoose.connect(process.env.MONGODB_URI);
+  } else {
+    // Handle the case where the environment variable is not defined
+    console.error('MONGODB_URI environment variable is not defined');
+  }
 }
 
 // Define the schema and model
@@ -20,7 +20,8 @@ const reviewerSchema = new mongoose.Schema({
   endDate: Date,
 });
 
-const Reviewer = mongoose.models.Reviewer || mongoose.model('Reviewer', reviewerSchema);
+const Reviewer =
+  mongoose.models.Reviewer || mongoose.model('Reviewer', reviewerSchema);
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
@@ -28,7 +29,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const reviewers = await Reviewer.find();
 
     // Format the data as needed
-    const formattedData = reviewers.map(reviewer => ({
+    const formattedData = reviewers.map((reviewer) => ({
       reviewer: reviewer.reviewer,
       startDate: reviewer.startDate?.toISOString(),
       endDate: reviewer.endDate ? reviewer.endDate.toISOString() : null,

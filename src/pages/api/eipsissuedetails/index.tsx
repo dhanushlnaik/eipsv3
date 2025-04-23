@@ -30,12 +30,15 @@ const IssueDetailsSchema = new mongoose.Schema({
 
 // Check if the model exists or create it
 const IssueDetails =
-  mongoose.models.AllEipsIssueDetails || mongoose.model('AllEipsIssueDetails', IssueDetailsSchema);
+  mongoose.models.AllEipsIssueDetails ||
+  mongoose.model('AllEipsIssueDetails', IssueDetailsSchema);
 
 const getIssueDetails = async (req: Request, res: Response): Promise<void> => {
   try {
     // Fetch Issue details with selected fields
-    const issueDetails = await IssueDetails.find({}).select('issueNumber issueTitle createdAt closedAt state').exec();
+    const issueDetails = await IssueDetails.find({})
+      .select('issueNumber issueTitle createdAt closedAt state')
+      .exec();
 
     // Transform the data to include createdAt, closedAt, and state
     const transformedDetails = issueDetails.map((issue) => {

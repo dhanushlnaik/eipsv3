@@ -1,6 +1,6 @@
-"use client"
-import Dashboard from "../Dashboard";
-import mockData from "@/data/eipmock.json";
+'use client';
+import Dashboard from '../Dashboard';
+import mockData from '@/data/eipmock.json';
 
 interface EIP {
   _id: string;

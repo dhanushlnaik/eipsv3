@@ -1,9 +1,9 @@
-"use client";
-import React, { useState , JSX} from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { Button } from "./MovingBorders";
+'use client';
+import React, { useState, JSX } from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
+import { Button } from './MovingBorders';
 
 type Card = {
   id: number;
@@ -44,19 +44,19 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
           <div
             className={cn(
               card.className,
-              "relative border-3 border-yellow-500"
+              'relative border-3 border-yellow-500'
             )}
           >
             <motion.div
               onClick={() => handleClick(card)}
               className={cn(
                 card.className,
-                "relative overflow-hidden",
+                'relative overflow-hidden',
                 selected?.id === card.id
-                  ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
+                  ? 'rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col'
                   : lastSelected?.id === card.id
-                  ? "z-40 bg-white rounded-xl h-full w-full"
-                  : "bg-white rounded-xl h-full w-full"
+                    ? 'z-40 bg-white rounded-xl h-full w-full'
+                    : 'bg-white rounded-xl h-full w-full'
               )}
               layout
             >
@@ -69,8 +69,8 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          "absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10",
-          selected?.id ? "pointer-events-auto" : "pointer-events-none"
+          'absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10',
+          selected?.id ? 'pointer-events-auto' : 'pointer-events-none'
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}
       />
@@ -88,8 +88,8 @@ const BlurImage = ({ card }: { card: Card }) => {
       width="100"
       onLoad={() => setLoaded(true)}
       className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200",
-        loaded ? "blur-none" : "blur-md"
+        'object-cover object-top absolute inset-0 h-full w-full transition duration-200',
+        loaded ? 'blur-none' : 'blur-md'
       )}
       alt="thumbnail"
     />
@@ -119,7 +119,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         }}
         transition={{
           duration: 0.3,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
         className="relative px-8 pb-4 z-[70]"
       >

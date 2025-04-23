@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import mongoose from "mongoose";
+import { Request, Response } from 'express';
+import mongoose from 'mongoose';
 
 // Ensure Mongo URI is defined
 const mongoUri = process.env.MONGODB_URI;
@@ -28,11 +28,11 @@ const mdFilesSchema = new mongoose.Schema({
 });
 
 const EIPMdFiles =
-  mongoose.models.EipMdFiles || mongoose.model("EipMdFiles", mdFilesSchema);
+  mongoose.models.EipMdFiles || mongoose.model('EipMdFiles', mdFilesSchema);
 const ERCMdFiles =
-  mongoose.models.ErcMdFiles || mongoose.model("ErcMdFiles", mdFilesSchema);
+  mongoose.models.ErcMdFiles || mongoose.model('ErcMdFiles', mdFilesSchema);
 const RIPMdFiles =
-  mongoose.models.RipMdFiles || mongoose.model("RipMdFiles", mdFilesSchema);
+  mongoose.models.RipMdFiles || mongoose.model('RipMdFiles', mdFilesSchema);
 
 // export default async (req: Request, res: Response) => {
 // const EIPResult = await EIPMdFiles.aggregate([
@@ -65,8 +65,8 @@ const handler = async (req: Request, res: Response) => {
     const eipResult = await EIPMdFiles.aggregate([
       {
         $match: {
-          eip: { $nin: ["7212"] },
-          category: { $nin: ["ERC", "ERCs"] },
+          eip: { $nin: ['7212'] },
+          category: { $nin: ['ERC', 'ERCs'] },
         },
       },
       {
@@ -76,9 +76,20 @@ const handler = async (req: Request, res: Response) => {
       },
     ]);
 
-    const eipModified = eipResult.map((item: { eip: string; title: string; author: string; status: string; type: string; category: string; created: string; _id: string }) => {
-      return { ...item, repo: "eip" };
-    });
+    const eipModified = eipResult.map(
+      (item: {
+        eip: string;
+        title: string;
+        author: string;
+        status: string;
+        type: string;
+        category: string;
+        created: string;
+        _id: string;
+      }) => {
+        return { ...item, repo: 'eip' };
+      }
+    );
 
     const ercResult = await ERCMdFiles.aggregate([
       {
@@ -88,9 +99,20 @@ const handler = async (req: Request, res: Response) => {
       },
     ]);
 
-    const ercModified = ercResult.map((item: { eip: string; title: string; author: string; status: string; type: string; category: string; created: string; _id: string }) => {
-      return { ...item, repo: "erc" };
-    });
+    const ercModified = ercResult.map(
+      (item: {
+        eip: string;
+        title: string;
+        author: string;
+        status: string;
+        type: string;
+        category: string;
+        created: string;
+        _id: string;
+      }) => {
+        return { ...item, repo: 'erc' };
+      }
+    );
 
     const ripResult = await RIPMdFiles.aggregate([
       {
@@ -100,14 +122,25 @@ const handler = async (req: Request, res: Response) => {
       },
     ]);
 
-    const ripModified = ripResult.map((item: { eip: string; title: string; author: string; status: string; type: string; category: string; created: string; _id: string }) => {
-      return { ...item, repo: "rip" };
-    });
+    const ripModified = ripResult.map(
+      (item: {
+        eip: string;
+        title: string;
+        author: string;
+        status: string;
+        type: string;
+        category: string;
+        created: string;
+        _id: string;
+      }) => {
+        return { ...item, repo: 'rip' };
+      }
+    );
 
     res.json({ eip: eipModified, erc: ercModified, rip: ripModified });
   } catch (error) {
-    console.error("Error retrieving EIPs:", error);
-    res.status(500).json({ error: "Internal server error" });
+    console.error('Error retrieving EIPs:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 };
 

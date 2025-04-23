@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -68,7 +68,7 @@
 }
 
 .cursive {
-  font-family: "Cedarville Cursive", cursive;
+  font-family: 'Cedarville Cursive', cursive;
 }
 
 html {
@@ -127,13 +127,21 @@ html {
   opacity: 0.8;
 }
 
-.container span:nth-of-type(1) { filter: blur(10px); }
-.container span:nth-of-type(2) { filter: blur(20px); }
-.container span:nth-of-type(3) { filter: blur(30px); }
-.container span:nth-of-type(4) { filter: blur(50px); }
+.container span:nth-of-type(1) {
+  filter: blur(10px);
+}
+.container span:nth-of-type(2) {
+  filter: blur(20px);
+}
+.container span:nth-of-type(3) {
+  filter: blur(30px);
+}
+.container span:nth-of-type(4) {
+  filter: blur(50px);
+}
 
 .container::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 10px;
   background: rgba(0, 0, 0, 0.4); /* Dark inner effect */
@@ -142,8 +150,12 @@ html {
 }
 
 @keyframes rotate_3922 {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* styles/glass-pagination.css */
@@ -167,7 +179,7 @@ html {
 }
 
 /* Table filter inputs */
-.c-smart-table input[type="text"] {
+.c-smart-table input[type='text'] {
   @apply bg-white/10 text-white placeholder-purple-300 border border-purple-500 
          rounded-md px-2 py-1 text-sm focus:outline-none focus:ring-2 
          focus:ring-purple-400 backdrop-blur-md transition duration-300;
@@ -185,5 +197,3 @@ html {
 .c-icon.c-icon-sm {
   color: #d8b4fe !important; /* purple-300 */
 }
-
-/* Add glowing hover for pagination dots/buttons */

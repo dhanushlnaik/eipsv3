@@ -11,47 +11,73 @@ if (mongoose.connection.readyState === 0) {
   }
 }
 const IssueDetailsSchema = new Schema({
-    issueNumber: { type: Number },
-    issueTitle: { type: String },
-    IssueDescription: { type: String },
-    labels: { type: [String] },
-    conversations: { type: [Object] },
-    numConversations: { type: Number },
-    participants: { type: [String] },
-    numParticipants: { type: Number },
-    commits: { type: [Object] },
-    numCommits: { type: Number },
-    filesChanged: { type: [String] },
-    numFilesChanged: { type: Number },
-    mergeDate: { type: Date },
+  issueNumber: { type: Number },
+  issueTitle: { type: String },
+  IssueDescription: { type: String },
+  labels: { type: [String] },
+  conversations: { type: [Object] },
+  numConversations: { type: Number },
+  participants: { type: [String] },
+  numParticipants: { type: Number },
+  commits: { type: [Object] },
+  numCommits: { type: Number },
+  filesChanged: { type: [String] },
+  numFilesChanged: { type: Number },
+  mergeDate: { type: Date },
 });
 
 // Define separate models for each collection
-const EipIssueDetails = mongoose.models.alleipsissuedetails || mongoose.model('alleipsissuedetails', IssueDetailsSchema);
-const ErcIssueDetails = mongoose.models.allercsissuedetails || mongoose.model('allercsissuedetails', IssueDetailsSchema);
-const RipIssueDetails = mongoose.models.allripsissuedetails || mongoose.model('allripsissuedetails', IssueDetailsSchema);
-
+const EipIssueDetails =
+  mongoose.models.alleipsissuedetails ||
+  mongoose.model('alleipsissuedetails', IssueDetailsSchema);
+const ErcIssueDetails =
+  mongoose.models.allercsissuedetails ||
+  mongoose.model('allercsissuedetails', IssueDetailsSchema);
+const RipIssueDetails =
+  mongoose.models.allripsissuedetails ||
+  mongoose.model('allripsissuedetails', IssueDetailsSchema);
 
 const getAllIssues = async (req: Request, res: Response) => {
-    try {
-        // Retrieve unique Issue numbers from each collection with repository information
-        const eipIssueNumbers = await EipIssueDetails.find({}, { issueTitle: 1, issueNumber: 1, _id: 0 }).lean();
-        const ercIssueNumbers = await ErcIssueDetails.find({}, { issueTitle: 1, issueNumber: 1, _id: 0 }).lean();
-        const ripIssueNumbers = await RipIssueDetails.find({}, { issueTitle: 1, issueNumber: 1, _id: 0 }).lean();
+  try {
+    // Retrieve unique Issue numbers from each collection with repository information
+    const eipIssueNumbers = await EipIssueDetails.find(
+      {},
+      { issueTitle: 1, issueNumber: 1, _id: 0 }
+    ).lean();
+    const ercIssueNumbers = await ErcIssueDetails.find(
+      {},
+      { issueTitle: 1, issueNumber: 1, _id: 0 }
+    ).lean();
+    const ripIssueNumbers = await RipIssueDetails.find(
+      {},
+      { issueTitle: 1, issueNumber: 1, _id: 0 }
+    ).lean();
 
-        // Add repository information to each Issue number
-        const formattedIssueNumbers = [
-            ...eipIssueNumbers.map(Issue => ({ issueNumber: Issue.issueNumber, issueTitle:Issue.issueTitle, repo: 'EIPs' })),
-            ...ercIssueNumbers.map(Issue => ({ issueNumber: Issue.issueNumber, issueTitle:Issue.issueTitle, repo: 'ERCs' })),
-            ...ripIssueNumbers.map(Issue => ({ issueNumber: Issue.issueNumber, issueTitle:Issue.issueTitle, repo: 'RIPs' })),
-        ];
+    // Add repository information to each Issue number
+    const formattedIssueNumbers = [
+      ...eipIssueNumbers.map((Issue) => ({
+        issueNumber: Issue.issueNumber,
+        issueTitle: Issue.issueTitle,
+        repo: 'EIPs',
+      })),
+      ...ercIssueNumbers.map((Issue) => ({
+        issueNumber: Issue.issueNumber,
+        issueTitle: Issue.issueTitle,
+        repo: 'ERCs',
+      })),
+      ...ripIssueNumbers.map((Issue) => ({
+        issueNumber: Issue.issueNumber,
+        issueTitle: Issue.issueTitle,
+        repo: 'RIPs',
+      })),
+    ];
 
-        // Send the consolidated list as a JSON response
-        res.json(formattedIssueNumbers);
-    } catch (error) {
-        console.error('Error:', error);
-        res.status(500).json({ error: 'Something went wrong' });
-    }
+    // Send the consolidated list as a JSON response
+    res.json(formattedIssueNumbers);
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Something went wrong' });
+  }
 };
 
 export default getAllIssues;

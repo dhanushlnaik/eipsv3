@@ -1,6 +1,5 @@
-import { Request, Response } from "express";
-import mongoose from "mongoose";
-
+import { Request, Response } from 'express';
+import mongoose from 'mongoose';
 
 // Ensure Mongo URI is defined
 const mongoUri = process.env.MONGODB_URI;
@@ -49,23 +48,23 @@ const eipHistorySchema = new mongoose.Schema({
 });
 
 const EipHistory =
-  mongoose.models.EipHistory || mongoose.model("EipHistory", eipHistorySchema);
+  mongoose.models.EipHistory || mongoose.model('EipHistory', eipHistorySchema);
 
 const handler = async (req: Request, res: Response) => {
-  const parts = req.url.split("/");
+  const parts = req.url.split('/');
   const eipNumber = parseInt(parts[4]);
 
   try {
     if (isNaN(eipNumber)) {
-      return res.status(400).json({ message: "Invalid EIP number" });
+      return res.status(400).json({ message: 'Invalid EIP number' });
     }
 
     const eipHistory = await EipHistory.find({ eip: eipNumber });
 
-    res.json({ ...eipHistory, repo: "eip" });
+    res.json({ ...eipHistory, repo: 'eip' });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server Error" });
+    res.status(500).json({ message: 'Server Error' });
   }
 };
 

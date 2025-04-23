@@ -1,7 +1,7 @@
-"use client";
-import { useEffect } from "react";
-import { motion, stagger, useAnimate } from "framer-motion";
-import { cn } from "@/lib/utils";
+'use client';
+import { useEffect } from 'react';
+import { motion, stagger, useAnimate } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 export const TextGenerateEffect = ({
   words,
@@ -11,11 +11,11 @@ export const TextGenerateEffect = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
-  const wordsArray = words.split(" ");
+  const wordsArray = words.split(' ');
   useEffect(() => {
     console.log(wordsArray);
     animate(
-      "span",
+      'span',
       {
         opacity: 1,
       },
@@ -34,10 +34,11 @@ export const TextGenerateEffect = ({
             <motion.span
               key={word + idx}
               // change here if idx is greater than 3, change the text color to #CBACF9
-              className={` ${idx > 3 ? "text-purpleee" : "dark:text-white text-black"
-                } opacity-0`}
+              className={` ${
+                idx > 3 ? 'text-purpleee' : 'dark:text-white text-black'
+              } opacity-0`}
             >
-              {word}{" "}
+              {word}{' '}
             </motion.span>
           );
         })}
@@ -46,7 +47,7 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-bold", className)}>
+    <div className={cn('font-bold', className)}>
       {/* mt-4 to my-4 */}
       <div className="my-4">
         {/* remove  text-2xl from the original */}

@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 
 // Define the StatusChange schema
 const allissuesSchema = new mongoose.Schema({
-    issue: {
-        type: Number,
-    },
+  issue: {
+    type: Number,
+  },
 });
 
 // Create the StatusChange model

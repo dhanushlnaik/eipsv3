@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import mongoose from "mongoose";
+import { Request, Response } from 'express';
+import mongoose from 'mongoose';
 
 // Ensure Mongo URI is defined
 const mongoUri = process.env.MONGODB_URI;
@@ -48,23 +48,23 @@ const eipHistorySchema = new mongoose.Schema({
 });
 
 const ErcHistory =
-  mongoose.models.RipHistory || mongoose.model("RipHistory", eipHistorySchema);
+  mongoose.models.RipHistory || mongoose.model('RipHistory', eipHistorySchema);
 
 const render = async (req: Request, res: Response) => {
-  const parts = req.url.split("/");
+  const parts = req.url.split('/');
   const eipNumber = parseInt(parts[4]);
 
   try {
     if (isNaN(eipNumber)) {
-      return res.status(400).json({ message: "Invalid RIP number" });
+      return res.status(400).json({ message: 'Invalid RIP number' });
     }
 
     const ercHistory = await ErcHistory.find({ eip: eipNumber });
 
-    res.json({ ...ercHistory, repo: "rip" });
+    res.json({ ...ercHistory, repo: 'rip' });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server Error" });
+    res.status(500).json({ message: 'Server Error' });
   }
 };
 

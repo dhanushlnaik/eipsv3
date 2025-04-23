@@ -4,10 +4,10 @@ import { MongoClient } from 'mongodb';
 const MONGODB_URI = process.env.MONGODB_URI || '';
 const DB_NAME = 'test';
 const COLLECTIONS = {
-  eips: "eipsPRCharts",
-  ercs: "ercsPRCharts",
-  rips: "ripsPRCharts",
-  all: "allPRCharts",
+  eips: 'eipsPRCharts',
+  ercs: 'ercsPRCharts',
+  rips: 'ripsPRCharts',
+  all: 'allPRCharts',
 };
 
 let client: MongoClient | null = null;
@@ -20,10 +20,17 @@ const connectToDatabase = async () => {
   return client.db(DB_NAME);
 };
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const { name } = req.query;
 
-  if (!name || typeof name !== 'string' || !Object.keys(COLLECTIONS).includes(name)) {
+  if (
+    !name ||
+    typeof name !== 'string' ||
+    !Object.keys(COLLECTIONS).includes(name)
+  ) {
     return res.status(400).json({ error: 'Invalid collection name' });
   }
 
@@ -36,8 +43,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const data = await collection.find({}).toArray();
     return res.status(200).json(data);
   } catch (error) {
-    console.error("Database query error:", error);
-    return res.status(500).json({ error: 'Failed to retrieve data from the database' });
+    console.error('Database query error:', error);
+    return res
+      .status(500)
+      .json({ error: 'Failed to retrieve data from the database' });
   }
 }
 
@@ -45,6 +54,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 process.on('SIGINT', async () => {
   if (client) {
     await client.close();
-    console.log("MongoDB connection closed on app termination");
+    console.log('MongoDB connection closed on app termination');
   }
 });

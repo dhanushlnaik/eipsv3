@@ -1,8 +1,8 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import finalStatusData from "@/data/final-status.json";
-import StatusBarChart from "../charts/StatusBarChart";
-import DownloadButton from "../ui/DownloadButton";
+'use client';
+import React, { useState, useEffect } from 'react';
+import finalStatusData from '@/data/final-status.json';
+import StatusBarChart from '../charts/StatusBarChart';
+import DownloadButton from '../ui/DownloadButton';
 
 interface StatusChange {
   eip: string;
@@ -32,22 +32,23 @@ const useFinalStatusData = (category: string) => {
       const jsonData: APIResponse = finalStatusData;
 
       // Merge all categories into a unified dataset
-      const combinedData = [...jsonData.eip, ...jsonData.erc, ...jsonData.rip].reduce(
-        (acc: StatusChart[], curr: StatusChart) => {
-          const existingYear = acc.find((item) => item.year === curr.year);
-          if (existingYear) {
-            existingYear.statusChanges.push(...curr.statusChanges);
-          } else {
-            acc.push({ year: curr.year, statusChanges: [...curr.statusChanges] });
-          }
-          return acc;
-        },
-        []
-      );
+      const combinedData = [
+        ...jsonData.eip,
+        ...jsonData.erc,
+        ...jsonData.rip,
+      ].reduce((acc: StatusChart[], curr: StatusChart) => {
+        const existingYear = acc.find((item) => item.year === curr.year);
+        if (existingYear) {
+          existingYear.statusChanges.push(...curr.statusChanges);
+        } else {
+          acc.push({ year: curr.year, statusChanges: [...curr.statusChanges] });
+        }
+        return acc;
+      }, []);
 
       setTypeData(combinedData);
     } catch (error) {
-      console.error("Error loading JSON data:", error);
+      console.error('Error loading JSON data:', error);
     } finally {
       setLoading(false);
     }
@@ -61,7 +62,10 @@ interface StatusChartWrapperProps {
   type: string;
 }
 
-const StatusChartWrapper: React.FC<StatusChartWrapperProps> = ({ category, type }) => {
+const StatusChartWrapper: React.FC<StatusChartWrapperProps> = ({
+  category,
+  type,
+}) => {
   const { typeData, loading } = useFinalStatusData(category);
 
   return (

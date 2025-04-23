@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import mongoose from "mongoose";
+import { Request, Response } from 'express';
+import mongoose from 'mongoose';
 
 // Ensure Mongo URI is defined
 const mongoUri = process.env.MONGODB_URI;
@@ -26,23 +26,23 @@ const ripcontentsSchema = new mongoose.Schema({
 
 const rip_contents =
   mongoose.models.rip_contents ||
-  mongoose.model("rip_contents", ripcontentsSchema);
+  mongoose.model('rip_contents', ripcontentsSchema);
 
 const render = async (req: Request, res: Response) => {
-  const parts = req.url.split("/");
+  const parts = req.url.split('/');
   const eipNumber = parseInt(parts[4]);
 
   try {
     const eip = await rip_contents.findOne({ eipNumber });
 
     if (!eip) {
-      return res.status(404).json({ message: "RIP not found" });
+      return res.status(404).json({ message: 'RIP not found' });
     }
 
-    res.json({ ...eip, repo: "rip" });
+    res.json({ ...eip, repo: 'rip' });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server Error" });
+    res.status(500).json({ message: 'Server Error' });
   }
 };
 

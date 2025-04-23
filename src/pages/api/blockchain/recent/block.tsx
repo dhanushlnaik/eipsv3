@@ -2,9 +2,14 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { ethers } from 'ethers';
 
-const provider = new ethers.JsonRpcProvider(`https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`);
+const provider = new ethers.JsonRpcProvider(
+  `https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`
+);
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   try {
     const latestBlockNumber = await provider.getBlockNumber();
 
@@ -22,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Create an array to hold the block info (block number, miner, and reward)
     const blockDetails = validBlocks.map((block: ethers.Block) => {
-      const blockReward = ethers.formatEther('2'); 
+      const blockReward = ethers.formatEther('2');
 
       return {
         blockNumber: block.number,

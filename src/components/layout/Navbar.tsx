@@ -1,8 +1,8 @@
-"use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import SearchBox from "../tools/SearchBar";
-import Link from "next/link";
+'use client';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import SearchBox from '../tools/SearchBar';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isLightMode, setIsLightMode] = useState(false);
@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const toggleLightMode = () => {
     setIsLightMode(!isLightMode);
-    document.documentElement.classList.toggle("light");
+    document.documentElement.classList.toggle('light');
   };
 
   const toggleMenu = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div
       className={`w-full h-[65px] fixed top-0 z-50 px-4 md:px-10 backdrop-blur-md ${
-        isLightMode ? "bg-white/30" : "bg-purple-900/30"
+        isLightMode ? 'bg-white/30' : 'bg-purple-900/30'
       }`}
     >
       <div className="w-full h-full flex items-center justify-between m-auto">
@@ -39,11 +39,11 @@ const Navbar = () => {
         <div className="hidden md:flex w-[500px] h-full items-center justify-between">
           <div className="flex items-center justify-between w-full h-auto border border-white/30 bg-purple-800/50 px-5 py-2 rounded-full text-gray-200">
             {[
-              { href: "/pectra", label: "Pectra" },
-              { href: "/alleips", label: "All EIPs" },
-              { href: "/tools", label: "Tools" },
-              { href: "/insights", label: "Insights" },
-              { href: "/more", label: "More" },
+              { href: '/pectra', label: 'Pectra' },
+              { href: '/alleips', label: 'All EIPs' },
+              { href: '/tools', label: 'Tools' },
+              { href: '/insights', label: 'Insights' },
+              { href: '/more', label: 'More' },
             ].map(({ href, label }) => (
               <a
                 key={href}
@@ -62,7 +62,7 @@ const Navbar = () => {
           onClick={toggleMenu}
           className="md:hidden flex items-center justify-center w-10 h-10 rounded-full border text-gray-200 hover:bg-gray-300 transition-colors duration-300"
         >
-          {isMenuOpen ? "✖" : "☰"}
+          {isMenuOpen ? '✖' : '☰'}
         </button>
 
         {/* Search and Light Mode Toggle */}
@@ -72,7 +72,7 @@ const Navbar = () => {
             onClick={toggleLightMode}
             className="w-10 h-10 flex items-center justify-center rounded-full border text-gray-800 hover:bg-gray-300 transition-colors duration-300"
           >
-            {isLightMode ? "🌙" : "☀️"}
+            {isLightMode ? '🌙' : '☀️'}
           </button>
         </div>
       </div>
@@ -81,11 +81,11 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden flex flex-col gap-4 mt-4 bg-purple-800/50 p-4 rounded-lg text-gray-200">
           {[
-            { href: "/pectra", label: "Pectra" },
-            { href: "/alleips", label: "All EIPs" },
-            { href: "/tools", label: "Tools" },
-            { href: "/insights", label: "Insights" },
-            { href: "/more", label: "More" },
+            { href: '/pectra', label: 'Pectra' },
+            { href: '/alleips', label: 'All EIPs' },
+            { href: '/tools', label: 'Tools' },
+            { href: '/insights', label: 'Insights' },
+            { href: '/more', label: 'More' },
           ].map(({ href, label }) => (
             <Link
               key={href}
@@ -100,7 +100,7 @@ const Navbar = () => {
             onClick={toggleLightMode}
             className="w-full flex items-center justify-center rounded-full border text-gray-800 hover:bg-gray-300 transition-colors duration-300"
           >
-            {isLightMode ? "🌙" : "☀️"}
+            {isLightMode ? '🌙' : '☀️'}
           </button>
         </div>
       )}

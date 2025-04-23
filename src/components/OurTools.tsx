@@ -1,25 +1,25 @@
-"use client";
-import React from "react";
-import { workExperience } from "@/data";
-import { Button } from "./ui/MovingBorders";
-import Image from "next/image";
-import { motion } from "motion/react";
-import { slideInFromLeft, slideInFromRight } from "@/lib/utils";
+'use client';
+import React from 'react';
+import { workExperience } from '@/data';
+import { Button } from './ui/MovingBorders';
+import Image from 'next/image';
+import { motion } from 'motion/react';
+import { slideInFromLeft, slideInFromRight } from '@/lib/utils';
 const OurTools = () => {
   return (
     <div className="w-full">
-        <motion.div
+      <motion.div
         variants={slideInFromLeft(0.5)}
-        className='text-[60px] text-white font-bold mt-[10px] text-center mb-[5px]'
-        >
-            Our <span className="text-purpleee">  Tools </span>
-        </motion.div>
-        <motion.div
+        className="text-[60px] text-white font-bold mt-[10px] text-center mb-[5px]"
+      >
+        Our <span className="text-purpleee"> Tools </span>
+      </motion.div>
+      <motion.div
         variants={slideInFromRight(0.5)}
-        className='cursive text-[20px] text-gray-200 mb-10 mt-[5px] text-center'
-        >
-            Simplifying Ethereum Proposal Analysis
-        </motion.div>
+        className="cursive text-[20px] text-gray-200 mb-10 mt-[5px] text-center"
+      >
+        Simplifying Ethereum Proposal Analysis
+      </motion.div>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (
@@ -31,9 +31,9 @@ const OurTools = () => {
             style={{
               //   add these two
               //   you can generate the color from here https://cssgradient.io/
-              background: "rgb(4,7,29)",
+              background: 'rgb(4,7,29)',
               backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                'linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)',
               // add this border radius to make it more rounded so that the moving border is more realistic
               borderRadius: `calc(1.75rem* 0.96)`,
             }}
@@ -41,15 +41,15 @@ const OurTools = () => {
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-            <Image
-                    src={card.thumbnail}
-                    alt={card.title} // Better for accessibility
-                    width={128} // Define width explicitly
-                    height={128} // Define height explicitly
-                    className="lg:w-32 md:w-20 w-16"
-                    priority // Improves LCP (Largest Contentful Paint)
-                    unoptimized={false} // Ensures Next.js optimization
-                  />
+              <Image
+                src={card.thumbnail}
+                alt={card.title} // Better for accessibility
+                width={128} // Define width explicitly
+                height={128} // Define height explicitly
+                className="lg:w-32 md:w-20 w-16"
+                priority // Improves LCP (Largest Contentful Paint)
+                unoptimized={false} // Ensures Next.js optimization
+              />
               <div className="lg:ms-5">
                 <h1 className="text-start text-xl md:text-2xl font-bold">
                   {card.title}

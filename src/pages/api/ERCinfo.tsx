@@ -1,9 +1,9 @@
-import { Request, Response } from "express";
-import axios from "axios";
+import { Request, Response } from 'express';
+import axios from 'axios';
 
 const render = async (req: Request, res: Response) => {
   try {
-    const repositoryUrl = "https://api.github.com/repos/ethereum/ERCs";
+    const repositoryUrl = 'https://api.github.com/repos/ethereum/ERCs';
     const response = await axios.get(repositoryUrl);
 
     console.log(response);
@@ -29,9 +29,8 @@ const render = async (req: Request, res: Response) => {
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server Error" });
+    res.status(500).json({ message: 'Server Error' });
   }
 };
-
 
 export default render;

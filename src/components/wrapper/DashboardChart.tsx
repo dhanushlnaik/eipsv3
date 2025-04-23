@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React from "react";
-import { motion } from "motion/react";
-import { slideInFromLeft, slideInFromRight } from "@/lib/utils";
-import EIPChartWrapper from "../charts/EIPChartWrapper";
+import React from 'react';
+import { motion } from 'motion/react';
+import { slideInFromLeft, slideInFromRight } from '@/lib/utils';
+import EIPChartWrapper from '../charts/EIPChartWrapper';
 
 const DashboardChart = () => {
   return (
@@ -18,9 +18,10 @@ const DashboardChart = () => {
         variants={slideInFromRight(0.5)}
         className="cursive text-[20px] text-gray-200 mt-5 mb-10 text-center"
       >
-        Ethereum Improvement Proposals (EIPs) Categorization Over the Years (2015-2025)
+        Ethereum Improvement Proposals (EIPs) Categorization Over the Years
+        (2015-2025)
       </motion.div>
-      <EIPChartWrapper type={"All"} />
+      <EIPChartWrapper type={'All'} />
     </div>
   );
 };

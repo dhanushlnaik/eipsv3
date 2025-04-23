@@ -28,7 +28,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
     // Validate required parameters
     if (!page || typeof page !== 'string') {
-      return res.status(400).json({ message: 'Page parameter is required and must be a string' });
+      return res
+        .status(400)
+        .json({ message: 'Page parameter is required and must be a string' });
     }
 
     if (!CommentId || !ObjectId.isValid(CommentId as string)) {
@@ -36,7 +38,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     }
 
     if (!content || typeof content !== 'string') {
-      return res.status(400).json({ message: 'Content is required and must be a string' });
+      return res
+        .status(400)
+        .json({ message: 'Content is required and must be a string' });
     }
 
     const client = new MongoClient(uri);
@@ -68,7 +72,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       if (result.modifiedCount > 0) {
         return res.status(200).json({ message: 'Reply added successfully' });
       } else {
-        return res.status(404).json({ message: 'Comment not found or category mismatch' });
+        return res
+          .status(404)
+          .json({ message: 'Comment not found or category mismatch' });
       }
     } catch (err) {
       console.error('Error posting reply:', err);

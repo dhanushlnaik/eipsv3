@@ -1,6 +1,5 @@
-import { Request, Response } from "express";
-import mongoose from "mongoose";
-
+import { Request, Response } from 'express';
+import mongoose from 'mongoose';
 
 // Ensure Mongo URI is defined
 const mongoUri = process.env.MONGODB_URI;
@@ -27,23 +26,23 @@ const eipcontentsSchema = new mongoose.Schema({
 
 const eip_contents =
   mongoose.models.eip_contents ||
-  mongoose.model("eip_contents", eipcontentsSchema);
+  mongoose.model('eip_contents', eipcontentsSchema);
 
 const handler = async (req: Request, res: Response) => {
-  const parts = req.url.split("/");
+  const parts = req.url.split('/');
   const eipNumber = parseInt(parts[4]);
 
   try {
     const eip = await eip_contents.findOne({ eipNumber });
 
     if (!eip) {
-      return res.status(404).json({ message: "EIP not found" });
+      return res.status(404).json({ message: 'EIP not found' });
     }
 
-    res.json({ ...eip, repo: "eip" });
+    res.json({ ...eip, repo: 'eip' });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server Error" });
+    res.status(500).json({ message: 'Server Error' });
   }
 };
 

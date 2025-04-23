@@ -2,11 +2,16 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { ethers } from 'ethers';
 
-const provider = new ethers.JsonRpcProvider(`https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`);
+const provider = new ethers.JsonRpcProvider(
+  `https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`
+);
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const { id } = req.query; // 'id' will be the block number or block hash
-  
+
   if (typeof id !== 'string') {
     return res.status(400).json({
       success: false,

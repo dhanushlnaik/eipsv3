@@ -1,20 +1,20 @@
-import { Request, Response } from "express";
-import mongoose from "mongoose";
+import { Request, Response } from 'express';
+import mongoose from 'mongoose';
 
 // Ensure the MongoDB URI is defined
 const mongoUri = process.env.MONGODB_URI;
 if (!mongoUri) {
-  throw new Error("MONGODB_URI environment variable is not defined");
+  throw new Error('MONGODB_URI environment variable is not defined');
 }
 
 // Connect to the database
 mongoose
   .connect(mongoUri)
   .then(() => {
-    console.log("Connected to the database");
+    console.log('Connected to the database');
   })
   .catch((error: Error) => {
-    console.error("Error connecting to the database:", error.message);
+    console.error('Error connecting to the database:', error.message);
   });
 
 // Define the schema for EIPs
@@ -30,7 +30,7 @@ const mdFilesSchema = new mongoose.Schema({
 
 // Create or retrieve the Mongoose model
 const MdFiles =
-  mongoose.models.ErcMdFiles || mongoose.model("ErcMdFiles", mdFilesSchema);
+  mongoose.models.ErcMdFiles || mongoose.model('ErcMdFiles', mdFilesSchema);
 
 // Define the handler function
 const handler = async (req: Request, res: Response): Promise<void> => {
@@ -47,8 +47,8 @@ const handler = async (req: Request, res: Response): Promise<void> => {
     // Send the sorted result as a JSON response
     res.json(result);
   } catch (error) {
-    console.error("Error retrieving EIPs:", error);
-    res.status(500).json({ error: "Internal server error" });
+    console.error('Error retrieving EIPs:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 };
 

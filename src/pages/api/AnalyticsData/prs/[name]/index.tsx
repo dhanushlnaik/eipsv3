@@ -20,14 +20,20 @@ const connectToDatabase = async () => {
   return client.db(DB_NAME);
 };
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const { name } = req.query;
 
   // Validate collection name and monthYear
-  if (!name || typeof name !== 'string' || !Object.keys(COLLECTIONS).includes(name)) {
+  if (
+    !name ||
+    typeof name !== 'string' ||
+    !Object.keys(COLLECTIONS).includes(name)
+  ) {
     return res.status(400).json({ error: 'Invalid collection name' });
   }
-
 
   try {
     const db = await connectToDatabase();
@@ -40,7 +46,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json(data);
   } catch (error) {
     console.error('Database query error:', error);
-    return res.status(500).json({ error: 'Failed to retrieve data from the database' });
+    return res
+      .status(500)
+      .json({ error: 'Failed to retrieve data from the database' });
   }
 }
 

@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import mongoose from "mongoose";
+import { Request, Response } from 'express';
+import mongoose from 'mongoose';
 
 // Ensure Mongo URI is defined
 const mongoUri = process.env.MONGODB_URI;
@@ -49,18 +49,18 @@ const statusChangeSchema = new mongoose.Schema({
 });
 const EipStatusChange =
   mongoose.models.EipStatusChange2 ||
-  mongoose.model("EipStatusChange2", statusChangeSchema, "eipstatuschange2");
+  mongoose.model('EipStatusChange2', statusChangeSchema, 'eipstatuschange2');
 
 const ErcStatusChange =
   mongoose.models.ErcStatusChange2 ||
-  mongoose.model("ErcStatusChange2", statusChangeSchema, "ercstatuschange2");
+  mongoose.model('ErcStatusChange2', statusChangeSchema, 'ercstatuschange2');
 
 const RipStatusChange =
   mongoose.models.RipStatusChange2 ||
-  mongoose.model("RipStatusChange2", statusChangeSchema, "ripstatuschange2");
+  mongoose.model('RipStatusChange2', statusChangeSchema, 'ripstatuschange2');
 
 const render = async (req: Request, res: Response) => {
-  const parts = req.url.split("/");
+  const parts = req.url.split('/');
   const year = parseInt(parts[4]);
   const month = parseInt(parts[5]);
   try {
@@ -76,18 +76,18 @@ const render = async (req: Request, res: Response) => {
     const EipstatusChanges = await EipStatusChange.aggregate([
       {
         $match: {
-          eip: { $nin: ["7212"] },
+          eip: { $nin: ['7212'] },
           changeDate: { $gte: startDate, $lte: endDate },
           category: {
-            $ne: "ERC",
+            $ne: 'ERC',
           },
         },
       },
       {
         $group: {
-          _id: "$toStatus",
+          _id: '$toStatus',
           count: { $sum: 1 },
-          statusChanges: { $push: "$$ROOT" },
+          statusChanges: { $push: '$$ROOT' },
         },
       },
     ]);
@@ -97,47 +97,89 @@ const render = async (req: Request, res: Response) => {
         $match: {
           changeDate: { $gte: startDate, $lte: endDate },
           category: {
-            $ne: "ERC",
+            $ne: 'ERC',
           },
         },
       },
       {
         $group: {
-          _id: "$toStatus",
+          _id: '$toStatus',
           count: { $sum: 1 },
-          statusChanges: { $push: "$$ROOT" },
+          statusChanges: { $push: '$$ROOT' },
         },
       },
     ]);
 
-    const eipFinal = EipstatusChanges.map((item: { _id: string; count: number; statusChanges: { eip: string; fromStatus: string; toStatus: string; changeDate: Date; changedDay: number; changedMonth: number; changedYear: number; }[] }) => {
-      return { ...item, repo: "eip" };
-    });
+    const eipFinal = EipstatusChanges.map(
+      (item: {
+        _id: string;
+        count: number;
+        statusChanges: {
+          eip: string;
+          fromStatus: string;
+          toStatus: string;
+          changeDate: Date;
+          changedDay: number;
+          changedMonth: number;
+          changedYear: number;
+        }[];
+      }) => {
+        return { ...item, repo: 'eip' };
+      }
+    );
 
-    const ripFinal = RipstatusChanges.map((item: { _id: string; count: number; statusChanges: { eip: string; fromStatus: string; toStatus: string; changeDate: Date; changedDay: number; changedMonth: number; changedYear: number; }[] }) => {
-      return { ...item, repo: "rip" };
-    });
+    const ripFinal = RipstatusChanges.map(
+      (item: {
+        _id: string;
+        count: number;
+        statusChanges: {
+          eip: string;
+          fromStatus: string;
+          toStatus: string;
+          changeDate: Date;
+          changedDay: number;
+          changedMonth: number;
+          changedYear: number;
+        }[];
+      }) => {
+        return { ...item, repo: 'rip' };
+      }
+    );
 
     if (yearNum === 2023 && monthNum === 10) {
       const FrozenErcStatusChanges = await EipStatusChange.aggregate([
         {
           $match: {
             changeDate: { $gte: startDate, $lte: endDate },
-            category: "ERC",
+            category: 'ERC',
           },
         },
         {
           $group: {
-            _id: "$toStatus",
+            _id: '$toStatus',
             count: { $sum: 1 },
-            statusChanges: { $push: "$$ROOT" },
+            statusChanges: { $push: '$$ROOT' },
           },
         },
       ]);
 
-      const ercFrozenFinal = FrozenErcStatusChanges.map((item: { _id: string; count: number; statusChanges: { eip: string; fromStatus: string; toStatus: string; changeDate: Date; changedDay: number; changedMonth: number; changedYear: number; }[] }) => {
-        return { ...item, repo: "erc" };
-      });
+      const ercFrozenFinal = FrozenErcStatusChanges.map(
+        (item: {
+          _id: string;
+          count: number;
+          statusChanges: {
+            eip: string;
+            fromStatus: string;
+            toStatus: string;
+            changeDate: Date;
+            changedDay: number;
+            changedMonth: number;
+            changedYear: number;
+          }[];
+        }) => {
+          return { ...item, repo: 'erc' };
+        }
+      );
       res.json({
         eip: eipFinal,
         erc: ercFrozenFinal,
@@ -148,36 +190,64 @@ const render = async (req: Request, res: Response) => {
         {
           $match: {
             changeDate: { $gte: startDate, $lte: endDate },
-            category: "ERC",
+            category: 'ERC',
           },
         },
         {
           $group: {
-            _id: "$toStatus",
+            _id: '$toStatus',
             count: { $sum: 1 },
-            statusChanges: { $push: "$$ROOT" },
+            statusChanges: { $push: '$$ROOT' },
           },
         },
       ]);
 
-      const ercFrozenFinal = FrozenErcStatusChanges.map((item: { _id: string; count: number; statusChanges: { eip: string; fromStatus: string; toStatus: string; changeDate: Date; changedDay: number; changedMonth: number; changedYear: number; }[] }) => {
-        return { ...item, repo: "erc" };
-      });
+      const ercFrozenFinal = FrozenErcStatusChanges.map(
+        (item: {
+          _id: string;
+          count: number;
+          statusChanges: {
+            eip: string;
+            fromStatus: string;
+            toStatus: string;
+            changeDate: Date;
+            changedDay: number;
+            changedMonth: number;
+            changedYear: number;
+          }[];
+        }) => {
+          return { ...item, repo: 'erc' };
+        }
+      );
 
       const ErcstatusChanges = await ErcStatusChange.aggregate([
         { $match: { changeDate: { $gte: startDate, $lte: endDate } } },
         {
           $group: {
-            _id: "$toStatus",
+            _id: '$toStatus',
             count: { $sum: 1 },
-            statusChanges: { $push: "$$ROOT" },
+            statusChanges: { $push: '$$ROOT' },
           },
         },
       ]);
 
-      const ercFinal = ErcstatusChanges.map((item: { _id: string; count: number; statusChanges: { eip: string; fromStatus: string; toStatus: string; changeDate: Date; changedDay: number; changedMonth: number; changedYear: number; }[] }) => {
-        return { ...item, repo: "erc" };
-      });
+      const ercFinal = ErcstatusChanges.map(
+        (item: {
+          _id: string;
+          count: number;
+          statusChanges: {
+            eip: string;
+            fromStatus: string;
+            toStatus: string;
+            changeDate: Date;
+            changedDay: number;
+            changedMonth: number;
+            changedYear: number;
+          }[];
+        }) => {
+          return { ...item, repo: 'erc' };
+        }
+      );
 
       res.json({
         eip: eipFinal,
@@ -189,20 +259,34 @@ const render = async (req: Request, res: Response) => {
         { $match: { changeDate: { $gte: startDate, $lte: endDate } } },
         {
           $group: {
-            _id: "$toStatus",
+            _id: '$toStatus',
             count: { $sum: 1 },
-            statusChanges: { $push: "$$ROOT" },
+            statusChanges: { $push: '$$ROOT' },
           },
         },
       ]);
 
-      const ercFinal = ErcstatusChanges.map((item: { _id: string; count: number; statusChanges: { eip: string; fromStatus: string; toStatus: string; changeDate: Date; changedDay: number; changedMonth: number; changedYear: number; }[] }) => {
-        return { ...item, repo: "erc" };
-      });
+      const ercFinal = ErcstatusChanges.map(
+        (item: {
+          _id: string;
+          count: number;
+          statusChanges: {
+            eip: string;
+            fromStatus: string;
+            toStatus: string;
+            changeDate: Date;
+            changedDay: number;
+            changedMonth: number;
+            changedYear: number;
+          }[];
+        }) => {
+          return { ...item, repo: 'erc' };
+        }
+      );
       res.json({ eip: eipFinal, erc: ercFinal, rip: ripFinal });
     }
   } catch (error) {
-    res.status(500).json({ error: "An error occurred" });
+    res.status(500).json({ error: 'An error occurred' });
     console.log(error);
   }
 };

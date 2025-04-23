@@ -1,5 +1,5 @@
-import React from "react";
-import ReactECharts from "echarts-for-react";
+import React from 'react';
+import ReactECharts from 'echarts-for-react';
 
 interface EIP {
   eip: string;
@@ -12,12 +12,18 @@ interface DonutChartProps {
 }
 
 const DashboardDonut: React.FC<DonutChartProps> = ({ dataset }) => {
-  const categoryCounts = dataset.eip.reduce<Record<string, number>>((acc, item) => {
-    acc[item.category] = (acc[item.category] || 0) + 1;
-    return acc;
-  }, {});
+  const categoryCounts = dataset.eip.reduce<Record<string, number>>(
+    (acc, item) => {
+      acc[item.category] = (acc[item.category] || 0) + 1;
+      return acc;
+    },
+    {}
+  );
 
-  const totalCategories = Object.values(categoryCounts).reduce((sum, count) => sum + count, 0);
+  const totalCategories = Object.values(categoryCounts).reduce(
+    (sum, count) => sum + count,
+    0
+  );
 
   const chartData = Object.entries(categoryCounts).map(([name, value]) => ({
     name,
@@ -25,13 +31,13 @@ const DashboardDonut: React.FC<DonutChartProps> = ({ dataset }) => {
   }));
 
   const colors = [
-    { main: "rgba(159, 122, 234, 0.7)", stroke: "#9F7AEA" }, // Purple
-    { main: "rgba(246, 114, 128, 0.7)", stroke: "#F67280" }, // Red
-    { main: "rgba(129, 199, 132, 0.7)", stroke: "#81C784" }, // Green
-    { main: "rgba(100, 181, 246, 0.7)", stroke: "#64B5F6" }, // Blue
-    { main: "rgba(255, 213, 79, 0.7)", stroke: "#FFD54F" }, // Yellow
-    { main: "rgba(255, 138, 101, 0.7)", stroke: "#FF8A65" }, // Orange
-    { main: "rgba(77, 182, 172, 0.7)", stroke: "#4DB6AC" }, // Teal (NEW for extra category)
+    { main: 'rgba(159, 122, 234, 0.7)', stroke: '#9F7AEA' }, // Purple
+    { main: 'rgba(246, 114, 128, 0.7)', stroke: '#F67280' }, // Red
+    { main: 'rgba(129, 199, 132, 0.7)', stroke: '#81C784' }, // Green
+    { main: 'rgba(100, 181, 246, 0.7)', stroke: '#64B5F6' }, // Blue
+    { main: 'rgba(255, 213, 79, 0.7)', stroke: '#FFD54F' }, // Yellow
+    { main: 'rgba(255, 138, 101, 0.7)', stroke: '#FF8A65' }, // Orange
+    { main: 'rgba(77, 182, 172, 0.7)', stroke: '#4DB6AC' }, // Teal (NEW for extra category)
   ];
 
   // Assign colors dynamically
@@ -46,58 +52,58 @@ const DashboardDonut: React.FC<DonutChartProps> = ({ dataset }) => {
 
   const option = {
     title: {
-      text: "EIP Categories",
-      left: "center",
+      text: 'EIP Categories',
+      left: 'center',
       textStyle: {
-        color: "#ffffff",
+        color: '#ffffff',
       },
     },
     tooltip: {
-      trigger: "item",
-      backgroundColor: "rgba(30, 30, 30, 0.8)",
-      borderColor: "#777",
+      trigger: 'item',
+      backgroundColor: 'rgba(30, 30, 30, 0.8)',
+      borderColor: '#777',
       textStyle: {
-        color: "#fff",
+        color: '#fff',
       },
     },
     legend: {
-      orient: "vertical",
-      left: "left",
+      orient: 'vertical',
+      left: 'left',
       textStyle: {
-        color: "#ffffff",
+        color: '#ffffff',
       },
     },
     series: [
       {
-        name: "Category",
-        type: "pie",
-        radius: ["40%", "70%"], // Donut shape
+        name: 'Category',
+        type: 'pie',
+        radius: ['40%', '70%'], // Donut shape
         data: formattedData,
         label: {
-          color: "#ffffff",
+          color: '#ffffff',
           fontSize: 12,
         },
         emphasis: {
           itemStyle: {
             shadowBlur: 15,
             shadowOffsetX: 0,
-            shadowColor: "rgba(255, 255, 255, 0.6)",
+            shadowColor: 'rgba(255, 255, 255, 0.6)',
           },
         },
       },
       {
-        name: "Total",
-        type: "pie",
-        radius: ["0%", "30%"], // Center text space
+        name: 'Total',
+        type: 'pie',
+        radius: ['0%', '30%'], // Center text space
         data: [{ value: totalCategories, name: `Total: ${totalCategories}` }],
         label: {
-          position: "center",
+          position: 'center',
           fontSize: 20,
-          fontWeight: "bold",
-          color: "#ffffff",
+          fontWeight: 'bold',
+          color: '#ffffff',
         },
         itemStyle: {
-          color: "transparent",
+          color: 'transparent',
         },
         emphasis: {
           label: {
@@ -108,7 +114,7 @@ const DashboardDonut: React.FC<DonutChartProps> = ({ dataset }) => {
     ],
   };
 
-  return <ReactECharts option={option} style={{ height: 700  }} />;
+  return <ReactECharts option={option} style={{ height: 700 }} />;
 };
 
 export default DashboardDonut;

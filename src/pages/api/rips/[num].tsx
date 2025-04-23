@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import mongoose from "mongoose";
+import { Request, Response } from 'express';
+import mongoose from 'mongoose';
 
 // Ensure Mongo URI is defined
 const mongoUri = process.env.MONGODB_URI;
@@ -28,23 +28,23 @@ const mdFilesSchema = new mongoose.Schema({
 });
 
 const RIPMdFiles =
-  mongoose.models.RipMdFiles || mongoose.model("RipMdFiles", mdFilesSchema);
+  mongoose.models.RipMdFiles || mongoose.model('RipMdFiles', mdFilesSchema);
 
 const render = async (req: Request, res: Response) => {
-  const parts = req.url.split("/");
+  const parts = req.url.split('/');
   const eipNumber = parseInt(parts[3]);
 
   RIPMdFiles.findOne({ eip: eipNumber })
     .then((eip: typeof RIPMdFiles) => {
       if (eip) {
-        res.json({ ...eip, repo: "rip" });
+        res.json({ ...eip, repo: 'rip' });
       } else {
-        res.status(404).json({ error: "EIP not found" });
+        res.status(404).json({ error: 'EIP not found' });
       }
     })
     .catch((error: mongoose.Error) => {
-      console.error("Error retrieving EIP:", error);
-      res.status(500).json({ error: "Internal server error" });
+      console.error('Error retrieving EIP:', error);
+      res.status(500).json({ error: 'Internal server error' });
     });
 };
 

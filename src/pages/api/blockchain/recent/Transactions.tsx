@@ -2,15 +2,24 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { ethers } from 'ethers';
 
-const provider = new ethers.JsonRpcProvider(`https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`);
+const provider = new ethers.JsonRpcProvider(
+  `https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`
+);
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   try {
     const latestBlockNumber = await provider.getBlockNumber();
     const latestBlock = await provider.getBlock(latestBlockNumber, true); // Fetch block with transactions
 
     // Check if latestBlock is null or doesn't have transactions
-    if (!latestBlock || !latestBlock.transactions || latestBlock.transactions.length === 0) {
+    if (
+      !latestBlock ||
+      !latestBlock.transactions ||
+      latestBlock.transactions.length === 0
+    ) {
       return res.status(404).json({
         success: false,
         message: 'No transactions found in the latest block',

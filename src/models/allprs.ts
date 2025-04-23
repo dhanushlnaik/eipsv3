@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 
 // Define the StatusChange schema
 const allprsSchema = new mongoose.Schema({
-    pr: {
-        type: Number,
-    },
+  pr: {
+    type: Number,
+  },
 });
 
 // Create the StatusChange model

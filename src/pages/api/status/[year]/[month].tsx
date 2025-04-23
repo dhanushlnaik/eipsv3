@@ -19,39 +19,41 @@ mongoose
 
 // Define the StatusChange schema
 const statusChangeSchema = new mongoose.Schema({
-    eip: {
-        type: String,
-        required: true
-    }, 
-    fromStatus: {
-        type: String,
-        required: true,
-    },
-    toStatus: {
-        type: String,
-        required: true,
-    },
-    changeDate: {
-        type: Date,
-        required: true,
-    },
-    changedDay: {
-        type: Number,
-        required: true,
-    },
-    changedMonth: {
-        type: Number,
-        required: true,
-    },
-    changedYear: {
-        type: Number,
-        required: true,
-    },
+  eip: {
+    type: String,
+    required: true,
+  },
+  fromStatus: {
+    type: String,
+    required: true,
+  },
+  toStatus: {
+    type: String,
+    required: true,
+  },
+  changeDate: {
+    type: Date,
+    required: true,
+  },
+  changedDay: {
+    type: Number,
+    required: true,
+  },
+  changedMonth: {
+    type: Number,
+    required: true,
+  },
+  changedYear: {
+    type: Number,
+    required: true,
+  },
 });
-const StatusChange = mongoose.models.StatusChange || mongoose.model('StatusChange', statusChangeSchema);
+const StatusChange =
+  mongoose.models.StatusChange ||
+  mongoose.model('StatusChange', statusChangeSchema);
 
 const render = async (req: Request, res: Response) => {
-  const parts = req.url.split("/");
+  const parts = req.url.split('/');
   const year = parseInt(parts[3]);
   const month = parseInt(parts[4]);
   try {
@@ -65,56 +67,77 @@ const render = async (req: Request, res: Response) => {
 
     // Query the database for status changes within the specified date range
     const statusChanges = await StatusChange.aggregate([
-        { $match: { changeDate: { $gte: startDate, $lte: endDate }, status: { $ne: null } } },
-        {
-            $group: {
-                _id: { status: '$status', month: { $month: '$changeDate' }, year: { $year: '$changeDate' } },
-                eips: {
-                    $push: {
-                        category: '$category',
-                        month: { $month: '$changeDate' },
-                        year: { $year: '$changeDate' },
-                        date: { $concat: [{ $toString: { $year: '$changeDate' } }, '-', { $toString: { $month: '$changeDate' } }] },
-                        count: 1,
-                        eips: '$$ROOT'
-                    }
-                }
-            }
+      {
+        $match: {
+          changeDate: { $gte: startDate, $lte: endDate },
+          status: { $ne: null },
         },
-        {
-            $group: {
-                _id: '$_id.status',
-                eips: {
-                    $push: {
-                        category: '$_id.category',
-                        month: '$_id.month',
-                        year: '$_id.year',
-                        date: { $concat: [{ $toString: '$_id.year' }, '-', { $toString: '$_id.month' }] },
-                        count: { $sum: 1 },
-                        eips: '$eips'
-                    }
-                }
-            }
+      },
+      {
+        $group: {
+          _id: {
+            status: '$status',
+            month: { $month: '$changeDate' },
+            year: { $year: '$changeDate' },
+          },
+          eips: {
+            $push: {
+              category: '$category',
+              month: { $month: '$changeDate' },
+              year: { $year: '$changeDate' },
+              date: {
+                $concat: [
+                  { $toString: { $year: '$changeDate' } },
+                  '-',
+                  { $toString: { $month: '$changeDate' } },
+                ],
+              },
+              count: 1,
+              eips: '$$ROOT',
+            },
+          },
         },
-        {
-            $project: {
-                _id: 0,
-                status: '$_id',
-                eips: 1
-            }
+      },
+      {
+        $group: {
+          _id: '$_id.status',
+          eips: {
+            $push: {
+              category: '$_id.category',
+              month: '$_id.month',
+              year: '$_id.year',
+              date: {
+                $concat: [
+                  { $toString: '$_id.year' },
+                  '-',
+                  { $toString: '$_id.month' },
+                ],
+              },
+              count: { $sum: 1 },
+              eips: '$eips',
+            },
+          },
         },
-        {
-            $sort: {
-                status: 1
-            }
-        }
+      },
+      {
+        $project: {
+          _id: 0,
+          status: '$_id',
+          eips: 1,
+        },
+      },
+      {
+        $sort: {
+          status: 1,
+        },
+      },
     ]);
 
     res.json(statusChanges);
-} catch (error) {
+  } catch (error) {
     console.error('Error:', error);
     res.status(500).json({ error: 'An error occurred' });
-}
+  }
 };
 
 export default render;

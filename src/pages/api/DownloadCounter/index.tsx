@@ -1,12 +1,12 @@
-import mongoose from "mongoose";
-import type { NextApiRequest, NextApiResponse } from "next";
-import { Schema, model, models } from "mongoose";
+import mongoose from 'mongoose';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { Schema, model, models } from 'mongoose';
 
 // Connect to MongoDB using the connection string from the environment variable
 const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
-  throw new Error("Please define the MONGODB_URI environment variable");
+  throw new Error('Please define the MONGODB_URI environment variable');
 }
 
 // Define a schema for the view counts
@@ -15,7 +15,8 @@ const DownloadCountSchema = new Schema({
 });
 
 // Use the schema to create a model
-const DownloadCount = models.DownloadCount || model("DownloadCount", DownloadCountSchema);
+const DownloadCount =
+  models.DownloadCount || model('DownloadCount', DownloadCountSchema);
 
 // Connect to MongoDB if not already connected
 const connectToDatabase = async () => {
@@ -25,7 +26,10 @@ const connectToDatabase = async () => {
   await mongoose.connect(MONGODB_URI!);
 };
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   await connectToDatabase();
 
   try {
@@ -38,7 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     res.status(200).json({ DownloadCount: result.count });
   } catch (error) {
-    console.error("Error updating view count:", error);
-    res.status(500).json({ error: "Error updating view count" });
+    console.error('Error updating view count:', error);
+    res.status(500).json({ error: 'Error updating view count' });
   }
 }

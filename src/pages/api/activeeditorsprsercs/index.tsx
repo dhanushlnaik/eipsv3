@@ -4,13 +4,14 @@ import fetch from 'node-fetch';
 
 // Ensure the database connection is established only once
 if (mongoose.connection.readyState === 0) {
-    if (typeof process.env.MONGODB_URI === 'string') {
-        mongoose.connect(process.env.MONGODB_URI)
-            .then(() => console.log('Connected to MongoDB'))
-            .catch((err) => console.error('Error connecting to MongoDB:', err));
-    } else {
-        console.error('MONGODB_URI environment variable is not defined');
-    }
+  if (typeof process.env.MONGODB_URI === 'string') {
+    mongoose
+      .connect(process.env.MONGODB_URI)
+      .then(() => console.log('Connected to MongoDB'))
+      .catch((err) => console.error('Error connecting to MongoDB:', err));
+  } else {
+    console.error('MONGODB_URI environment variable is not defined');
+  }
 }
 
 // Function to fetch reviewers from a YAML file
@@ -75,16 +76,31 @@ const ripReviewSchema = new mongoose.Schema({
 
 // Create or use existing RIPReviewDetails model
 const RIPReviewDetails =
-  mongoose.models.RIPReviewDetails || mongoose.model('RIPReviewDetails', ripReviewSchema);
+  mongoose.models.RIPReviewDetails ||
+  mongoose.model('RIPReviewDetails', ripReviewSchema);
 
 // Controller logic to fetch and group PR review details by reviewer
-const fetchAndGroupReviews = async (req: Request, res: Response): Promise<void> => {
+const fetchAndGroupReviews = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
   try {
     // Fetch GitHub handles to filter by
     const githubHandles = await fetchReviewers();
 
     // Create an object to store results grouped by reviewer
-    const resultByReviewer: { [key: string]: { repo: string; prNumber: number; prTitle: string; createdAt: Date; closedAt: Date | null; mergedAt: Date | null; reviewDate: Date; reviewComment: string | null; }[] } = {};
+    const resultByReviewer: {
+      [key: string]: {
+        repo: string;
+        prNumber: number;
+        prTitle: string;
+        createdAt: Date;
+        closedAt: Date | null;
+        mergedAt: Date | null;
+        reviewDate: Date;
+        reviewComment: string | null;
+      }[];
+    } = {};
     githubHandles.forEach((handle) => {
       resultByReviewer[handle] = [];
     });
@@ -108,29 +124,40 @@ const fetchAndGroupReviews = async (req: Request, res: Response): Promise<void> 
     ]);
 
     // Group PR details by reviewer
-    eipReviews.forEach((review: { reviewerName: string; prNumber: number; prTitle: string; createdAt: Date; closedAt: Date | null; mergedAt: Date | null; reviewDate: Date; reviewComment: string | null; }) => {
-      const {
-        reviewerName,
-        prNumber,
-        prTitle,
-        createdAt,
-        closedAt,
-        mergedAt,
-        reviewDate,
-        reviewComment,
-      } = review;
+    eipReviews.forEach(
+      (review: {
+        reviewerName: string;
+        prNumber: number;
+        prTitle: string;
+        createdAt: Date;
+        closedAt: Date | null;
+        mergedAt: Date | null;
+        reviewDate: Date;
+        reviewComment: string | null;
+      }) => {
+        const {
+          reviewerName,
+          prNumber,
+          prTitle,
+          createdAt,
+          closedAt,
+          mergedAt,
+          reviewDate,
+          reviewComment,
+        } = review;
 
-      resultByReviewer[reviewerName].push({
-        repo: 'RIPs',
-        prNumber,
-        prTitle,
-        createdAt,
-        closedAt,
-        mergedAt,
-        reviewDate,
-        reviewComment,
-      });
-    });
+        resultByReviewer[reviewerName].push({
+          repo: 'RIPs',
+          prNumber,
+          prTitle,
+          createdAt,
+          closedAt,
+          mergedAt,
+          reviewDate,
+          reviewComment,
+        });
+      }
+    );
 
     // Send the grouped details as a JSON response
     res.status(200).json(resultByReviewer);
