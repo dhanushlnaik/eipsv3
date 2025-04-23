@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
-
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
 interface EIP {
   _id: string;
   eip: string;
@@ -217,92 +221,84 @@ const SearchByEip2: React.FC<AuthorProps> = ({ defaultQuery }) => {
 
                 return (
                   <a
-                    key={item._id}
-                    href={`/${item.repo === 'erc' ? 'ercs/erc' : item.repo === 'rip' ? 'rips/rip' : 'eips/eip'}-${item.eip}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-purple-900/50 backdrop-blur-md rounded-lg p-4 transition transform hover:scale-105 hover:outline hover:outline-purple-400 outline-offset-[-2px] flex flex-col justify-between min-h-[300px] shadow-md"
-                  >
-                    <h2 className="text-blue-400 text-xl font-extrabold mb-3 break-words">
-                      {item.repo.toUpperCase()}-{item.eip}
-                    </h2>
-
-                    <p className="text-sm font-bold text-gray-300 truncate mb-2">
-                      {item.title}
-                    </p>
-
-                    <p className="text-sm text-gray-300 mb-1">
-                      <b>Type:</b> {item.type}
-                    </p>
-
-                    <p className="text-sm text-gray-300 mb-1">
-                      <b>Category:</b> {item.category}
-                    </p>
-
-                    <p className="text-sm text-gray-300 mb-1">
-                      <b>Status:</b> {item.status}
-                    </p>
-
-                    {networkUpgrade && (
-                      <p className="text-sm text-gray-300 mb-1">
-                        <b>Network Upgrade:</b> {networkUpgrade}
-                      </p>
-                    )}
-
-                    <p className="text-xs font-bold text-gray-300 mb-2">
-                      Authors:
-                    </p>
+                  key={item._id}
+                  href={`/${item.repo === 'erc' ? 'ercs/erc' : item.repo === 'rip' ? 'rips/rip' : 'eips/eip'}-${item.eip}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-purple-900/30 backdrop-blur-lg border border-purple-700/40 rounded-2xl p-5 transition-all duration-300 transform hover:scale-105 hover:border-purple-400 shadow-xl flex flex-col justify-between min-h-[320px] hover:shadow-purple-500/30"
+                >
+                  <h2 className="text-purple-300 text-2xl font-black mb-3 break-words drop-shadow-sm tracking-tight">
+                    {item.repo.toUpperCase()}-{item.eip}
+                  </h2>
+                
+                  <p className="text-sm font-semibold text-gray-100 line-clamp-2 mb-3">
+                    {item.title}
+                  </p>
+                
+                  <div className="space-y-1 text-sm text-gray-200 font-medium">
+                    <p><b>Type:</b> {item.type}</p>
+                    <p><b>Category:</b> {item.category}</p>
+                    <p><b>Status:</b> {item.status}</p>
+                    {networkUpgrade && <p><b>Network Upgrade:</b> {networkUpgrade}</p>}
+                  </div>
+                
+                  <div className="mt-4">
+                    <p className="text-xs font-bold text-gray-400 mb-1 tracking-wide">Author:</p>
                     <div
-                      className="flex items-center gap-2 bg-blue-500 text-white px-3 py-1 rounded-full border border-blue-500 whitespace-nowrap overflow-hidden transition hover:bg-blue-400 hover:scale-105 cursor-pointer"
+                      className="flex items-center gap-3 px-3 py-2 rounded-xl border border-purple-500/40 bg-purple-500/20 hover:bg-purple-500/30 transition cursor-pointer w-fit"
                       onClick={(e) => {
                         e.preventDefault();
                         setSelectedAuthor(firstAuthor);
                       }}
                     >
-                      {firstAuthor}
-                      {hasMoreAuthors && (
-                        <span className="ml-2">
-                          +{sortedAuthors.length - 1}
-                        </span>
-                      )}
+                      <Avatar>
+                        <AvatarImage src={`https://github.com/${firstAuthor.toLowerCase()}.png`} alt={`@${firstAuthor}`} />
+                        <AvatarFallback>{firstAuthor.slice(0, 2).toUpperCase()}</AvatarFallback>
+                      </Avatar>
+                      <span className="text-sm text-white font-semibold">
+                        {firstAuthor}
+                        {hasMoreAuthors && (
+                          <span className="ml-1 text-purple-300">+{sortedAuthors.length - 1}</span>
+                        )}
+                      </span>
                     </div>
-                  </a>
+                  </div>
+                </a>
                 );
               })}
             </div>
 
             {/* Pagination */}
-            <div className="mt-8 flex justify-center items-center gap-4">
-              <button
-                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                disabled={currentPage === 1}
-                className={`px-4 py-2 rounded-md font-semibold transition-all duration-200 ${
-                  currentPage === 1
-                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                    : 'bg-blue-600 text-white hover:bg-blue-700'
-                }`}
-              >
-                Previous
-              </button>
+            <div className="mt-8 flex justify-center items-center gap-6">
+  <button
+    onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+    disabled={currentPage === 1}
+    className={`px-6 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform ${
+      currentPage === 1
+        ? 'bg-gray-400 text-gray-500 cursor-not-allowed'
+        : 'bg-purple-600 text-white hover:bg-purple-700 shadow-md hover:scale-105'
+    } backdrop-blur-lg border border-purple-600/30`}
+  >
+    Previous
+  </button>
 
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                Page {currentPage} of {totalPages}
-              </span>
+  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">
+    Page {currentPage} of {totalPages}
+  </span>
 
-              <button
-                onClick={() =>
-                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-                }
-                disabled={currentPage === totalPages}
-                className={`px-4 py-2 rounded-md font-semibold transition-all duration-200 ${
-                  currentPage === totalPages
-                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                    : 'bg-blue-600 text-white hover:bg-blue-700'
-                }`}
-              >
-                Next
-              </button>
-            </div>
+  <button
+    onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+    disabled={currentPage === totalPages}
+    className={`px-6 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform ${
+      currentPage === totalPages
+        ? 'bg-gray-400 text-gray-500 cursor-not-allowed'
+        : 'bg-purple-600 text-white hover:bg-purple-700 shadow-md hover:scale-105'
+    } backdrop-blur-lg border border-purple-600/30`}
+  >
+    Next
+  </button>
+</div>
+
           </>
         )}
       </div>

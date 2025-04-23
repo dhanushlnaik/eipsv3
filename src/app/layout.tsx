@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/components/theme-providers';
 import { Space_Grotesk } from 'next/font/google';
 import Navbar from '@/components/layout/Navbar';
 import { useState, useEffect } from 'react';
-import Loader from '@/components/ui/Loader';
+import Loader from '@/components/ui/Loader2';
 
 const inter = Space_Grotesk({
   subsets: ['latin'],
