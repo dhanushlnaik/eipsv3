@@ -1,10 +1,8 @@
-import React, { useEffect, useState,  } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import ReactECharts from 'echarts-for-react';
-
-
 
 interface EIP {
   _id: string;
@@ -61,10 +59,12 @@ const EIPStatusBar: React.FC<ChartProps> = ({ type }) => {
   const transformedData = data.reduce<TransformedData[]>((acc, item) => {
     const year = new Date(item.created).getFullYear();
     const status = item.status;
-  
+
     // Check if a record for the same category and year already exists
-    const existingEntry = acc.find((entry) => entry.year === year && entry.status === status);
-  
+    const existingEntry = acc.find(
+      (entry) => entry.year === year && entry.status === status
+    );
+
     if (existingEntry) {
       // If it exists, increment the value
       existingEntry.value += 1;
@@ -76,7 +76,7 @@ const EIPStatusBar: React.FC<ChartProps> = ({ type }) => {
         value: 1,
       });
     }
-  
+
     return acc;
   }, []);
 
@@ -203,7 +203,7 @@ const EIPStatusBar: React.FC<ChartProps> = ({ type }) => {
       },
     ],
     xAxis: {
-      type: "category",
+      type: 'category',
       boundaryGap: true,
       data: yearSet,
       axisLine: {
@@ -225,23 +225,21 @@ const EIPStatusBar: React.FC<ChartProps> = ({ type }) => {
         lineStyle: { color: '#2d3748' }, // Tailwind gray-800 for subtle lines
       },
     },
-    series: Array.from(seriesMap.entries()).map(
-      ([status, values], index) => ({
-        name: status,
-        type: 'bar',
-        stack: 'total',
-        emphasis: { focus: 'series' },
-        itemStyle: {
-          color: colors[index % colors.length].main,
-          borderColor: colors[index % colors.length].stroke,
-          borderWidth: 1,
-        },
-        data: yearSet.map((year) => {
-          const entry = values.find((v) => v.year === year);
-          return entry ? entry.value : 0;
-        }),
-      })
-    ),
+    series: Array.from(seriesMap.entries()).map(([status, values], index) => ({
+      name: status,
+      type: 'bar',
+      stack: 'total',
+      emphasis: { focus: 'series' },
+      itemStyle: {
+        color: colors[index % colors.length].main,
+        borderColor: colors[index % colors.length].stroke,
+        borderWidth: 1,
+      },
+      data: yearSet.map((year) => {
+        const entry = values.find((v) => v.year === year);
+        return entry ? entry.value : 0;
+      }),
+    })),
   };
 
   return (
@@ -258,7 +256,7 @@ const EIPStatusBar: React.FC<ChartProps> = ({ type }) => {
     >
       {isLoading ? (
         <div className="flex justify-center items-center h-52">
-          <div className="animate-spin border-4 border-blue-400 rounded-full w-10 h-10 border-t-transparent"></div>
+          <div className="animate-spin border-4 border-purple-400 rounded-full w-10 h-10 border-t-transparent"></div>
         </div>
       ) : (
         <>

@@ -17,6 +17,7 @@
     "@octokit/rest": "^21.1.0",
     "@octokit/types": "^13.7.0",
     "@radix-ui/react-avatar": "^1.1.7",
+    "@radix-ui/react-select": "^2.2.2",
     "@radix-ui/react-slot": "^1.2.0",
     "@radix-ui/react-tabs": "^1.1.9",
     "@react-three/fiber": "^9.1.0",

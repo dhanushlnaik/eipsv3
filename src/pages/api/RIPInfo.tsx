@@ -4,7 +4,7 @@ import axios from 'axios';
 const render = async (req: Request, res: Response) => {
   try {
     const repositoryUrl = 'https://api.github.com/repos/ethereum/RIPs';
-    
+
     const response = await axios.get(repositoryUrl, {
       headers: {
         Authorization: `token ${process.env.ACCESS_TOKEN}`,
@@ -30,7 +30,9 @@ const render = async (req: Request, res: Response) => {
       res.status(500).json({ message: 'Server Error', error: err.message });
     } else {
       console.error('Unexpected error:', err);
-      res.status(500).json({ message: 'Server Error', error: 'Unexpected error occurred' });
+      res
+        .status(500)
+        .json({ message: 'Server Error', error: 'Unexpected error occurred' });
     }
   }
 };

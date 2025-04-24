@@ -47,7 +47,6 @@ const EIPStatusDonut = () => {
     { main: 'rgba(77, 182, 172, 0.7)', stroke: '#4DB6AC' }, // Teal
   ];
 
-
   const statusData = Array.from(new Set(data.map((item) => item.status)));
 
   // Generate chart data based on the status values
@@ -55,7 +54,7 @@ const EIPStatusDonut = () => {
     name: status,
     value: data.filter((item) => item.status === status).length,
   }));
-  
+
   // Format the status data for the chart with colors and borders
   const formattedStatusData = statusChartData.map((item, index) => ({
     ...item,
@@ -65,7 +64,7 @@ const EIPStatusDonut = () => {
       borderWidth: 3,
     },
   }));
-  
+
   const statusChartOption = {
     tooltip: {
       trigger: 'item',
@@ -117,7 +116,6 @@ const EIPStatusDonut = () => {
       },
     ],
   };
-  
 
   const downloadData = () => {
     const header =

@@ -49,7 +49,7 @@ interface AreaCProps {
   cat: string;
 }
 
-const CatTable: React.FC<AreaCProps> = ({ cat, dataset, status }) => {
+const CatTable2: React.FC<AreaCProps> = ({ cat, dataset, status }) => {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [data, setData] = useState<EIP[]>([]);
@@ -84,7 +84,7 @@ const CatTable: React.FC<AreaCProps> = ({ cat, dataset, status }) => {
   const filteredData = data
     .filter(
       (item) =>
-        (cat === 'All' || item.category === cat) && item.status === status
+        (cat === 'All' || item.category === cat) && item.category === status
     )
     .map((item) => {
       const { eip, title, author, repo, type, category, status, deadline } =
@@ -314,4 +314,4 @@ const CatTable: React.FC<AreaCProps> = ({ cat, dataset, status }) => {
   );
 };
 
-export default CatTable;
+export default CatTable2;

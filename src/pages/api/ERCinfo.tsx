@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 import axios from 'axios';
 
-
 const render = async (req: Request, res: Response) => {
   try {
     const repositoryUrl = 'https://api.github.com/repos/ethereum/ERCs';

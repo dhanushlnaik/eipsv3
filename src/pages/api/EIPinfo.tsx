@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 import axios from 'axios';
 
-
 const render = async (req: Request, res: Response) => {
   try {
     const repositoryUrl = 'https://api.github.com/repos/ethereum/EIPs';
@@ -30,7 +29,9 @@ const render = async (req: Request, res: Response) => {
   } catch (err: unknown) {
     if (axios.isAxiosError(err) && err.response) {
       console.error(err.response.data);
-      res.status(500).json({ message: 'Server Error', error: err.response.data });
+      res
+        .status(500)
+        .json({ message: 'Server Error', error: err.response.data });
     } else if (err instanceof Error) {
       console.error(err.message);
       res.status(500).json({ message: 'Server Error', error: err.message });

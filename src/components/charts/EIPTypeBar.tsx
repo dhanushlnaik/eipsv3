@@ -68,25 +68,25 @@ const EIPTypeBar: React.FC<ChartProps> = ({ type }) => {
       try {
         const response = await fetch(`/api/new/all`);
         const jsonData = await response.json();
-        if (type === "EIP") {
+        if (type === 'EIP') {
           setData(jsonData.eip);
-        } else if (type === "ERC") {
+        } else if (type === 'ERC') {
           setData(jsonData.erc);
-        } else if (type === "RIP") {
+        } else if (type === 'RIP') {
           jsonData.rip.forEach((item: EIP) => {
-            if (item.eip === "7859") {
-                item.status = "Draft"; // Update the status
+            if (item.eip === '7859') {
+              item.status = 'Draft'; // Update the status
             }
-        });        
+          });
           setData(jsonData.rip);
-        } else if (type === "Total") {
+        } else if (type === 'Total') {
           setData(jsonData.eip.concat(jsonData.erc.concat(jsonData.rip)));
         } else {
           setData(jsonData.eip.concat(jsonData.erc.concat(jsonData.rip)));
         }
         setIsLoading(false);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       }
     };
 
@@ -96,10 +96,12 @@ const EIPTypeBar: React.FC<ChartProps> = ({ type }) => {
   const transformedData = data.reduce<TransformedData[]>((acc, item) => {
     const year = new Date(item.created).getFullYear();
     const category = getCat(item.category);
-  
+
     // Check if a record for the same category and year already exists
-    const existingEntry = acc.find((entry) => entry.year === year && entry.category === category);
-  
+    const existingEntry = acc.find(
+      (entry) => entry.year === year && entry.category === category
+    );
+
     if (existingEntry) {
       // If it exists, increment the value
       existingEntry.value += 1;
@@ -111,10 +113,9 @@ const EIPTypeBar: React.FC<ChartProps> = ({ type }) => {
         value: 1,
       });
     }
-  
+
     return acc;
   }, []);
-  
 
   const downloadData = () => {
     const header =
@@ -180,7 +181,7 @@ const EIPTypeBar: React.FC<ChartProps> = ({ type }) => {
 
   const yearSet = [...new Set(transformedData.map((d) => d.year))];
 
-  const seriesMap = transformedData.reduce((acc, {category, year, value }) => {
+  const seriesMap = transformedData.reduce((acc, { category, year, value }) => {
     if (!acc.has(category)) acc.set(category, []);
     acc.get(category)?.push({ year, value });
     return acc;
