@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import CatTable from "../tables/catTable";
+import React, { useState, useEffect } from 'react';
+import CatTable from '../tables/catTable';
 
 interface EIP {
   _id: string;
@@ -13,118 +13,107 @@ interface EIP {
   discussion: string;
   deadline: string;
   requires: string;
-  repo:string;
+  repo: string;
   unique_ID: number;
   __v: number;
 }
 
 const AllTabTables: React.FC = () => {
-  const [selected, setSelected] = useState("All");
+  const [selected, setSelected] = useState('All');
   const [data, setData] = useState<EIP[]>([]);
   const [data2, setData2] = useState<EIP[]>([]);
-  
-
-
 
   useEffect(() => {
     const fetchData = async () => {
-      try { 
+      try {
         const response = await fetch(`/api/new/all`);
         const jsonData = await response.json();
         setData(jsonData.eip.concat(jsonData.erc).concat(jsonData.rip));
-        const alldata=jsonData.eip.concat(jsonData.erc).concat(jsonData.rip);
-        let filteredData = alldata
-        .filter((item: EIP) => item.category === selected);
-        if(selected==="All"){
-          filteredData=alldata;
+        const alldata = jsonData.eip.concat(jsonData.erc).concat(jsonData.rip);
+        let filteredData = alldata.filter(
+          (item: EIP) => item.category === selected
+        );
+        if (selected === 'All') {
+          filteredData = alldata;
         }
 
         setData2(filteredData);
-        console.log("all data:",alldata);
-        console.log("filtered data:", filteredData);
-
-
+        console.log('all data:', alldata);
+        console.log('filtered data:', filteredData);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       }
     };
     fetchData();
   }, [selected]);
 
-  useEffect(()=>{
-        let filteredData = data
-        .filter((item: EIP) => item.category === selected);
-        if(selected==="All"){
-          filteredData=data;
-        }
-        console.log("main data:", filteredData);
+  useEffect(() => {
+    let filteredData = data.filter((item: EIP) => item.category === selected);
+    if (selected === 'All') {
+      filteredData = data;
+    }
+    console.log('main data:', filteredData);
 
-        setData2(filteredData);
-  },[selected, data]);
+    setData2(filteredData);
+  }, [selected, data]);
 
-//   const handleDownload = () => {
-//     // Filter data based on the selected category
-//     let filteredData;
-//     if(selected!=='RIP'){
-//     filteredData = data
-//         .filter((item) => (selected==="All"||item.category === selected))
-//         .map((item) => {
-//             const { repo, eip, title, author, discussion, status, deadline, type, category,created } = item;
-//             return { repo, eip, title, author, discussion, status, deadline, type, category,created };
-//         });
-//       }
-//     else{
-//     filteredData=data
-//     .filter((item) => item.repo === 'rip')
-//         .map((item) => {
-//             const { repo, eip, title, author, discussion, status, deadline, type, category,created } = item;
-//             return { repo, eip, title, author, discussion, status, deadline, type, category,created };
-//         });
-//     }
+  //   const handleDownload = () => {
+  //     // Filter data based on the selected category
+  //     let filteredData;
+  //     if(selected!=='RIP'){
+  //     filteredData = data
+  //         .filter((item) => (selected==="All"||item.category === selected))
+  //         .map((item) => {
+  //             const { repo, eip, title, author, discussion, status, deadline, type, category,created } = item;
+  //             return { repo, eip, title, author, discussion, status, deadline, type, category,created };
+  //         });
+  //       }
+  //     else{
+  //     filteredData=data
+  //     .filter((item) => item.repo === 'rip')
+  //         .map((item) => {
+  //             const { repo, eip, title, author, discussion, status, deadline, type, category,created } = item;
+  //             return { repo, eip, title, author, discussion, status, deadline, type, category,created };
+  //         });
+  //     }
 
-//     // Check if there's any data to download
-//     if (filteredData.length === 0) {
-//         console.log("No data available for download.");
-//         return; // Exit if no data is present
-//     }
+  //     // Check if there's any data to download
+  //     if (filteredData.length === 0) {
+  //         console.log("No data available for download.");
+  //         return; // Exit if no data is present
+  //     }
 
-//     // Define the CSV header
-//     const header = "Repo, EIP, Title, Author,Status, deadline, Type, Category, Discussion, Created at, Link\n";
+  //     // Define the CSV header
+  //     const header = "Repo, EIP, Title, Author,Status, deadline, Type, Category, Discussion, Created at, Link\n";
 
-//     // Prepare the CSV content
-//     const csvContent = "data:text/csv;charset=utf-8,"
-//     + header
-//     + filteredData.map(({ repo, eip, title, author, discussion, status, deadline, type, category, created }) => {
-//         // Generate the correct URL based on the repo type
-//         const url = repo === "eip"
-//             ? `https://eipsinsight.com/eips/eip-${eip}`
-//             : repo === "erc"
-//             ? `https://eipsinsight.com/ercs/erc-${eip}`
-//             : `https://eipsinsight.com/rips/rip-${eip}`;
+  //     // Prepare the CSV content
+  //     const csvContent = "data:text/csv;charset=utf-8,"
+  //     + header
+  //     + filteredData.map(({ repo, eip, title, author, discussion, status, deadline, type, category, created }) => {
+  //         // Generate the correct URL based on the repo type
+  //         const url = repo === "eip"
+  //             ? `https://eipsinsight.com/eips/eip-${eip}`
+  //             : repo === "erc"
+  //             ? `https://eipsinsight.com/ercs/erc-${eip}`
+  //             : `https://eipsinsight.com/rips/rip-${eip}`;
 
-//         // Wrap title and author in double quotes to handle commas
-//         return `"${repo}","${eip}","${title.replace(/"/g, '""')}","${author.replace(/"/g, '""')}","${status.replace(/"/g, '""')}","${deadline ? deadline.replace(/"/g, '""') : '-'}","${type.replace(/"/g, '""')}","${category.replace(/"/g, '""')}","${discussion.replace(/"/g, '""')}","${created.replace(/"/g, '""')}","${url}"`; }).join("\n");
+  //         // Wrap title and author in double quotes to handle commas
+  //         return `"${repo}","${eip}","${title.replace(/"/g, '""')}","${author.replace(/"/g, '""')}","${status.replace(/"/g, '""')}","${deadline ? deadline.replace(/"/g, '""') : '-'}","${type.replace(/"/g, '""')}","${category.replace(/"/g, '""')}","${discussion.replace(/"/g, '""')}","${created.replace(/"/g, '""')}","${url}"`; }).join("\n");
 
-  
-//     // Check the generated CSV content before download
-//     console.log("CSV Content:", csvContent);
+  //     // Check the generated CSV content before download
+  //     console.log("CSV Content:", csvContent);
 
-//     // Encode the CSV content for downloading
-//     const encodedUri = encodeURI(csvContent);
-//     const link = document.createElement("a");
-//     link.setAttribute("href", encodedUri);
-//     link.setAttribute("download", `${selected}.csv`); // Name your CSV file here
-//     document.body.appendChild(link); // Required for Firefox
-//     link.click();
-//     document.body.removeChild(link);
-// };
+  //     // Encode the CSV content for downloading
+  //     const encodedUri = encodeURI(csvContent);
+  //     const link = document.createElement("a");
+  //     link.setAttribute("href", encodedUri);
+  //     link.setAttribute("download", `${selected}.csv`); // Name your CSV file here
+  //     document.body.appendChild(link); // Required for Firefox
+  //     link.click();
+  //     document.body.removeChild(link);
+  // };
 
-  const optionArr = React.useMemo(() => [
-    "All",
-    "EIP",
-    "ERC",
-    "RIP",
-  ], []);
+  const optionArr = React.useMemo(() => ['All', 'EIP', 'ERC', 'RIP'], []);
 
   useEffect(() => {
     // Check if a hash exists in the URL
@@ -139,7 +128,7 @@ const AllTabTables: React.FC = () => {
       {/* For larger screens, show the buttons with padding */}
       <div className="space-x-6 hidden md:flex px-6">
         {optionArr.map((item, key) => {
-          if (item === "All") {
+          if (item === 'All') {
             return (
               <button
                 key={key}
@@ -174,20 +163,24 @@ const AllTabTables: React.FC = () => {
           className="w-full bg-transparent text-white border-2 border-purple-500/40 px-4 py-3 rounded-lg backdrop-blur-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 hover:bg-purple-500/10"
         >
           {optionArr.map((item, key) => (
-            <option value={item} key={key} className="bg-purple-500/10 text-white">
+            <option
+              value={item}
+              key={key}
+              className="bg-purple-500/10 text-white"
+            >
               {item}
             </option>
           ))}
         </select>
       </div>
-      
-      <CatTable dataset={data2} cat={selected} status={"Living"} />
-              <CatTable dataset={data2} cat={selected} status={"Final"} />
-              <CatTable dataset={data2} cat={selected} status={"Last Call"} />
-              <CatTable dataset={data2} cat={selected} status={"Review"} />
-              <CatTable dataset={data2} cat={selected} status={"Draft"} />
-              <CatTable dataset={data2} cat={selected} status={"Withdrawn"} />
-              <CatTable dataset={data2} cat={selected} status={"Stagnant"} />
+
+      <CatTable dataset={data2} cat={selected} status={'Living'} />
+      <CatTable dataset={data2} cat={selected} status={'Final'} />
+      <CatTable dataset={data2} cat={selected} status={'Last Call'} />
+      <CatTable dataset={data2} cat={selected} status={'Review'} />
+      <CatTable dataset={data2} cat={selected} status={'Draft'} />
+      <CatTable dataset={data2} cat={selected} status={'Withdrawn'} />
+      <CatTable dataset={data2} cat={selected} status={'Stagnant'} />
     </>
   );
 };

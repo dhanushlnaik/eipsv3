@@ -27,18 +27,23 @@ const AllPage = () => {
             <Loader /> // Show loader while loading
           ) : (
             <>
-            <motion.div
-  variants={slideInFromLeft(0.5)}
-  className="text-[60px] text-white font-bold mt-[10px] text-center mb-[5px]"
->
-  Explore <span className="text-purpleee">Ethereum Improvement Proposals</span>
-</motion.div>
-<motion.div
-  variants={slideInFromRight(0.5)}
-  className="cursive text-[20px] text-gray-200 mb-10 mt-[5px] text-center"
->
-  {"Your gateway to understanding and navigating Ethereum's latest innovations"}
-</motion.div>
+              <motion.div
+                variants={slideInFromLeft(0.5)}
+                className="text-[60px] text-white font-bold mt-[10px] text-center mb-[5px]"
+              >
+                Explore{' '}
+                <span className="text-purpleee">
+                  Ethereum Improvement Proposals
+                </span>
+              </motion.div>
+              <motion.div
+                variants={slideInFromRight(0.5)}
+                className="cursive text-[20px] text-gray-200 mb-10 mt-[5px] text-center"
+              >
+                {
+                  "Your gateway to understanding and navigating Ethereum's latest innovations"
+                }
+              </motion.div>
 
               <SearchByEip2 defaultQuery="" />
               <AllTabTables />

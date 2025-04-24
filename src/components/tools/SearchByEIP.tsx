@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 interface EIP {
   _id: string;
   eip: string;
@@ -221,84 +217,104 @@ const SearchByEip2: React.FC<AuthorProps> = ({ defaultQuery }) => {
 
                 return (
                   <a
-                  key={item._id}
-                  href={`/${item.repo === 'erc' ? 'ercs/erc' : item.repo === 'rip' ? 'rips/rip' : 'eips/eip'}-${item.eip}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-purple-900/30 backdrop-blur-lg border border-purple-700/40 rounded-2xl p-5 transition-all duration-300 transform hover:scale-105 hover:border-purple-400 shadow-xl flex flex-col justify-between min-h-[320px] hover:shadow-purple-500/30"
-                >
-                  <h2 className="text-purple-300 text-2xl font-black mb-3 break-words drop-shadow-sm tracking-tight">
-                    {item.repo.toUpperCase()}-{item.eip}
-                  </h2>
-                
-                  <p className="text-sm font-semibold text-gray-100 line-clamp-2 mb-3">
-                    {item.title}
-                  </p>
-                
-                  <div className="space-y-1 text-sm text-gray-200 font-medium">
-                    <p><b>Type:</b> {item.type}</p>
-                    <p><b>Category:</b> {item.category}</p>
-                    <p><b>Status:</b> {item.status}</p>
-                    {networkUpgrade && <p><b>Network Upgrade:</b> {networkUpgrade}</p>}
-                  </div>
-                
-                  <div className="mt-4">
-                    <p className="text-xs font-bold text-gray-400 mb-1 tracking-wide">Author:</p>
-                    <div
-                      className="flex items-center gap-3 px-3 py-2 rounded-xl border border-purple-500/40 bg-purple-500/20 hover:bg-purple-500/30 transition cursor-pointer w-fit"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setSelectedAuthor(firstAuthor);
-                      }}
-                    >
-                      <Avatar>
-                        <AvatarImage src={`https://github.com/${firstAuthor.toLowerCase()}.png`} alt={`@${firstAuthor}`} />
-                        <AvatarFallback>{firstAuthor.slice(0, 2).toUpperCase()}</AvatarFallback>
-                      </Avatar>
-                      <span className="text-sm text-white font-semibold">
-                        {firstAuthor}
-                        {hasMoreAuthors && (
-                          <span className="ml-1 text-purple-300">+{sortedAuthors.length - 1}</span>
-                        )}
-                      </span>
+                    key={item._id}
+                    href={`/${item.repo === 'erc' ? 'ercs/erc' : item.repo === 'rip' ? 'rips/rip' : 'eips/eip'}-${item.eip}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-purple-900/30 backdrop-blur-lg border border-purple-700/40 rounded-2xl p-5 transition-all duration-300 transform hover:scale-105 hover:border-purple-400 shadow-xl flex flex-col justify-between min-h-[320px] hover:shadow-purple-500/30"
+                  >
+                    <h2 className="text-purple-300 text-2xl font-black mb-3 break-words drop-shadow-sm tracking-tight">
+                      {item.repo.toUpperCase()}-{item.eip}
+                    </h2>
+
+                    <p className="text-sm font-semibold text-gray-100 line-clamp-2 mb-3">
+                      {item.title}
+                    </p>
+
+                    <div className="space-y-1 text-sm text-gray-200 font-medium">
+                      <p>
+                        <b>Type:</b> {item.type}
+                      </p>
+                      <p>
+                        <b>Category:</b> {item.category}
+                      </p>
+                      <p>
+                        <b>Status:</b> {item.status}
+                      </p>
+                      {networkUpgrade && (
+                        <p>
+                          <b>Network Upgrade:</b> {networkUpgrade}
+                        </p>
+                      )}
                     </div>
-                  </div>
-                </a>
+
+                    <div className="mt-4">
+                      <p className="text-xs font-bold text-gray-400 mb-1 tracking-wide">
+                        Author:
+                      </p>
+                      <div
+                        className="flex items-center gap-3 px-3 py-2 rounded-xl border border-purple-500/40 bg-purple-500/20 hover:bg-purple-500/30 transition cursor-pointer w-fit"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setSelectedAuthor(firstAuthor);
+                        }}
+                      >
+                        <Avatar>
+                          <AvatarImage
+                            src={`https://github.com/${firstAuthor.toLowerCase()}.png`}
+                            alt={`@${firstAuthor}`}
+                          />
+                          <AvatarFallback>
+                            {firstAuthor.slice(0, 2).toUpperCase()}
+                          </AvatarFallback>
+                        </Avatar>
+                        <span className="text-sm text-white font-semibold">
+                          {firstAuthor}
+                          {hasMoreAuthors && (
+                            <span className="ml-1 text-purple-300">
+                              +{sortedAuthors.length - 1}
+                            </span>
+                          )}
+                        </span>
+                      </div>
+                    </div>
+                  </a>
                 );
               })}
             </div>
 
             {/* Pagination */}
             <div className="mt-8 flex justify-center items-center gap-6">
-  <button
-    onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-    disabled={currentPage === 1}
-    className={`px-6 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform ${
-      currentPage === 1
-        ? 'bg-gray-400 text-gray-500 cursor-not-allowed'
-        : 'bg-purple-600 text-white hover:bg-purple-700 shadow-md hover:scale-105'
-    } backdrop-blur-lg border border-purple-600/30`}
-  >
-    Previous
-  </button>
+              <button
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+                className={`px-6 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform ${
+                  currentPage === 1
+                    ? 'bg-gray-400 text-gray-500 cursor-not-allowed'
+                    : 'bg-purple-600 text-white hover:bg-purple-700 shadow-md hover:scale-105'
+                } backdrop-blur-lg border border-purple-600/30`}
+              >
+                Previous
+              </button>
 
-  <span className="text-sm font-medium text-gray-800 dark:text-gray-300">
-    Page {currentPage} of {totalPages}
-  </span>
+              <span className="text-sm font-medium text-gray-800 dark:text-gray-300">
+                Page {currentPage} of {totalPages}
+              </span>
 
-  <button
-    onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-    disabled={currentPage === totalPages}
-    className={`px-6 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform ${
-      currentPage === totalPages
-        ? 'bg-gray-400 text-gray-500 cursor-not-allowed'
-        : 'bg-purple-600 text-white hover:bg-purple-700 shadow-md hover:scale-105'
-    } backdrop-blur-lg border border-purple-600/30`}
-  >
-    Next
-  </button>
-</div>
-
+              <button
+                onClick={() =>
+                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                }
+                disabled={currentPage === totalPages}
+                className={`px-6 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform ${
+                  currentPage === totalPages
+                    ? 'bg-gray-400 text-gray-500 cursor-not-allowed'
+                    : 'bg-purple-600 text-white hover:bg-purple-700 shadow-md hover:scale-105'
+                } backdrop-blur-lg border border-purple-600/30`}
+              >
+                Next
+              </button>
+            </div>
           </>
         )}
       </div>
