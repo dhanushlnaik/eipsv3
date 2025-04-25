@@ -34,32 +34,6 @@ const ERCMdFiles =
 const RIPMdFiles =
   mongoose.models.RipMdFiles || mongoose.model('RipMdFiles', mdFilesSchema);
 
-// export default async (req: Request, res: Response) => {
-// const EIPResult = await EIPMdFiles.aggregate([
-//   {
-//     $sort: {
-//       _id: 1, // Sort by status in ascending order
-//     },
-//   },
-// ]).catch((error: any) => {
-//   console.error("Error retrieving EIPs:", error);
-//   res.status(500).json({ error: "Internal server error" });
-// });
-
-//   const ERCResult = await ERCMdFiles.aggregate([
-//     {
-//       $sort: {
-//         _id: 1, // Sort by status in ascending order
-//       },
-//     },
-//   ]).catch((error: any) => {
-//     console.error("Error retrieving EIPs:", error);
-//     res.status(500).json({ error: "Internal server error" });
-//   });
-
-//   res.json({ eip: EIPResult, erc: ERCResult });
-// };
-
 const handler = async (req: Request, res: Response) => {
   try {
     const eipResult = await EIPMdFiles.aggregate([

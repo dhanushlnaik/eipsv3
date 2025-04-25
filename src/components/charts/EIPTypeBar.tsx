@@ -212,24 +212,32 @@ const EIPTypeBar: React.FC<ChartProps> = ({ type }) => {
       {
         type: 'slider',
         show: true,
+        height: 14, // reduce height for slimmer look
         start: 0,
         end: 100,
         xAxisIndex: 0,
-        backgroundColor: '#1a202c',
+        backgroundColor: '#1a1325', // match your dark purple bg
+        borderColor: 'transparent',
         dataBackground: {
           lineStyle: {
-            color: '#718096', // Tailwind gray-500
+            color: '#6b46c1', // lavender highlight line
           },
           areaStyle: {
-            color: '#2d3748', // Tailwind gray-800
+            color: 'rgba(159, 122, 234, 0.2)', // soft purple fill
           },
         },
+        handleIcon: 'M8.7,11.6v-7.2h-1.4v7.2H4.5v1.4h6.1v-1.4H8.7z', // minimal handle
+        handleSize: '80%', // slimmer handle
         handleStyle: {
-          color: '#a0aec0', // Tailwind gray-400
-          borderColor: '#e2e8f0', // gray-200
+          color: '#9f7aea', // vivid handle color
+          borderColor: '#6b46c1',
+          shadowBlur: 4,
+          shadowColor: 'rgba(159, 122, 234, 0.3)',
         },
+        fillerColor: 'rgba(159, 122, 234, 0.15)', // filled area
         textStyle: {
-          color: '#cbd5e0', // Tailwind gray-300
+          color: '#cbd5e0', // gray-300
+          fontSize: 10,
         },
       },
       {
@@ -237,8 +245,10 @@ const EIPTypeBar: React.FC<ChartProps> = ({ type }) => {
         xAxisIndex: 0,
         start: 0,
         end: 100,
+        zoomLock: false,
       },
     ],
+
     xAxis: {
       type: 'category',
       boundaryGap: true,
