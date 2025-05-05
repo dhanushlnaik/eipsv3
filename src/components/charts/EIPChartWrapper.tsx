@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import ReactECharts from 'echarts-for-react';
 import Link from 'next/link';
 import DateTime from '../DateTime';
-import mockData from '@/data/eipmock.json';
 
 const getCat = (cat: string): string => {
   switch (cat) {
@@ -59,8 +58,17 @@ const getStatus = (status: string): string => {
 };
 
 const fetchEIPData = async () => {
-  const data = mockData;
-  return data;
+  try {
+    const response = await fetch('/api/new/all');
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching EIP data:', error);
+    return { eip: [], erc: [], rip: [] }; // Return empty data in case of an error
+  }
 };
 
 const EIPChartWrapper: React.FC<{ type: string }> = ({ type }) => {

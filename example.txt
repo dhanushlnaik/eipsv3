@@ -1,0 +1,1124 @@
+
+    <AllLayout>
+      <Box padding={{ base: 1, md: 4 }} margin={{ base: 2, md: 4 }}>
+        <Heading
+          size="xl"
+          marginBottom={10}
+          textAlign="center"
+          style={{ color: "#42a5f5", fontSize: "2.5rem", fontWeight: "bold" }}
+        >
+          {" "}
+          Editors & Reviewers Leaderboard
+        </Heading>
+
+        <Box
+          pl={4}
+          bg={useColorModeValue("blue.50", "gray.700")}
+          borderRadius="md"
+          pr="8px"
+          marginBottom={2}
+        >
+          <Flex justify="space-between" align="center">
+            <Heading
+              as="h3"
+              size="lg"
+              marginBottom={4}
+              color={useColorModeValue("#3182CE", "blue.300")}
+            >
+              {" "}
+              Editors & Reviewers Leaderboard FAQ
+            </Heading>
+            <Box
+              bg="blue" // Gray background
+              borderRadius="md" // Rounded corners
+              padding={2} // Padding inside the box
+            >
+              <IconButton
+                onClick={toggleCollapse}
+                icon={
+                  show ? (
+                    <ChevronUpIcon boxSize={8} color="white" />
+                  ) : (
+                    <ChevronDownIcon boxSize={8} color="white" />
+                  )
+                }
+                variant="ghost"
+                h="24px" // Smaller height
+                w="20px"
+                aria-label="Toggle Instructions"
+                _hover={{ bg: "blue" }} // Maintain background color on hover
+                _active={{ bg: "blue" }} // Maintain background color when active
+                _focus={{ boxShadow: "none" }} // Remove focus outline
+              />
+            </Box>
+          </Flex>
+
+          <Collapse in={show}>
+            <Heading
+              as="h4"
+              size="md"
+              marginBottom={4}
+              color={useColorModeValue("#3182CE", "blue.300")}
+            >
+              What does this tool do?
+            </Heading>
+            <Text
+              fontSize="md"
+              marginBottom={2}
+              color={useColorModeValue("gray.800", "gray.200")}
+              className="text-justify"
+            >
+              This tool provides a comprehensive overview of all EIP
+              editor/reviewer reviews conducted to date. It displays the total
+              number of reviews each month for each editor/reviewer, allowing
+              you to easily track and analyze review activity across different
+              months and editors.
+            </Text>
+
+            <Heading
+              as="h4"
+              size="md"
+              marginBottom={4}
+              color={useColorModeValue("#3182CE", "blue.300")}
+            >
+              How can I view data for a specific Month?
+            </Heading>
+            <Text
+              fontSize="md"
+              marginBottom={2}
+              color={useColorModeValue("gray.800", "gray.200")}
+              className="text-justify"
+            >
+              To view data for a specific month, you can use the timeline scroll
+              bar or click the View More button. From there, select the desired
+              Year and Month using the dropdown menus, and the table and graph
+              will automatically update to display data for that selected month.
+            </Text>
+
+            <Heading
+              as="h4"
+              size="md"
+              marginBottom={4}
+              color={useColorModeValue("#3182CE", "blue.300")}
+            >
+              How can I view data for a specific EIP Editor?
+            </Heading>
+            <Text
+              fontSize="md"
+              color={useColorModeValue("gray.800", "gray.200")}
+              className="text-justify"
+              marginBottom={2}
+            >
+              You can refine the data by selecting or deselecting specific
+              editors from the checkbox list. This will filter the chart and
+              table to show data only for the selected editors, enabling you to
+              focus on individual contributions.
+            </Text>
+
+            <Heading
+              as="h4"
+              size="md"
+              marginBottom={4}
+              color={useColorModeValue("#3182CE", "blue.300")}
+            >
+              How does this tool work?
+            </Heading>
+            <Text
+              fontSize="md"
+              color={useColorModeValue("gray.800", "gray.200")}
+              className="text-justify"
+            >
+              The tool will be going through all the reviews made by the
+              editor/reviewer and update the database every 24 hours. This tool
+              captures reviews only if the person is marked as a reviewer and
+              has performed a review activity on the PR. If no review is made,
+              it won't be counted, even if the person is listed as a reviewer.
+            </Text>
+            <br />
+
+            <Text
+              fontSize="md"
+              color={useColorModeValue("gray.800", "gray.200")}
+              className="text-justify"
+            >
+              Note: The reviews made by the editor during their active time as
+              an editor are considered for plotting the charts
+            </Text>
+
+            <br />
+          </Collapse>
+
+          {/* {!show && (
+        <Flex justify="center" align="center" marginTop={4}>
+          <Text color={useColorModeValue("#3182CE", "blue.300")} cursor="pointer" onClick={toggleCollapse}>
+            View Instructions
+          </Text>
+          <ChevronDownIcon color={useColorModeValue("#3182CE", "blue.300")} />
+        </Flex>
+      )} */}
+        </Box>
+
+        <Flex justify="center">
+          <Menu>
+            <MenuButton
+              as={Button}
+              rightIcon={<ChevronDownIcon />}
+              colorScheme="blue"
+              size="md"
+              width="200px"
+            >
+              {activeTab ? activeTab.toUpperCase() : "Select an option"}
+            </MenuButton>
+
+            <MenuList maxHeight="200px" overflowY="auto">
+              <MenuItem
+                onClick={() => {
+                  setActiveTab("all");
+                }}
+              >
+                ALL
+              </MenuItem>
+
+              <MenuItem
+                onClick={() => {
+                  setActiveTab("eips");
+                }}
+              >
+                EIPs
+              </MenuItem>
+
+              <MenuItem
+                onClick={() => {
+                  setActiveTab("ercs");
+                }}
+              >
+                ERCs
+              </MenuItem>
+
+              <MenuItem
+                onClick={() => {
+                  setActiveTab("rips");
+                }}
+              >
+                RIPs
+              </MenuItem>
+            </MenuList>
+          </Menu>
+        </Flex>
+
+        <Box padding="0.5rem" borderRadius="0.55rem">
+          <Box
+            // bgColor={bg}
+            // padding="2rem"
+            borderRadius="0.55rem"
+            // _hover={{
+            //   border: "1px",
+            //   borderColor: "#30A0E0",
+            // }}
+          >
+            <Box id="Leaderboard" className="w-full">
+              {renderCharts(chart1data, selectedYear, selectedMonth)}
+            </Box>
+          </Box>
+          {/* <br /> */}
+          {/* <br /> */}
+        </Box>
+
+        {/* <br/> */}
+
+        <Box
+          bgColor={bg}
+          padding="2rem"
+          borderRadius="0.55rem"
+          // _hover={{
+          //   border: "1px",
+          //   borderColor: "#30A0E0",
+          // }}
+        >
+          <Box id="ActivityTimeline" className="w-full">
+            <Flex
+              justifyContent="space-between"
+              alignItems="center"
+              marginBottom="0.5rem"
+            >
+              <Heading
+                as="h3"
+                size="lg"
+                marginBottom={2}
+                marginTop={2}
+                fontWeight="bold"
+                color={useColorModeValue("#3182CE", "blue.300")}
+              >
+                {" "}
+                Active Editors Timeline Scatterplot{" "}
+                <CopyLink
+                  link={`https://eipsinsight.com/Reviewers#ActivityTimeline`}
+                />
+              </Heading>
+              <Flex alignItems="center">
+                <Button
+                  colorScheme="blue"
+                  onClick={() => setShowFilters2(!showFilters2)}
+                  leftIcon={showFilters ? <AiOutlineClose /> : <FiFilter />}
+                  fontSize={{ base: "0.6rem", md: "md" }}
+                  mr="1rem"
+                >
+                  {showFilters2 ? "Hide Filters" : "Show Filters"}
+                </Button>
+              </Flex>
+            </Flex>
+
+            {showFilters2 && (
+              <Box bg="blue.50" borderRadius="md" p={4} mt="1rem">
+                <Flex
+                  justifyContent="flex-start"
+                  flexDirection={{ base: "column", md: "row" }}
+                  gap="2rem"
+                  mb="1rem"
+                >
+                  <Box>
+                    <Heading size="sm" mb="0.5rem" color="black">
+                      Start Date
+                    </Heading>
+                    <Flex>
+                      <HStack spacing={4}>
+                        <Menu>
+                          <MenuButton
+                            as={Button}
+                            rightIcon={<ChevronDownIcon />}
+                            colorScheme="blue"
+                          >
+                            {selectedStartYear2
+                              ? `${selectedStartYear2}`
+                              : "Select Year"}
+                          </MenuButton>
+                          <MenuList
+                            bg="white"
+                            color="black"
+                            borderColor="blue.500"
+                          >
+                            {Array.from({ length: 2025 - 2015 + 1 }, (_, i) =>
+                              (2025 - i).toString()
+                            ).map((year) => (
+                              <MenuItem
+                                key={year}
+                                onClick={() => setSelectedStartYear2(year)}
+                                bg="white"
+                                color="black"
+                              >
+                                {year}
+                              </MenuItem>
+                            ))}
+                          </MenuList>
+                        </Menu>
+
+                        <Menu>
+                          <MenuButton
+                            as={Button}
+                            rightIcon={<ChevronDownIcon />}
+                            colorScheme="blue"
+                          >
+                            {selectedStartMonth2
+                              ? `${selectedStartMonth2}`
+                              : "Select Month"}
+                          </MenuButton>
+                          <MenuList
+                            bg="white"
+                            color="black"
+                            borderColor="blue.500"
+                          >
+                            {[
+                              { name: "Jan", value: "01" },
+                              { name: "Feb", value: "02" },
+                              { name: "Mar", value: "03" },
+                              { name: "Apr", value: "04" },
+                              { name: "May", value: "05" },
+                              { name: "Jun", value: "06" },
+                              { name: "Jul", value: "07" },
+                              { name: "Aug", value: "08" },
+                              { name: "Sep", value: "09" },
+                              { name: "Oct", value: "10" },
+                              { name: "Nov", value: "11" },
+                              { name: "Dec", value: "12" },
+                            ].map((month) => (
+                              <MenuItem
+                                key={month.value}
+                                onClick={() =>
+                                  setSelectedStartMonth2(month.value)
+                                }
+                                bg="white"
+                                color="black"
+                              >
+                                {month.name}
+                              </MenuItem>
+                            ))}
+                          </MenuList>
+                        </Menu>
+                      </HStack>
+                    </Flex>
+                  </Box>
+
+                  <Box>
+                    <Heading size="sm" mb="0.5rem" color="black">
+                      End Date
+                    </Heading>
+                    <Flex>
+                      <HStack spacing={4}>
+                        {/* Year Dropdown */}
+                        <Menu>
+                          <MenuButton
+                            as={Button}
+                            rightIcon={<ChevronDownIcon />}
+                            colorScheme="blue"
+                          >
+                            {selectedEndYear2
+                              ? `${selectedEndYear2}`
+                              : "Select Year"}
+                          </MenuButton>
+                          <MenuList
+                            bg="white"
+                            color="black"
+                            borderColor="blue.500"
+                          >
+                            {Array.from({ length: 2025 - 2015 + 1 }, (_, i) =>
+                              (2025 - i).toString()
+                            ).map((year) => (
+                              <MenuItem
+                                key={year}
+                                onClick={() => setSelectedEndYear2(year)}
+                                bg="white"
+                                color="black"
+                              >
+                                {year}
+                              </MenuItem>
+                            ))}
+                          </MenuList>
+                        </Menu>
+
+                        {/* Month Dropdown */}
+                        <Menu>
+                          <MenuButton
+                            as={Button}
+                            rightIcon={<ChevronDownIcon />}
+                            colorScheme="blue"
+                          >
+                            {selectedEndMonth2
+                              ? `${selectedEndMonth2}`
+                              : "Select Month"}
+                          </MenuButton>
+                          <MenuList
+                            bg="white"
+                            color="black"
+                            borderColor="blue.500"
+                          >
+                            {[
+                              { name: "Jan", value: "01" },
+                              { name: "Feb", value: "02" },
+                              { name: "Mar", value: "03" },
+                              { name: "Apr", value: "04" },
+                              { name: "May", value: "05" },
+                              { name: "Jun", value: "06" },
+                              { name: "Jul", value: "07" },
+                              { name: "Aug", value: "08" },
+                              { name: "Sep", value: "09" },
+                              { name: "Oct", value: "10" },
+                              { name: "Nov", value: "11" },
+                              { name: "Dec", value: "12" },
+                            ].map((month) => (
+                              <MenuItem
+                                key={month.value}
+                                onClick={() =>
+                                  setSelectedEndMonth2(month.value)
+                                }
+                                bg="white"
+                                color="black"
+                              >
+                                {month.name}
+                              </MenuItem>
+                            ))}
+                          </MenuList>
+                        </Menu>
+                      </HStack>
+                    </Flex>
+                  </Box>
+                  <Box></Box>
+                </Flex>
+              </Box>
+            )}
+
+            {editorsActivity()}
+          </Box>
+        </Box>
+
+        <Box
+          bgColor={bg}
+          padding="2rem"
+          borderRadius="0.55rem"
+          mt={2}
+          // _hover={{
+          //   border: "1px",
+          //   borderColor: "#30A0E0",
+          // }}
+        >
+          {/* The part that is breaking start */}
+          <Box id="Monthly" className={"w-full"}>
+            <Flex
+              justifyContent="space-between"
+              alignItems="center"
+              marginBottom="0.5rem"
+            >
+              <Heading size="md" color="black">
+                {`PRs Reviewed (Monthly, since 2015)`}
+                <CopyLink link={`https://eipsinsight.com/Reviewers#Monthly`} />
+              </Heading>
+              <Flex alignItems="center">
+                <CSVLink
+                  data={csvData.length ? csvData : []}
+                  filename={`reviews_data_since_2015.csv`}
+                  onClick={async () => {
+                    try {
+                      generateCSVData5();
+
+                      await axios.post("/api/DownloadCounter");
+                    } catch (error) {
+                      console.error(
+                        "Error triggering download counter:",
+                        error
+                      );
+                    }
+                  }}
+                >
+                  <Button
+                    colorScheme="blue"
+                    mr="1rem"
+                    fontSize={{ base: "0.6rem", md: "md" }}
+                    display={{ base: "none", md: "flex" }}
+                  >
+                    {loading3 ? <Spinner size="sm" /> : "Download CSV"}
+                  </Button>
+                </CSVLink>
+                <Button
+                  colorScheme="blue"
+                  onClick={() => setLinechart(!Linechart)}
+                  mr="1rem"
+                  display={{ base: "none", md: "flex" }}
+                >
+                  {Linechart ? "Column Chart" : "Line Chart"}
+                </Button>
+                <Button
+                  colorScheme="blue"
+                  onClick={() => setShowFilters(!showFilters)}
+                  leftIcon={showFilters ? <AiOutlineClose /> : <FiFilter />}
+                  fontSize={{ base: "0.6rem", md: "md" }}
+                  display={{ base: "none", md: "flex" }}
+                >
+                  {showFilters ? "Hide Filters" : "Show Filters"}
+                </Button>
+              </Flex>
+            </Flex>
+
+            <Flex alignItems="center">
+              <CSVLink
+                data={csvData.length ? csvData : []}
+                filename={`reviews_data_since_2015.csv`}
+                onClick={async () => {
+                  try {
+                    generateCSVData5();
+                    await axios.post("/api/DownloadCounter");
+                  } catch (error) {
+                    console.error("Error triggering download counter:", error);
+                  }
+                }}
+              >
+                <Button
+                  colorScheme="blue"
+                  mr="1rem"
+                  fontSize={{ base: "0.6rem", md: "md" }}
+                  display={{ base: "flex", md: "none" }}
+                >
+                  {loading3 ? <Spinner size="sm" /> : "Download CSV"}
+                </Button>
+              </CSVLink>
+
+              <Button
+                colorScheme="blue"
+                onClick={() => setLinechart(!Linechart)}
+                mr="1rem"
+                display={{ base: "flex", md: "none" }}
+                fontSize={{ base: "0.6rem", md: "md" }}
+              >
+                {Linechart ? "Column Chart" : "Line Chart"}
+              </Button>
+              <Button
+                colorScheme="blue"
+                onClick={() => setShowFilters(!showFilters)}
+                leftIcon={showFilters ? <AiOutlineClose /> : <FiFilter />}
+                fontSize={{ base: "0.6rem", md: "md" }}
+                display={{ base: "flex", md: "none" }}
+              >
+                {showFilters ? "Hide Filters" : "Show Filters"}
+              </Button>
+            </Flex>
+
+            {showFilters && (
+              <Box bg="blue.50" borderRadius="md" p={4} mt="1rem">
+                <Flex
+                  flexDirection={{ base: "column", md: "row" }}
+                  justifyContent="flex-start"
+                  gap="2rem"
+                  mb="1rem"
+                >
+                  <Box>
+                    <Heading size="sm" mb="0.5rem" color="black">
+                      Start Date
+                    </Heading>
+                    <Flex>
+                      <HStack spacing={4}>
+                        {/* Year Dropdown for Start Date */}
+                        <Menu>
+                          <MenuButton
+                            as={Button}
+                            rightIcon={<ChevronDownIcon />}
+                            colorScheme="blue"
+                          >
+                            {selectedStartYear
+                              ? `${selectedStartYear}`
+                              : "Year"}
+                          </MenuButton>
+                          <MenuList
+                            bg="white"
+                            color="black"
+                            borderColor="blue.500"
+                          >
+                            {Array.from({ length: 2025 - 2015 + 1 }, (_, i) =>
+                              (2025 - i).toString()
+                            ).map((year) => (
+                              <MenuItem
+                                key={year}
+                                onClick={() => setSelectedStartYear(year)}
+                                bg="white"
+                                color="black"
+                              >
+                                {year}
+                              </MenuItem>
+                            ))}
+                          </MenuList>
+                        </Menu>
+
+                        {/* Month Dropdown for Start Date */}
+                        <Menu>
+                          <MenuButton
+                            as={Button}
+                            rightIcon={<ChevronDownIcon />}
+                            colorScheme="blue"
+                          >
+                            {selectedStartMonth
+                              ? `${selectedStartMonth}`
+                              : "Month"}
+                          </MenuButton>
+                          <MenuList
+                            bg="white"
+                            color="black"
+                            borderColor="blue.500"
+                          >
+                            {[
+                              { name: "Jan", value: "01" },
+                              { name: "Feb", value: "02" },
+                              { name: "Mar", value: "03" },
+                              { name: "Apr", value: "04" },
+                              { name: "May", value: "05" },
+                              { name: "Jun", value: "06" },
+                              { name: "Jul", value: "07" },
+                              { name: "Aug", value: "08" },
+                              { name: "Sep", value: "09" },
+                              { name: "Oct", value: "10" },
+                              { name: "Nov", value: "11" },
+                              { name: "Dec", value: "12" },
+                            ].map((month) => (
+                              <MenuItem
+                                key={month.value}
+                                onClick={() =>
+                                  setSelectedStartMonth(month.value)
+                                }
+                                bg="white"
+                                color="black"
+                              >
+                                {month.name}
+                              </MenuItem>
+                            ))}
+                          </MenuList>
+                        </Menu>
+                      </HStack>
+                    </Flex>
+                  </Box>
+
+                  <Box>
+                    <Heading size="sm" mb="0.5rem" color="black">
+                      End Date
+                    </Heading>
+                    <Flex>
+                      <HStack spacing={4}>
+                        {/* Year Dropdown for End Date */}
+                        <Menu>
+                          <MenuButton
+                            as={Button}
+                            rightIcon={<ChevronDownIcon />}
+                            colorScheme="blue"
+                          >
+                            {selectedEndYear ? `${selectedEndYear}` : "Year"}
+                          </MenuButton>
+                          <MenuList
+                            bg="white"
+                            color="black"
+                            borderColor="blue.500"
+                          >
+                            {Array.from({ length: 2025 - 2015 + 1 }, (_, i) =>
+                              (2025 - i).toString()
+                            ).map((year) => (
+                              <MenuItem
+                                key={year}
+                                onClick={() => setSelectedEndYear(year)}
+                                bg="white"
+                                color="black"
+                              >
+                                {year}
+                              </MenuItem>
+                            ))}
+                          </MenuList>
+                        </Menu>
+
+                        {/* Month Dropdown for End Date */}
+                        <Menu>
+                          <MenuButton
+                            as={Button}
+                            rightIcon={<ChevronDownIcon />}
+                            colorScheme="blue"
+                          >
+                            {selectedEndMonth ? `${selectedEndMonth}` : "Month"}
+                          </MenuButton>
+                          <MenuList
+                            bg="white"
+                            color="black"
+                            borderColor="blue.500"
+                          >
+                            {[
+                              { name: "Jan", value: "01" },
+                              { name: "Feb", value: "02" },
+                              { name: "Mar", value: "03" },
+                              { name: "Apr", value: "04" },
+                              { name: "May", value: "05" },
+                              { name: "Jun", value: "06" },
+                              { name: "Jul", value: "07" },
+                              { name: "Aug", value: "08" },
+                              { name: "Sep", value: "09" },
+                              { name: "Oct", value: "10" },
+                              { name: "Nov", value: "11" },
+                              { name: "Dec", value: "12" },
+                            ].map((month) => (
+                              <MenuItem
+                                key={month.value}
+                                onClick={() => setSelectedEndMonth(month.value)}
+                                bg="white"
+                                color="black"
+                              >
+                                {month.name}
+                              </MenuItem>
+                            ))}
+                          </MenuList>
+                        </Menu>
+                      </HStack>
+                    </Flex>
+                  </Box>
+
+                  <Box>
+                    <Heading size="sm" mb="0.5rem" color="black">
+                      Select Reviewer
+                    </Heading>
+                    <Menu closeOnSelect={false}>
+                      <MenuButton
+                        as={Button}
+                        rightIcon={<ChevronDownIcon />}
+                        colorScheme="blue"
+                        size="md"
+                        width="150px"
+                      >
+                        Reviewers
+                      </MenuButton>
+
+                      <MenuList maxHeight="200px" overflowY="auto">
+                        <MenuItem onClick={deselectAllReviewers}>
+                          <Text
+                            as="span"
+                            fontWeight="bold"
+                            textDecoration="underline"
+                          >
+                            Remove All
+                          </Text>
+                        </MenuItem>
+
+                        <MenuItem onClick={selectAllReviewers}>
+                          <Text
+                            as="span"
+                            fontWeight="bold"
+                            textDecoration="underline"
+                          >
+                            Select All
+                          </Text>
+                        </MenuItem>
+
+                        <MenuItem onClick={selectActiveReviewers}>
+                          <Text
+                            as="span"
+                            fontWeight="bold"
+                            textDecoration="underline"
+                          >
+                            Select Active
+                          </Text>
+                        </MenuItem>
+
+                        <MenuItem onClick={selectEmeritusReviewers}>
+                          <Text
+                            as="span"
+                            fontWeight="bold"
+                            textDecoration="underline"
+                          >
+                            Select Emeritus
+                          </Text>
+                        </MenuItem>
+
+                        <MenuItem onClick={selectReviewers}>
+                          <Text
+                            as="span"
+                            fontWeight="bold"
+                            textDecoration="underline"
+                          >
+                            Select Reviewers
+                          </Text>
+                        </MenuItem>
+
+                        {Object.keys(showReviewer).map((reviewer) => (
+                          <MenuItem key={reviewer}>
+                            <Checkbox
+                              isChecked={showReviewer[reviewer]}
+                              onChange={(e) =>
+                                setShowReviewer({
+                                  ...showReviewer,
+                                  [reviewer]: e.target.checked,
+                                })
+                              }
+                            >
+                              {reviewer}
+                            </Checkbox>
+                          </MenuItem>
+                        ))}
+                      </MenuList>
+                    </Menu>
+                  </Box>
+                </Flex>
+              </Box>
+            )}
+
+            {Linechart ? renderChart4() : renderChart()}
+            <LastUpdatedDateTime name="EditorsTool" />
+          </Box>
+
+          {/* the part that is breaking the plot */}
+        </Box>
+
+        <Box>
+          <Text color="gray.500" fontStyle="italic" textAlign="center">
+            *Please note: The data is refreshed every 24 hours to ensure
+            accuracy and up-to-date information*
+          </Text>
+        </Box>
+
+        <br />
+
+        <Flex justify="center">
+          <HStack spacing={4}>
+            <Menu closeOnSelect={false}>
+              <MenuButton
+                as={Button}
+                rightIcon={<ChevronDownIcon />}
+                colorScheme="blue"
+                size="md"
+                width="150px"
+              >
+                Reviewers
+              </MenuButton>
+
+              <MenuList maxHeight="200px" overflowY="auto">
+                <MenuItem onClick={deselectAllReviewers}>
+                  <Text as="span" fontWeight="bold" textDecoration="underline">
+                    Remove All
+                  </Text>
+                </MenuItem>
+
+                <MenuItem onClick={selectActiveReviewers}>
+                  <Text as="span" fontWeight="bold" textDecoration="underline">
+                    Active Editors
+                  </Text>
+                </MenuItem>
+
+                <MenuItem onClick={selectAllReviewers}>
+                  <Text as="span" fontWeight="bold" textDecoration="underline">
+                    Select All
+                  </Text>
+                </MenuItem>
+
+                {Object.keys(showReviewer).map((reviewer) => (
+                  <MenuItem key={reviewer}>
+                    <Checkbox
+                      isChecked={showReviewer[reviewer]}
+                      onChange={(e) =>
+                        setShowReviewer({
+                          ...showReviewer,
+                          [reviewer]: e.target.checked,
+                        })
+                      }
+                    >
+                      {reviewer}
+                    </Checkbox>
+                  </MenuItem>
+                ))}
+              </MenuList>
+            </Menu>
+
+            <Button
+              size="md"
+              width="150px"
+              colorScheme="blue"
+              onClick={toggleDropdown}
+            >
+              {showDropdown ? "Hide" : "View More"}
+            </Button>
+
+            <br />
+
+            {showDropdown && (
+              // <HStack spacing={4}>
+              <Box
+                display={{ base: "none", md: "flex" }}
+                justifyContent="center"
+                gap="1rem"
+              >
+                <Menu>
+                  <MenuButton
+                    as={Button}
+                    rightIcon={<ChevronDownIcon />}
+                    colorScheme="blue"
+                  >
+                    {selectedYear ? `Year: ${selectedYear}` : "Select Year"}
+                  </MenuButton>
+                  <MenuList>
+                    {getYears().map((year) => (
+                      <MenuItem
+                        key={year}
+                        onClick={() => {
+                          setSelectedYear(year.toString());
+                          setSelectedMonth(null);
+                        }}
+                      >
+                        {year}
+                      </MenuItem>
+                    ))}
+                  </MenuList>
+                </Menu>
+
+                <Menu>
+                  <MenuButton
+                    as={Button}
+                    rightIcon={<ChevronDownIcon />}
+                    colorScheme="blue"
+                    isDisabled={!selectedYear}
+                  >
+                    {selectedMonth ? `Month: ${selectedMonth}` : "Select Month"}
+                  </MenuButton>
+                  <MenuList>
+                    {selectedYear &&
+                      getMonths().map((month, index) => (
+                        <MenuItem
+                          key={index}
+                          onClick={() => setSelectedMonth(month)}
+                        >
+                          {month}
+                        </MenuItem>
+                      ))}
+                  </MenuList>
+                </Menu>
+              </Box>
+              // </HStack>
+            )}
+          </HStack>
+        </Flex>
+
+        <Flex justify="center" mt={2}>
+          <HStack spacing={4}>
+            {showDropdown && (
+              <HStack spacing={4}>
+                <Box
+                  display={{ base: "flex", md: "none" }}
+                  justifyContent="center"
+                  gap="1rem"
+                >
+                  <Menu>
+                    <MenuButton
+                      as={Button}
+                      rightIcon={<ChevronDownIcon />}
+                      colorScheme="blue"
+                    >
+                      {selectedYear ? `Year: ${selectedYear}` : "Select Year"}
+                    </MenuButton>
+                    <MenuList>
+                      {getYears().map((year) => (
+                        <MenuItem
+                          key={year}
+                          onClick={() => {
+                            setSelectedYear(year.toString());
+                            setSelectedMonth(null);
+                          }}
+                        >
+                          {year}
+                        </MenuItem>
+                      ))}
+                    </MenuList>
+                  </Menu>
+
+                  <Menu>
+                    <MenuButton
+                      as={Button}
+                      rightIcon={<ChevronDownIcon />}
+                      colorScheme="blue"
+                      isDisabled={!selectedYear}
+                    >
+                      {selectedMonth
+                        ? `Month: ${selectedMonth}`
+                        : "Select Month"}
+                    </MenuButton>
+                    <MenuList>
+                      {selectedYear &&
+                        getMonths().map((month, index) => (
+                          <MenuItem
+                            key={index}
+                            onClick={() => setSelectedMonth(month)}
+                          >
+                            {month}
+                          </MenuItem>
+                        ))}
+                    </MenuList>
+                  </Menu>
+                </Box>
+              </HStack>
+            )}
+          </HStack>
+        </Flex>
+        <br />
+
+        {selectedMonth && (
+          <Box padding="0.5rem" borderRadius="0.55rem">
+            <Box
+              bgColor={bg}
+              // padding="2rem"
+              borderRadius="0.55rem"
+              // _hover={{
+              //   border: "1px",
+              //   borderColor: "#30A0E0",
+              // }}
+            >
+              <Box className="w-full">
+                {renderCharts2(chart1data, selectedYear, selectedMonth)}
+                <LastUpdatedDateTime name="EditorsTool" />
+              </Box>
+            </Box>
+          </Box>
+        )}
+
+        {showDropdown && (
+          <>
+            {selectedYear && selectedMonth && (
+              <Box mt={4} display="flex" justifyContent="flex-end">
+                <CSVLink
+                  data={csvData.length ? csvData : []}
+                  filename={`reviews_${selectedYear}_${selectedMonth}.csv`}
+                  onClick={async () => {
+                    try {
+                      generateCSVData();
+                      await axios.post("/api/DownloadCounter");
+                    } catch (error) {
+                      console.error(
+                        "Error triggering download counter:",
+                        error
+                      );
+                    }
+                  }}
+                >
+                  <Button
+                    colorScheme="blue"
+                    fontSize={{ base: "0.6rem", md: "md" }}
+                  >
+                    {" "}
+                    <DownloadIcon marginEnd={"1.5"} />
+                    {loading2 ? <Spinner size="sm" /> : "Download CSV"}
+                  </Button>
+                </CSVLink>
+              </Box>
+            )}
+
+            {selectedYear && selectedMonth && (
+              <Box>
+                {renderTable(selectedYear, selectedMonth, showReviewer)}
+              </Box>
+            )}
+          </>
+        )}
+        <br />
+        <Box className="w-full">
+          {/* <br/> */}
+          {renderCharts3(chart1data)}
+          {/* <br/> */}
+        </Box>
+
+        <Box>
+          <br />
+          <Box
+            bgColor={bg}
+            padding="2rem"
+            borderRadius="0.55rem"
+            // _hover={{
+            //   border: "1px",
+            //   borderColor: "#30A0E0",
+            // }}
+          >
+            <Box id="Speciality" className="w-full">
+              <Heading
+                as="h3"
+                size="lg"
+                marginBottom={2}
+                marginTop={2}
+                fontWeight="bold"
+                color={useColorModeValue("#3182CE", "blue.300")}
+              >
+                {" "}
+                Active Editors PR reviews in each Repository{" "}
+                <CopyLink
+                  link={`https://eipsinsight.com/Reviewers#Speciality`}
+                />
+              </Heading>
+              {editorsSpecialityChart()}
+            </Box>
+          </Box>
+          <br />
+          <hr></hr>
+          <br />
+          <Text fontSize="3xl" fontWeight="bold">
+            Comments
+          </Text>
+          <Comments page={"Reviewers"} />
+        </Box>
+      </Box>
+      {/* </motion.div> */}
+    </AllLayout>
+  );
+};
+
+export default ReviewTracker;
