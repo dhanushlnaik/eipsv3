@@ -173,7 +173,7 @@ export const Markdown = ({
         img: ({ src = '', alt = '' }) => (
           <div className="flex justify-center my-8">
             <Image
-              src={resolveURL(markdownFileURL, src)}
+              src={typeof src === 'string' ? resolveURL(markdownFileURL, src) : ''}
               alt={alt}
               width={600}
               height={400}
