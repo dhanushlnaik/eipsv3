@@ -7,28 +7,32 @@ interface NetworkConfig {
   beaconApi: string;
   rpc: string;
   target: number;
+  targetepoch:number;
   name: string;
 }
 
 // Define the available networks
 const networks: Record<string, NetworkConfig> = {
   sepolia: {
-    beaconApi: 'https://ethereum-sepolia-beacon-api.publicnode.com',
-    rpc: 'https://ethereum-sepolia-rpc.publicnode.com',
+    beaconApi: "https://ethereum-sepolia-beacon-api.publicnode.com",
+    rpc: "https://ethereum-sepolia-rpc.publicnode.com",
     target: 7118848,
-    name: 'Sepolia',
+    targetepoch: 222464,
+    name: "Sepolia",
   },
   holesky: {
-    beaconApi: 'https://ethereum-holesky-beacon-api.publicnode.com',
-    rpc: 'https://ethereum-holesky-rpc.publicnode.com',
+    beaconApi: "https://ethereum-holesky-beacon-api.publicnode.com",
+    rpc: "https://ethereum-holesky-rpc.publicnode.com",
     target: 3710976,
-    name: 'Holesky',
+    targetepoch: 115968,
+    name: "Holesky",
   },
   mainnet: {
-    beaconApi: 'https://ethereum-beacon-api.publicnode.com',
-    rpc: 'https://ethereum-rpc.publicnode.com',
-    target: 11591680,
-    name: 'Mainnet',
+    beaconApi: "https://ethereum-beacon-api.publicnode.com",
+    rpc: "https://ethereum-rpc.publicnode.com",
+    target: 11649024,
+    targetepoch: 364032,
+    name: "Mainnet",
   },
 };
 
@@ -161,6 +165,7 @@ const PectraCountdown: React.FC = () => {
 
   // Calculate the slots remaining until the target
   const slotsRemaining = networks[network].target - currentSlot;
+  // const epochsRemaining = networks[network].targetepoch - currentEpoch;
 
   return (
     <motion.div
@@ -243,6 +248,7 @@ const PectraCountdown: React.FC = () => {
               {firstRowSlots.map((slot) => {
                 const isProcessed = slot < currentSlot;
                 const isCurrent = slot === currentSlot;
+                
                 return (
                   <motion.div
                     key={slot}
