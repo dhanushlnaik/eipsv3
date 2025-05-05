@@ -95,7 +95,7 @@ const extractLastTypesDates = (
   return typeDates;
 };
 
-export const extractMetadata = (text: string) => {
+const extractMetadata = (text: string) => {
   const regex = /(--|---)\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)/;
   const match = text.match(regex);
 
@@ -112,7 +112,7 @@ export const extractMetadata = (text: string) => {
   }
 };
 
-export const convertMetadataToJson = (
+const convertMetadataToJson = (
   metadataText: string
 ): EipMetadataJson => {
   const lines = metadataText.split('\n');
