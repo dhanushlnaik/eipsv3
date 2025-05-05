@@ -6,18 +6,16 @@ import Navbar from '@/components/layout/Navbar';
 import { useState, useEffect } from 'react';
 import Loader from '@/components/ui/Loader2';
 
+// import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+// import { AppSidebar } from '@/components/layout/SideBar';
+
+
 const inter = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-inter',
   weight: ['400', '700'],
   display: 'swap',
 });
-
-// export const metadata: Metadata = {
-//   title: "EIPs Insights",
-//   description:
-//     "EIPsInsight is specialized in toolings designed to provide clear, visual insights into the activity of Ethereum Improvement Proposal (EIP).",
-// };
 
 export default function RootLayout({
   children,
@@ -27,7 +25,8 @@ export default function RootLayout({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000); // Adjust timeout as needed
+    const timeout = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
@@ -42,8 +41,16 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Navbar />
-            {children}
+            {/* <SidebarProvider> */}
+              <div className="flex min-h-screen">
+                {/* <AppSidebar /> */}
+                <main className="flex-1">
+                  <Navbar />
+  
+                  {children}
+                </main>
+              </div>
+            {/* </SidebarProvider> */}
           </ThemeProvider>
         )}
       </body>

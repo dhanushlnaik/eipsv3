@@ -44,3 +44,12 @@ export const slideInFromTop = {
     },
   },
 };
+
+// utils/iconMap.ts
+import * as React from "react";
+import * as Icons from "lucide-react";
+
+export function getLucideIcon(name: string) {
+  const IconComponent = (Icons as unknown as Record<string, React.FC<{ className?: string }>>)[name];
+  return IconComponent ? React.createElement(IconComponent, { className: "w-5 h-5" }) : null;
+}

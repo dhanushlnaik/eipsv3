@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import SearchBox from '../tools/SearchBar';
 import Link from 'next/link';
-
+// import { SidebarTrigger } from '../ui/sidebar';
 const Navbar = () => {
   const [isLightMode, setIsLightMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,15 +25,18 @@ const Navbar = () => {
     >
       <div className="w-full h-full flex items-center justify-between m-auto">
         {/* Logo */}
-        <Link
-          href="/"
-          className="h-auto w-auto flex items-center border border-white/30 bg-white/10 px-4 py-2 rounded-full text-gray-200"
-        >
-          <Image src="/EIPsInsights.gif" width={30} height={30} alt="EIPS" />
-          <span className="ml-2 hidden md:block text-gray-200">
-            EIPs Insights
-          </span>
-        </Link>
+        <div className="flex items-center gap-3">
+          {/* <SidebarTrigger className="md:hidden p-2 rounded-full border text-gray-200 hover:bg-gray-300" /> */}
+          <Link
+            href="/"
+            className="h-auto w-auto flex items-center border border-white/30 bg-white/10 px-4 py-2 rounded-full text-gray-200"
+          >
+            <Image src="/EIPsInsights.gif" width={30} height={30} alt="EIPS" />
+            <span className="ml-2 hidden md:block text-gray-200">
+              EIPs Insights
+            </span>
+          </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex w-[500px] h-full items-center justify-between">
