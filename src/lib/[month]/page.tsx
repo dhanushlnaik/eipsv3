@@ -2,7 +2,7 @@ import React, { useEffect, useState, useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
 // import { motion } from "framer-motion";
 // import NextLink from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 // import CopyLink from "@/components/CopyLink";
 // import Loader from "@/components/ui/Loader2";
 // import { ChevronDownCircle, ChevronUpCircle } from "lucide-react";

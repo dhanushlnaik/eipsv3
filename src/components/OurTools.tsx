@@ -5,6 +5,9 @@ import { Button } from './ui/MovingBorders';
 import Image from 'next/image';
 import { motion } from 'motion/react';
 import { slideInFromLeft, slideInFromRight } from '@/lib/utils';
+
+import Link from 'next/link'; // make sure this is imported
+
 const OurTools = () => {
   return (
     <div className="w-full">
@@ -23,6 +26,7 @@ const OurTools = () => {
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (
+          
           <Button
             key={card.id}
             //   random duration will be fun , I think , may be not
@@ -41,6 +45,7 @@ const OurTools = () => {
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
             <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
+              
               <Image
                 src={card.thumbnail}
                 alt={card.title} // Better for accessibility
@@ -51,8 +56,10 @@ const OurTools = () => {
                 unoptimized={false} // Ensures Next.js optimization
               />
               <div className="lg:ms-5">
-                <h1 className="text-start text-xl md:text-2xl font-bold">
+                <h1 className="text-start text-xl md:text-2xl font-bold hover:cursor-pointer">
+                <Link href={card.link} key={card.id}>
                   {card.title}
+                  </Link>
                 </h1>
                 <p className="text-start text-white-100 mt-3 font-semibold">
                   {card.desc}

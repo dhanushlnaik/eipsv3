@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRouter } from 'next/router'; // Import useRouter hook
+import { useRouter } from 'next/navigation'; // Import useRouter hook
 import Author from '@/components/Author';
 
 const Authors: React.FC = () => {

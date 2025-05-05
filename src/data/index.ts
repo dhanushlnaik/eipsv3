@@ -178,6 +178,7 @@ export const workExperience = [
     desc: "Get a bird's-eye view of Ethereum Improvement Proposal activity with our detailed analytics dashboards. Explore trends, progress, and changes like never before.",
     className: 'md:col-span-2',
     thumbnail: '/DashboardCard1.png',
+    link: '/Analytics',
   },
   {
     id: 2,
@@ -185,6 +186,7 @@ export const workExperience = [
     desc: 'Recognizing the unsung heroes of Ethereum: Track and celebrate EIP Editors based on their contributions and impact in the ecosystem.',
     className: 'md:col-span-2', // change to md:col-span-2
     thumbnail: '/DashboardCard2.png',
+    link: '/Editors',
   },
   {
     id: 3,
@@ -192,6 +194,7 @@ export const workExperience = [
     desc: 'Stay organized with the Boards Tool—your central hub for tracking and prioritizing EIPs. Sort proposals by activity, streamline editor reviews, and focus on PRs that need immediate attention.',
     className: 'md:col-span-2', // change to md:col-span-2
     thumbnail: '/DashboardCard3.png',
+    link: '/boards',
   },
   {
     id: 4,
@@ -199,6 +202,7 @@ export const workExperience = [
     desc: 'Dive deep into the proposals that matter to you. Filter and search by authors to explore individual contributions and their evolving ideas.',
     className: 'md:col-span-2',
     thumbnail: '/DashboardCard4.png',
+    link: '/authors',
   },
   {
     id: 5,
@@ -206,6 +210,7 @@ export const workExperience = [
     desc: 'Access the full archive of Ethereum Improvement Proposals in one place. Simplified, structured, and easy to explore.',
     className: 'md:col-span-2',
     thumbnail: '/DashboardCard5.png',
+    link: '/all',
   },
   {
     id: 6,
@@ -213,6 +218,7 @@ export const workExperience = [
     desc: "Uncover interesting facts and insights about Ethereum's proposal ecosystem, from historical milestones to key moments shaping its future.",
     className: 'md:col-span-2',
     thumbnail: '/DashboardCard6.png',
+    link: '/didyouknow',
   },
   {
     id: 7,
@@ -220,6 +226,7 @@ export const workExperience = [
     desc: 'Expand your knowledge with curated resources, guides, and documentation for understanding Ethereum Improvement Proposals.',
     className: 'md:col-span-2',
     thumbnail: '/DashboardCard7.png',
+    link: '/resources',
   },
   {
     id: 8,
@@ -227,6 +234,7 @@ export const workExperience = [
     desc: 'Your voice matters! Share your thoughts, suggestions, and feedback to help us make EIPsInsight better for everyone.',
     className: 'md:col-span-2',
     thumbnail: '/DashboardCard8.png',
+    link: '/feedback',
   },
 ];
 

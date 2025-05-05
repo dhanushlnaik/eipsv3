@@ -11,3 +11,12 @@ export function ExperienceLoader() {
     </div>
   );
 }
+
+export function GraphLoader() {
+  return (
+    <div className="flex flex-col items-center justify-center p-6 rounded-2xl backdrop-blur-md bg-white/5 border border-white/10 shadow-md w-full h-64 animate-pulse">
+      <div className="w-24 h-24 rounded-full border-4 border-t-purple-500 border-opacity-20 animate-spin mb-4" />
+      <p className="text-white text-sm text-opacity-70">Loading graph data...</p>
+    </div>
+  );
+}

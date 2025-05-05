@@ -40,10 +40,10 @@ const Navbar = () => {
           <div className="flex items-center justify-between w-full h-auto border border-white/30 bg-purple-800/50 px-5 py-2 rounded-full text-gray-200">
             {[
               { href: '/pectra', label: 'Pectra' },
-              { href: '/alleips', label: 'All EIPs' },
-              { href: '/tools', label: 'Tools' },
+              { href: '/all', label: 'All EIPs' },
+              { href: '/boards', label: 'Boards' },
               { href: '/insights', label: 'Insights' },
-              { href: '/more', label: 'More' },
+              { href: '/Analytics', label: 'Analytics' },
             ].map(({ href, label }) => (
               <a
                 key={href}

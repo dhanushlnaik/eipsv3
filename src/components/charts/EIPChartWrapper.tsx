@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import ReactECharts from 'echarts-for-react';
 import Link from 'next/link';
 import DateTime from '../DateTime';
+import { SpokeSpinner } from '../ui/Spinner';
 
 const getCat = (cat: string): string => {
   switch (cat) {
@@ -180,7 +181,9 @@ const EIPChartWrapper: React.FC<{ type: string }> = ({ type }) => {
   return (
     <div className="p-4 rounded-lg shadow-md bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white h-[600px]">
       {isLoading ? (
-        <p className="text-white">Loading...</p>
+      <div className="h-[500px] flex items-center justify-center">
+      <SpokeSpinner size="xl" color="purple" />
+    </div>
       ) : (
         <>
           <div className="flex justify-between items-center mb-4">
