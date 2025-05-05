@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import finalStatusData from '@/data/final-status.json';
 import StatusBarChart from '../charts/StatusBarChart';
 import DownloadButton from '../ui/DownloadButton';
+import { SpokeSpinner } from '../ui/Spinner';
 
 interface StatusChange {
   eip: string;
@@ -72,14 +73,14 @@ const StatusChartWrapper: React.FC<StatusChartWrapperProps> = ({
     <div className="w-full p-6 bg-white dark:bg-gray-900 shadow-lg rounded-xl">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-          {category}-[{typeData.length}]
+          {category}
         </h2>
         <DownloadButton data={typeData} category={category} type={type} />
       </div>
 
       {loading ? (
         <div className="flex items-center justify-center h-64 text-gray-500 dark:text-gray-400">
-          Loading chart...
+          <SpokeSpinner/>
         </div>
       ) : typeData.length > 0 ? (
         <StatusBarChart data={typeData} category={category} />
